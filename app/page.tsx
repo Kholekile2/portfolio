@@ -1,29 +1,50 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <main className="page-shell min-h-screen px-6 py-16 text-zinc-900 dark:text-zinc-100">
       <section className="mx-auto max-w-5xl">
-        <p className="chip mb-4">Open to software and data roles</p>
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,1.15fr)_320px] lg:items-start">
+          <div>
+            <p className="chip mb-4">Open to software and data roles</p>
 
-        <h1 className="text-4xl font-bold tracking-tight md:text-5xl">Kholekile Mpengesi</h1>
+            <h1 className="text-4xl font-bold tracking-tight md:text-5xl">Kholekile Mpengesi</h1>
 
-        <p className="mt-3 text-xl text-gray-700 dark:text-gray-300">
-          Full-Stack Developer | Data Analytics and AI
-        </p>
+            <p className="mt-3 text-xl text-gray-700 dark:text-gray-300">
+              Full-Stack Developer | Data Analytics and AI
+            </p>
 
-        <p className="mt-4 max-w-2xl text-gray-600 dark:text-gray-300">
-          I build production web applications, analytics dashboards, and AI-powered systems.
-          My work combines software engineering, data analysis, and practical problem solving across the stack.
-        </p>
+            <p className="mt-4 max-w-2xl text-gray-600 dark:text-gray-300">
+              I build production web applications, analytics dashboards, and AI-powered systems.
+              My work combines software engineering, data analysis, and practical problem solving across the stack.
+            </p>
 
-        <div className="mt-6 flex flex-wrap gap-4">
-          <Link href="/projects" className="btn-primary">
-            View Projects
-          </Link>
-          <Link href="/contact" className="btn-secondary">
-            Contact Me
-          </Link>
+            <div className="mt-6 flex flex-wrap gap-4">
+              <Link href="/projects" className="btn-primary">
+                View Projects
+              </Link>
+              <Link href="/contact" className="btn-secondary">
+                Contact Me
+              </Link>
+            </div>
+          </div>
+
+          <figure className="surface-card overflow-hidden p-0">
+            <div className="relative aspect-[4/5] overflow-hidden bg-[radial-gradient(circle_at_30%_20%,color-mix(in_srgb,var(--accent-soft)_70%,transparent),transparent_38%),linear-gradient(180deg,color-mix(in_srgb,var(--surface)_94%,var(--accent-soft)),var(--surface))]">
+              <Image
+                src="/projects/Creative%20coder%20in%20a%20cozy%20workspace.png"
+                alt="Portrait of Kholekile Mpengesi"
+                fill
+                priority
+                sizes="(min-width: 1024px) 320px, 100vw"
+                className="object-cover object-center"
+              />
+
+              <div className="absolute inset-x-0 top-0 h-24 bg-[linear-gradient(180deg,rgba(255,255,255,0.16),transparent)] dark:bg-[linear-gradient(180deg,rgba(255,255,255,0.08),transparent)]" />
+            </div>
+          </figure>
+
         </div>
 
         <div className="mt-10 grid gap-4 md:grid-cols-3">
