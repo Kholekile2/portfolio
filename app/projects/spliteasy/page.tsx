@@ -1,14 +1,34 @@
 export default function SplitEasyPage() {
   return (
     <main className="max-w-4xl mx-auto px-6 py-12">
-      {/* Title */}
-      <h1 className="text-4xl font-bold mb-4">SplitEasy</h1>
-      <p className="text-lg text-gray-600 mb-6 dark:text-gray-300">
-        Full-stack expense splitting application with real-time updates and a custom debt simplification algorithm.
+      <h1 className="text-4xl font-bold mb-2">SplitEasy</h1>
+      <p className="text-xl text-gray-700 mb-2 dark:text-gray-300">
+        Shared Expense Tracker and Bill Splitting App
+      </p>
+      <p className="text-gray-600 mb-8 dark:text-gray-300">
+        Production-deployed full-stack platform that simplifies group expenses into the minimum set of settlement payments.
       </p>
 
-      {/* Links */}
-      <div className="flex gap-4 mb-12">
+      <div className="grid grid-cols-2 gap-3 mb-10 md:grid-cols-4">
+        <div className="rounded-lg border border-zinc-200 bg-white p-3 text-sm dark:border-zinc-800 dark:bg-zinc-900">
+          <p className="text-gray-500 dark:text-gray-400">Build Timeline</p>
+          <p className="font-semibold">~3 weeks</p>
+        </div>
+        <div className="rounded-lg border border-zinc-200 bg-white p-3 text-sm dark:border-zinc-800 dark:bg-zinc-900">
+          <p className="text-gray-500 dark:text-gray-400">Delivery Scope</p>
+          <p className="font-semibold">10 phases, end-to-end</p>
+        </div>
+        <div className="rounded-lg border border-zinc-200 bg-white p-3 text-sm dark:border-zinc-800 dark:bg-zinc-900">
+          <p className="text-gray-500 dark:text-gray-400">Deployment</p>
+          <p className="font-semibold">Vercel + Railway</p>
+        </div>
+        <div className="rounded-lg border border-zinc-200 bg-white p-3 text-sm dark:border-zinc-800 dark:bg-zinc-900">
+          <p className="text-gray-500 dark:text-gray-400">Data Layer</p>
+          <p className="font-semibold">Supabase PostgreSQL</p>
+        </div>
+      </div>
+
+      <div className="flex gap-4 mb-12 flex-wrap">
         <a
           href="https://spliteasy-alpha.vercel.app"
           target="_blank"
@@ -25,91 +45,161 @@ export default function SplitEasyPage() {
         >
           View Code
         </a>
+        <a
+          href="https://spliteasy-production-09fc.up.railway.app/health"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-4 py-2 border rounded"
+        >
+          API Health
+        </a>
       </div>
 
-      {/* Problem */}
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">The Problem</h2>
-        <p className="text-gray-700 dark:text-gray-300">
-          Splitting expenses in groups quickly becomes messy, with multiple people owing each other different amounts.
-          Tracking individual transactions leads to unnecessary complexity and confusion.
+        <h2 className="text-2xl font-semibold mb-4">Executive Summary</h2>
+        <p className="text-gray-700 dark:text-gray-300 mb-4">
+          SplitEasy is a full-stack expense management product for groups. It handles logging, equal splitting,
+          debt simplification, settlement tracking, and real-time synchronization across clients.
+          The project demonstrates practical product engineering across architecture, algorithm design,
+          data security, and production deployment.
         </p>
-      </section>
-
-      {/* Solution */}
-      <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">The Solution</h2>
-        <p className="text-gray-700 dark:text-gray-300">
-          SplitEasy allows users to log shared expenses and automatically calculates the minimum number of payments
-          required to settle all debts using a custom algorithm.
-        </p>
-      </section>
-
-      {/* Tech Stack */}
-      <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Tech Stack</h2>
-        <p className="text-gray-700 dark:text-gray-300">
-          Next.js, TypeScript, Tailwind CSS, ASP.NET Core, C#, Supabase (PostgreSQL), Realtime APIs
-        </p>
-      </section>
-
-      {/* Key Features */}
-      <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Key Features</h2>
         <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-          <li>Group expense tracking with equal split</li>
-          <li>Real-time updates across users</li>
-          <li>Debt simplification algorithm</li>
-          <li>Settlement tracking and summaries</li>
-          <li>Secure authentication with Row Level Security</li>
+          <li>17 features covering full shared-expense lifecycle.</li>
+          <li>Custom debt simplification algorithm integrated into production API logic.</li>
+          <li>Real-time collaboration with resilient fallback refresh strategy.</li>
+          <li>Multi-layer security through auth, authorization checks, and RLS.</li>
         </ul>
       </section>
 
-      {/* Algorithm */}
+      <section className="mb-12">
+        <h2 className="text-2xl font-semibold mb-4">Problem</h2>
+        <p className="text-gray-700 dark:text-gray-300">
+          Group expenses create a graph of overlapping debts that becomes hard to track manually.
+          Naive tracking surfaces too many person-to-person obligations, increasing settlement friction
+          and causing confusion about who owes whom.
+        </p>
+      </section>
+
+      <section className="mb-12">
+        <h2 className="text-2xl font-semibold mb-4">Solution</h2>
+        <p className="text-gray-700 dark:text-gray-300">
+          SplitEasy combines fast expense capture, automatic equal splits, and a debt simplification algorithm
+          that reduces settlement complexity to the minimum set of required payments.
+          Instead of showing every edge in the debt graph, the app returns clear settlement instructions.
+        </p>
+      </section>
+
+      <section className="mb-12">
+        <h2 className="text-2xl font-semibold mb-4">Tech Stack</h2>
+        <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+          <li>Frontend: Next.js 14 App Router, TypeScript, Tailwind CSS.</li>
+          <li>Backend: ASP.NET Core Minimal APIs with C# business logic.</li>
+          <li>Database: Supabase PostgreSQL with Auth, RLS, and Realtime.</li>
+          <li>Deployment: Vercel for frontend and Railway for backend.</li>
+          <li>Reporting: Client-side PDF generation using jsPDF.</li>
+        </ul>
+      </section>
+
+      <section className="mb-12">
+        <h2 className="text-2xl font-semibold mb-4">Architecture</h2>
+        <div className="grid gap-4 md:grid-cols-3">
+          <div className="rounded-xl border border-zinc-200 bg-white p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+            <h3 className="font-semibold mb-2">Presentation</h3>
+            <p className="text-sm text-gray-700 dark:text-gray-300">
+              Next.js App Router frontend handling routing, server-rendered entry points, and interactive views.
+            </p>
+          </div>
+          <div className="rounded-xl border border-zinc-200 bg-white p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+            <h3 className="font-semibold mb-2">Application</h3>
+            <p className="text-sm text-gray-700 dark:text-gray-300">
+              ASP.NET Core Minimal APIs implementing business logic, access checks, and settlement computation.
+            </p>
+          </div>
+          <div className="rounded-xl border border-zinc-200 bg-white p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+            <h3 className="font-semibold mb-2">Data</h3>
+            <p className="text-sm text-gray-700 dark:text-gray-300">
+              Supabase PostgreSQL with relational constraints, auth integration, RLS, and realtime channels.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="mb-12">
+        <h2 className="text-2xl font-semibold mb-4">Production Features</h2>
+        <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+          <li>Authentication via Supabase Auth with guarded routes and session handling.</li>
+          <li>Group management: create groups, invite members, leave, and controlled deletion.</li>
+          <li>Expense capture with category tags and automatic equal split per member.</li>
+          <li>Settlement workflow with live balance updates across connected clients.</li>
+          <li>Group analytics: totals, contribution breakdown, and category-level spend view.</li>
+          <li>Client-side PDF export for expense and settlement reporting.</li>
+          <li>Deletion history audit trail and account deletion support.</li>
+        </ul>
+      </section>
+
       <section className="mb-12">
         <h2 className="text-2xl font-semibold mb-4">Debt Simplification Algorithm</h2>
         <p className="text-gray-700 dark:text-gray-300 mb-4">
-          Instead of tracking every individual debt, the system calculates each user's net balance and uses
-          a greedy matching algorithm to minimize the number of transactions required to settle all balances.
+          The algorithm converts many bilateral debts into a reduced settlement plan.
+          It computes each member&apos;s net position, separates debtors and creditors,
+          and applies greedy matching until all balances converge near zero.
         </p>
 
         <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-          <li>Calculate net balances per user</li>
-          <li>Separate creditors and debtors</li>
-          <li>Match largest debtor with largest creditor</li>
-          <li>Repeat until all balances are settled</li>
+          <li>Stage 1: Net balances from expenses and historical settlements.</li>
+          <li>Stage 2: Partition into creditors (positive) and debtors (negative).</li>
+          <li>Stage 3: Greedy match largest debtor with largest creditor repeatedly.</li>
+          <li>Precision guard: threshold of 0.01 to avoid floating-point currency noise.</li>
         </ul>
       </section>
 
-      {/* Architecture */}
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Architecture</h2>
-        <p className="text-gray-700 dark:text-gray-300">
-          The system follows a three-tier architecture with a clear separation between frontend, backend,
-          and database. The frontend communicates with a .NET API, which handles business logic and interacts
-          with a PostgreSQL database via Supabase.
-        </p>
-      </section>
-
-      {/* Challenges */}
-      <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Challenges & Solutions</h2>
+        <h2 className="text-2xl font-semibold mb-4">Security and Data Integrity</h2>
         <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-          <li>Handled serialization issues using DTOs</li>
-          <li>Resolved real-time sync inconsistencies with fallback refetching</li>
-          <li>Fixed production auth issues with custom 403 responses</li>
-          <li>Managed database triggers and schema consistency</li>
+          <li>Row Level Security on all tables for tenant isolation at database level.</li>
+          <li>Per-endpoint membership verification using x-user-id authorization checks.</li>
+          <li>Service-role keys kept server-side only; browser uses restricted public key.</li>
+          <li>Strict CORS policy for known frontend origins in dev and production.</li>
+          <li>Environment-based secret management on Vercel and Railway.</li>
         </ul>
       </section>
 
-      {/* Results */}
+      <section className="mb-12">
+        <h2 className="text-2xl font-semibold mb-4">Engineering Highlights</h2>
+        <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+          <li>Realtime architecture with subscription fallback refetch on connect and reconnect.</li>
+          <li>Server and client component split aligned with Next.js App Router boundaries.</li>
+          <li>7-table relational schema with cascades, composite keys, and trigger-driven profile creation.</li>
+          <li>DTO mapping layer to isolate API contracts from ORM and serializer constraints.</li>
+          <li>Client-side PDF generation with structured report content for offline sharing.</li>
+        </ul>
+      </section>
+
+      <section className="mb-12">
+        <h2 className="text-2xl font-semibold mb-4">Challenges Solved</h2>
+        <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+          <li>Resolved model serialization failures by returning dedicated DTO records.</li>
+          <li>Fixed null timestamp inserts by omitting nullable fields and preserving DB defaults.</li>
+          <li>Hardened realtime consistency with refetch-on-subscribed fallback behavior.</li>
+          <li>Removed production 403 crashes by replacing middleware-dependent forbid helpers.</li>
+          <li>Rebuilt missing auth trigger and added profile backfill query for schema recovery.</li>
+          <li>Replaced unreliable form POST logout with client-side sign-out flow for hosting compatibility.</li>
+          <li>Fixed responsive overflow issues for long member identifiers in group UI.</li>
+        </ul>
+      </section>
+
       <section>
-        <h2 className="text-2xl font-semibold mb-4">Results</h2>
+        <h2 className="text-2xl font-semibold mb-4">Results and Portfolio Value</h2>
+        <p className="text-gray-700 dark:text-gray-300 mb-4">
+          SplitEasy demonstrates full ownership of a real, multi-user product from design to deployment.
+          It combines algorithmic problem solving with production reliability and secure multi-tenant data handling.
+        </p>
         <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-          <li>Fully deployed production application</li>
-          <li>17 implemented features</li>
-          <li>Custom algorithm reducing transaction complexity</li>
-          <li>Real-time multi-user collaboration</li>
+          <li>Live production deployment with separate frontend and backend infrastructure.</li>
+          <li>17 implemented features across auth, groups, expenses, settlements, analytics, and exports.</li>
+          <li>Custom settlement algorithm reducing transaction complexity in practical group scenarios.</li>
+          <li>Real-time collaborative UX supported by resilient data synchronization patterns.</li>
+          <li>Documented engineering decisions and production-debugging outcomes across 10 build phases.</li>
         </ul>
       </section>
     </main>

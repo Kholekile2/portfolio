@@ -3,10 +3,32 @@ import Image from "next/image";
 export default function AutoAnalyticsPage() {
   return (
     <main className="max-w-4xl mx-auto px-6 py-12">
-      <h1 className="text-4xl font-bold mb-4">Auto Analytics Portal</h1>
-      <p className="text-lg text-gray-600 mb-6 dark:text-gray-300">
-        Business Intelligence dashboard project built with Streamlit, BigQuery, and Plotly to analyze used car prices.
+      <h1 className="text-4xl font-bold mb-2">Auto Analytics Portal</h1>
+      <p className="text-xl text-gray-700 mb-2 dark:text-gray-300">
+        BigQuery and Streamlit Business Intelligence Case Study
       </p>
+      <p className="text-gray-600 mb-8 dark:text-gray-300">
+        Decision-support analytics platform for used-car pricing strategy, combining SQL-driven evidence with interactive BI visualizations.
+      </p>
+
+      <div className="grid grid-cols-2 gap-3 mb-10 md:grid-cols-4">
+        <div className="rounded-lg border border-zinc-200 bg-white p-3 text-sm dark:border-zinc-800 dark:bg-zinc-900">
+          <p className="text-gray-500 dark:text-gray-400">Analytics Focus</p>
+          <p className="font-semibold">Price drivers</p>
+        </div>
+        <div className="rounded-lg border border-zinc-200 bg-white p-3 text-sm dark:border-zinc-800 dark:bg-zinc-900">
+          <p className="text-gray-500 dark:text-gray-400">Data Platform</p>
+          <p className="font-semibold">Google BigQuery</p>
+        </div>
+        <div className="rounded-lg border border-zinc-200 bg-white p-3 text-sm dark:border-zinc-800 dark:bg-zinc-900">
+          <p className="text-gray-500 dark:text-gray-400">Delivery Pattern</p>
+          <p className="font-semibold">Multi-page BI app</p>
+        </div>
+        <div className="rounded-lg border border-zinc-200 bg-white p-3 text-sm dark:border-zinc-800 dark:bg-zinc-900">
+          <p className="text-gray-500 dark:text-gray-400">Outcome</p>
+          <p className="font-semibold">Pricing guidance</p>
+        </div>
+      </div>
 
       <div className="flex gap-4 mb-12 flex-wrap">
         <a
@@ -20,45 +42,50 @@ export default function AutoAnalyticsPage() {
       </div>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Project Summary</h2>
-        <p className="text-gray-700 dark:text-gray-300">
-          This project explores a car pricing dataset to uncover how features like brand, mileage,
-          manufacturing year, fuel type, transmission, and model affect vehicle price. The dashboard
-          supports data-driven decision-making for both buyers and sellers by combining SQL-based
-          analysis in BigQuery with interactive Streamlit visuals.
+        <h2 className="text-2xl font-semibold mb-4">Executive Summary</h2>
+        <p className="text-gray-700 dark:text-gray-300 mb-4">
+          Auto Analytics Portal transforms raw used-car records into actionable pricing intelligence.
+          Instead of relying on intuition, the dashboard quantifies how brand, mileage, year,
+          fuel type, transmission, and model shape market value.
         </p>
-      </section>
-
-      <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Problem Statement</h2>
-        <p className="text-gray-700 dark:text-gray-300">
-          Without reliable insights, sellers can underprice vehicles and buyers can overpay. Market
-          conditions and customer perceptions change quickly, so pricing decisions need to be supported
-          by descriptive statistics, correlations, and predictive thinking.
-        </p>
-      </section>
-
-      <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Goals and Research Questions</h2>
         <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-          <li>Identify factors that strongly influence car prices.</li>
-          <li>Highlight trends and correlations between key features and price.</li>
-          <li>Determine which brands and models are more expensive.</li>
-          <li>Measure whether higher mileage reduces price.</li>
-          <li>Evaluate whether newer cars cost more than older cars.</li>
-          <li>Analyze the impact of fuel type and transmission on value.</li>
+          <li>Converts pricing uncertainty into evidence-based valuation signals.</li>
+          <li>Supports faster decision cycles for listing, negotiation, and stock positioning.</li>
+          <li>Combines query performance, interactivity, and explainable insights in one interface.</li>
+          <li>Demonstrates practical BI workflow from warehouse query to business recommendation.</li>
+        </ul>
+      </section>
+
+      <section className="mb-12">
+        <h2 className="text-2xl font-semibold mb-4">Business Problem</h2>
+        <p className="text-gray-700 dark:text-gray-300">
+          In used-car markets, weak pricing visibility creates direct margin risk.
+          Sellers may underprice high-value stock, buyers may overpay, and teams lack a shared,
+          data-backed logic for valuation. The project addresses this gap by creating a transparent
+          analytics layer for pricing decisions.
+        </p>
+      </section>
+
+      <section className="mb-12">
+        <h2 className="text-2xl font-semibold mb-4">Analytical Objectives and Key Questions</h2>
+        <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+          <li>Identify the strongest value drivers across the vehicle portfolio.</li>
+          <li>Quantify directional relationships between usage, age, and price.</li>
+          <li>Measure premium or discount effects by brand, fuel type, and transmission.</li>
+          <li>Detect model-level opportunities for targeted pricing strategy.</li>
+          <li>Answer: Which features should carry the highest weight in negotiation and listing decisions?</li>
         </ul>
       </section>
 
       <section className="mb-12">
         <h2 className="text-2xl font-semibold mb-4">Architecture and Data Flow</h2>
         <p className="text-gray-700 dark:text-gray-300 mb-4">
-          The Auto Analytics Portal follows a two-layer architecture:
+          The platform follows a lean two-layer analytics architecture:
         </p>
         <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2 mb-4">
-          <li>Frontend: Streamlit pages, sidebar controls, and Plotly visualizations.</li>
+          <li>Presentation layer: Streamlit pages, sidebar controls, and Plotly visualizations.</li>
           <li>
-            Backend: Google BigQuery dataset and table
+            Data layer: Google BigQuery dataset and table
             ({" "}
             <span className="font-mono text-sm">
               datawarehouse1-468916.Car_Price_Prediction.CarPricePredictionTable
@@ -69,11 +96,11 @@ export default function AutoAnalyticsPage() {
 
         <p className="text-gray-700 dark:text-gray-300 mb-2">Data flow:</p>
         <ol className="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-          <li>User opens Home or Explore page and navigates to an analysis module.</li>
-          <li>Streamlit executes SQL queries against BigQuery.</li>
-          <li>Query results are returned as Pandas DataFrames.</li>
-          <li>Plotly renders interactive charts from query output.</li>
-          <li>Cached results reduce repeated query cost and improve responsiveness.</li>
+          <li>User selects a business question from Home or Explore.</li>
+          <li>Streamlit triggers SQL aggregation queries in BigQuery.</li>
+          <li>Result sets are loaded into Pandas for shaping and display logic.</li>
+          <li>Plotly renders interpretable visuals for decision discussion.</li>
+          <li>Cache strategy reduces repeated query cost and improves dashboard responsiveness.</li>
         </ol>
       </section>
 
@@ -85,13 +112,14 @@ export default function AutoAnalyticsPage() {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Analysis Pages and Insights</h2>
+        <h2 className="text-2xl font-semibold mb-4">Analysis Modules, Insights, and Business Implications</h2>
 
         <div className="space-y-10">
           <div>
             <h3 className="text-xl font-semibold mb-2">1) Home Page</h3>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              The Home page introduces the dataset source and overall context.
+              The Home page positions the dashboard around decision-making rather than reporting,
+              clarifying what data source is used and what pricing questions can be answered.
             </p>
             <div className="mx-auto max-w-2xl overflow-hidden rounded-lg border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
               <Image
@@ -107,7 +135,8 @@ export default function AutoAnalyticsPage() {
           <div>
             <h3 className="text-xl font-semibold mb-2">2) Explore Page</h3>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              The Explore page introduces the dashboard and provides navigation to the analysis pages.
+              The Explore page is an analytics control hub, enabling rapid movement between pricing dimensions
+              to support faster analyst workflows.
             </p>
             <div className="mx-auto max-w-2xl overflow-hidden rounded-lg border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
               <Image
@@ -123,11 +152,16 @@ export default function AutoAnalyticsPage() {
           <div>
             <h3 className="text-xl font-semibold mb-2">3) Brand Analysis</h3>
             <p className="text-gray-700 dark:text-gray-300 mb-2">
-              A BigQuery GROUP BY query compares average car prices by brand using a bar chart.
+              A BigQuery GROUP BY aggregation compares average price by brand.
             </p>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
               Insight: Honda appears as the highest-priced brand (~$25,702) while Audi is lowest
               (~$24,664). The range is narrow, suggesting no extreme brand-level outliers in this sample.
+            </p>
+            <p className="text-gray-700 dark:text-gray-300 mb-4">
+              Business implication: Brand alone should not be used as a dominant pricing lever in this dataset.
+              The tight spread indicates stronger explanatory power likely comes from condition, mileage,
+              year, and configuration variables.
             </p>
             <div className="mx-auto max-w-2xl overflow-hidden rounded-lg border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
               <Image
@@ -143,11 +177,16 @@ export default function AutoAnalyticsPage() {
           <div>
             <h3 className="text-xl font-semibold mb-2">4) Mileage vs Price</h3>
             <p className="text-gray-700 dark:text-gray-300 mb-2">
-              A scatter plot visualizes the relationship between mileage and price.
+              A scatter distribution maps depreciation behavior as mileage increases.
             </p>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
               Insight: As mileage increases, car prices generally decrease, confirming depreciation with use.
               This page also includes a sample-size slider to improve performance and query speed.
+            </p>
+            <p className="text-gray-700 dark:text-gray-300 mb-4">
+              Business implication: Mileage should carry a high weighting in valuation policy.
+              Dealers can use this relationship to define mileage bands for discount strategy,
+              stock procurement thresholds, and negotiation guardrails.
             </p>
             <div className="mx-auto max-w-2xl overflow-hidden rounded-lg border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
               <Image
@@ -163,10 +202,14 @@ export default function AutoAnalyticsPage() {
           <div>
             <h3 className="text-xl font-semibold mb-2">5) Year vs Price</h3>
             <p className="text-gray-700 dark:text-gray-300 mb-2">
-              A line chart shows average price by manufacturing year.
+              A line trend analyzes average value by manufacturing year.
             </p>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
               Insight: Newer vehicles tend to have higher average prices than older vehicles.
+            </p>
+            <p className="text-gray-700 dark:text-gray-300 mb-4">
+              Business implication: Inventory and campaign strategy should segment by age tier.
+              Newer units can support premium positioning, while older units need value-led pricing and faster turnover tactics.
             </p>
             <div className="mx-auto max-w-2xl overflow-hidden rounded-lg border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
               <Image
@@ -182,11 +225,16 @@ export default function AutoAnalyticsPage() {
           <div>
             <h3 className="text-xl font-semibold mb-2">6) Fuel Type and Transmission</h3>
             <p className="text-gray-700 dark:text-gray-300 mb-2">
-              A bar chart compares fuel type prices, and a pie chart compares transmission prices.
+              Dual visuals compare price behavior across fuel categories and transmission types.
             </p>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
               Insight: Electric cars have the highest average prices, followed by diesel and then petrol.
               Automatic cars are priced higher on average than manual cars.
+            </p>
+            <p className="text-gray-700 dark:text-gray-300 mb-4">
+              Business implication: Configuration-specific premiums are measurable.
+              Pricing playbooks can include explicit uplift factors for electric and automatic vehicles,
+              improving consistency and defensibility of quoted prices.
             </p>
             <div className="mx-auto max-w-2xl overflow-hidden rounded-lg border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
               <Image
@@ -202,10 +250,15 @@ export default function AutoAnalyticsPage() {
           <div>
             <h3 className="text-xl font-semibold mb-2">7) Model Analysis</h3>
             <p className="text-gray-700 dark:text-gray-300 mb-2">
-              A pie chart highlights top models by average price.
+              Model-level aggregation surfaces the highest and lowest value pockets in the portfolio.
             </p>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
               Insight: Model D ranks highest, followed by Model C. Models A and B are lower-priced in comparison.
+            </p>
+            <p className="text-gray-700 dark:text-gray-300 mb-4">
+              Business implication: Model-level strategy should differentiate acquisition, financing,
+              and margin targets. High-value models can support margin preservation, while lower-value
+              models may benefit from velocity-oriented pricing.
             </p>
             <div className="mx-auto max-w-2xl overflow-hidden rounded-lg border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
               <Image
@@ -221,9 +274,20 @@ export default function AutoAnalyticsPage() {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Project Focus</h2>
+        <h2 className="text-2xl font-semibold mb-4">Decision Framework for Business Teams</h2>
+        <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+          <li>Set baseline valuation by age and mileage before applying configuration adjustments.</li>
+          <li>Apply fuel and transmission premiums as explicit pricing multipliers.</li>
+          <li>Use model tiers to separate margin-maximization strategy from volume strategy.</li>
+          <li>Track pricing consistency over time through repeatable dashboard views.</li>
+          <li>Use the dashboard as a negotiation support tool to reduce subjective pricing decisions.</li>
+        </ul>
+      </section>
+
+      <section className="mb-12">
+        <h2 className="text-2xl font-semibold mb-4">Portfolio Focus</h2>
         <p className="text-gray-700 dark:text-gray-300 mb-4">
-          This portfolio case study focuses on my implementation of the dashboard presentation and analysis workflow, including:
+          This case study highlights my dashboard implementation and analytics delivery focus, including:
         </p>
         <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
           <li>BigQuery SQL query design and testing for each research question.</li>
@@ -235,11 +299,11 @@ export default function AutoAnalyticsPage() {
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mb-4">Outcome</h2>
+        <h2 className="text-2xl font-semibold mb-4">Outcome and Business Value</h2>
         <p className="text-gray-700 dark:text-gray-300">
-          The Auto Analytics Portal demonstrates how raw data can be transformed into practical BI insights
-          through a clear data pipeline: database storage, SQL transformation, visual exploration, and
-          decision-focused reporting.
+          Auto Analytics Portal demonstrates how a compact BI stack can turn raw market records into operational pricing intelligence.
+          The final output is not only descriptive reporting, but a repeatable decision system that improves pricing consistency,
+          strengthens negotiation confidence, and supports data-led commercial strategy.
         </p>
       </section>
     </main>

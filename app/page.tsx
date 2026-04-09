@@ -7,13 +7,12 @@ export default function Home() {
         <h1 className="text-4xl font-bold">Kholekile Mpengesi</h1>
 
         <p className="mt-2 text-xl text-gray-700 dark:text-gray-300">
-          Full-Stack Developer (C# / .NET) | Data &amp; AI Enthusiast
+          Full-Stack Developer | Data Analytics and AI
         </p>
 
         <p className="mt-4 max-w-2xl text-gray-600 dark:text-gray-300">
-          I build full-stack web applications, real-time systems, and
-          data-driven solutions. I have experience working with ASP.NET Core,
-          cloud-based AI services, and modern frontend frameworks.
+          I build production web applications, analytics dashboards, and AI-powered systems.
+          My work combines software engineering, data analysis, and practical problem solving across the stack.
         </p>
 
         <div className="mt-6 flex flex-wrap gap-4">
@@ -29,17 +28,14 @@ export default function Home() {
           <h2 className="mb-4 text-2xl font-semibold">About Me</h2>
 
           <p className="text-gray-700 dark:text-gray-300">
-            I&apos;m a postgraduate student specialising in Data Analytics and
-            Business Intelligence, with hands-on experience building scalable
-            web and AI-powered applications. I&apos;ve worked on healthcare
-            platforms and cloud-based AI solutions using Microsoft Azure,
-            focusing on real-world impact and system reliability.
+            I&apos;m a postgraduate student specialising in Data Analytics and Business Intelligence,
+            with hands-on experience building scalable web applications, analytics platforms,
+            and AI-enabled tools. I focus on systems that are useful, reliable, and grounded in real business needs.
           </p>
 
           <p className="mt-4 text-gray-700 dark:text-gray-300">
-            My work combines full-stack development with data and machine
-            learning concepts, allowing me to build systems that are not only
-            functional, but also intelligent and data-driven.
+            My work combines full-stack development with data and machine learning concepts,
+            allowing me to build systems that are not only functional, but also decision-supportive and data-driven.
           </p>
         </section>
 
@@ -85,9 +81,8 @@ export default function Home() {
               <h3 className="text-xl font-bold">SplitEasy</h3>
 
               <p className="mt-2 text-gray-700 dark:text-gray-300">
-                A full-stack expense splitting application with real-time
-                updates and a custom debt simplification algorithm that
-                minimizes the number of transactions between users.
+                Production expense-sharing platform with realtime updates, secure multi-user workflows,
+                and a custom debt simplification algorithm that minimizes settlement steps.
               </p>
 
               <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
@@ -116,8 +111,8 @@ export default function Home() {
               <h3 className="text-xl font-bold">DocChat</h3>
 
               <p className="mt-2 text-gray-700 dark:text-gray-300">
-                AI-powered document chat application using a full
-                Retrieval-Augmented Generation (RAG) pipeline.
+                Production RAG application that turns PDFs into conversational knowledge with grounded,
+                real-time answers.
               </p>
 
               <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
@@ -146,7 +141,7 @@ export default function Home() {
               <h3 className="text-xl font-bold">Auto Analytics Portal</h3>
 
               <p className="mt-2 text-gray-700 dark:text-gray-300">
-                BI dashboard project analyzing used car pricing trends with BigQuery SQL queries and interactive Streamlit visuals.
+                BI dashboard for car pricing strategy, translating BigQuery analysis into actionable pricing guidance.
               </p>
 
               <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
@@ -175,7 +170,7 @@ export default function Home() {
               <h3 className="text-xl font-bold">MedCare Booking System</h3>
 
               <p className="mt-2 text-gray-700 dark:text-gray-300">
-                Streamlit-based healthcare booking platform with specialist search, appointment management, and admin analytics.
+                Healthcare operations platform combining specialist booking, administrative controls, and analytics for capacity and revenue.
               </p>
 
               <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">

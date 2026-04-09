@@ -8,7 +8,7 @@ export default function ProjectsPage() {
           <h2 className="text-xl font-bold mb-2">DocChat</h2>
 
           <p className="text-gray-700 mb-3 dark:text-gray-300">
-            AI-powered document chat application using a full Retrieval-Augmented Generation (RAG) pipeline.
+            Production RAG application that turns PDF documents into grounded, conversational knowledge.
           </p>
 
           <p className="text-sm text-gray-500 mb-4 dark:text-gray-400">
@@ -34,7 +34,7 @@ export default function ProjectsPage() {
           <h2 className="text-xl font-bold mb-2">SplitEasy</h2>
 
           <p className="text-gray-700 mb-3 dark:text-gray-300">
-            Expense splitting app with real-time updates and a custom debt simplification algorithm.
+            Production expense-sharing platform with realtime updates and a custom debt simplification algorithm.
           </p>
 
           <p className="text-sm text-gray-500 mb-4 dark:text-gray-400">
@@ -60,7 +60,7 @@ export default function ProjectsPage() {
           <h2 className="text-xl font-bold mb-2">Auto Analytics Portal</h2>
 
           <p className="text-gray-700 mb-3 dark:text-gray-300">
-            Business Intelligence dashboard for car pricing analysis using BigQuery, SQL, and Streamlit.
+            BI dashboard for car pricing strategy, turning BigQuery analysis into actionable pricing guidance.
           </p>
 
           <p className="text-sm text-gray-500 mb-4 dark:text-gray-400">
@@ -86,7 +86,7 @@ export default function ProjectsPage() {
           <h2 className="text-xl font-bold mb-2">MedCare Booking System</h2>
 
           <p className="text-gray-700 mb-3 dark:text-gray-300">
-            Streamlit-based medical booking and analytics platform backed by BigQuery.
+            Healthcare operations platform combining specialist booking, admin controls, and analytics.
           </p>
 
           <p className="text-sm text-gray-500 mb-4 dark:text-gray-400">

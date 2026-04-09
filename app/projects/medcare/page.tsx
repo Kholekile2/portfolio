@@ -3,10 +3,32 @@ import Image from "next/image";
 export default function MedCarePage() {
   return (
     <main className="max-w-4xl mx-auto px-6 py-12">
-      <h1 className="text-4xl font-bold mb-4">MedCare Booking System</h1>
-      <p className="text-lg text-gray-600 mb-6 dark:text-gray-300">
-        A Streamlit-based medical facility management solution for specialist booking, patient access, and admin analytics.
+      <h1 className="text-4xl font-bold mb-2">MedCare Booking System</h1>
+      <p className="text-xl text-gray-700 mb-2 dark:text-gray-300">
+        Streamlit-Based Medical Facility Management and Analytics Platform
       </p>
+      <p className="text-gray-600 mb-8 dark:text-gray-300">
+        Healthcare operations case study combining patient booking workflows with decision-grade analytics for capacity, revenue, and specialist performance.
+      </p>
+
+      <div className="grid grid-cols-2 gap-3 mb-10 md:grid-cols-4">
+        <div className="rounded-lg border border-zinc-200 bg-white p-3 text-sm dark:border-zinc-800 dark:bg-zinc-900">
+          <p className="text-gray-500 dark:text-gray-400">Sector</p>
+          <p className="font-semibold">Healthcare operations</p>
+        </div>
+        <div className="rounded-lg border border-zinc-200 bg-white p-3 text-sm dark:border-zinc-800 dark:bg-zinc-900">
+          <p className="text-gray-500 dark:text-gray-400">Core Objective</p>
+          <p className="font-semibold">Booking efficiency</p>
+        </div>
+        <div className="rounded-lg border border-zinc-200 bg-white p-3 text-sm dark:border-zinc-800 dark:bg-zinc-900">
+          <p className="text-gray-500 dark:text-gray-400">Data Platform</p>
+          <p className="font-semibold">Google BigQuery</p>
+        </div>
+        <div className="rounded-lg border border-zinc-200 bg-white p-3 text-sm dark:border-zinc-800 dark:bg-zinc-900">
+          <p className="text-gray-500 dark:text-gray-400">BI Focus</p>
+          <p className="font-semibold">Capacity and revenue</p>
+        </div>
+      </div>
 
       <div className="flex gap-4 mb-12 flex-wrap">
         <a
@@ -20,20 +42,26 @@ export default function MedCarePage() {
       </div>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Project Overview</h2>
-        <p className="text-gray-700 dark:text-gray-300">
-          MedCare Booking System is a multi-page Streamlit web application integrated with Google BigQuery.
-          It supports patient-facing appointment booking, specialist browsing, and an administrator dashboard
-          for monitoring bookings, revenue, and specialist performance.
+        <h2 className="text-2xl font-semibold mb-4">Executive Summary</h2>
+        <p className="text-gray-700 dark:text-gray-300 mb-4">
+          MedCare Booking System was designed to solve two linked healthcare challenges: patient booking friction and limited managerial visibility.
+          The platform digitizes specialist appointment booking while giving administrators a live analytics layer to monitor demand,
+          optimize specialist allocation, and improve service quality.
         </p>
+        <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+          <li>Patient-facing workflow for discovery, booking, and confirmation in one interface.</li>
+          <li>Admin dashboard with filtering, KPI monitoring, and visual performance analysis.</li>
+          <li>BigQuery-backed architecture enabling scalable, query-driven healthcare reporting.</li>
+          <li>Operational controls including authentication, booking limits, and auditable data access.</li>
+        </ul>
       </section>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Purpose</h2>
+        <h2 className="text-2xl font-semibold mb-4">Business Problem and Purpose</h2>
         <p className="text-gray-700 dark:text-gray-300">
-          The application was designed to make specialist appointments easier for patients while giving the
-          facility a clearer view of operational data. It reduces manual scheduling friction, improves
-          transparency around availability, and provides decision-support analytics for administrators.
+          Manual appointment coordination leads to long response times, weak visibility into specialist availability,
+          and high administrative overhead. MedCare addresses this by creating a unified digital booking and BI environment
+          where patient access and operational decisions are both supported by real-time data.
         </p>
       </section>
 
@@ -43,38 +71,44 @@ export default function MedCarePage() {
           <div className="rounded-xl border border-zinc-200 bg-white p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
             <h3 className="font-semibold mb-2">Presentation Layer</h3>
             <p className="text-sm text-gray-700 dark:text-gray-300">
-              Streamlit interface for Home, Specialists, Booking, and Admin pages with Plotly visualizations.
+              Streamlit pages for patient booking and admin analytics with Plotly visual outputs.
             </p>
           </div>
           <div className="rounded-xl border border-zinc-200 bg-white p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
             <h3 className="font-semibold mb-2">Application Layer</h3>
             <p className="text-sm text-gray-700 dark:text-gray-300">
-              Python logic, validation, session handling, and Google BigQuery API integration.
+              Python validation logic, workflow orchestration, and BigQuery client interactions.
             </p>
           </div>
           <div className="rounded-xl border border-zinc-200 bg-white p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
             <h3 className="font-semibold mb-2">Data Layer</h3>
             <p className="text-sm text-gray-700 dark:text-gray-300">
-              BigQuery dataset storing clients, specialists, dates, time slots, bookings, and admin users.
+              BigQuery relational model storing clients, specialists, time slots, dates, bookings, and admin credentials.
             </p>
           </div>
         </div>
       </section>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Data Flow</h2>
+        <h2 className="text-2xl font-semibold mb-4">Data Flow and Analytical Model</h2>
         <ol className="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-          <li>User interacts with the Streamlit interface.</li>
-          <li>The app sends SQL queries to BigQuery through the Python client.</li>
-          <li>Results are processed with Pandas and rendered in the interface.</li>
-          <li>Plotly displays charts and dashboards for operational analysis.</li>
+          <li>Users interact with Streamlit pages (patient flow or admin analytics flow).</li>
+          <li>Actions trigger SQL reads or writes through the BigQuery API.</li>
+          <li>Pandas performs shaping and aggregation for metric-level analysis.</li>
+          <li>Plotly visualizes utilization, specialist performance, and revenue behavior.</li>
+          <li>Filter-aware dashboard views support targeted operational diagnosis.</li>
         </ol>
+        <p className="text-gray-700 dark:text-gray-300 mt-4">
+          The core model follows a star-schema-like pattern where Bookings acts as the fact table linked to Clients,
+          Specialists, Dates, and TimeSlots. This enables scalable joins for time-series and specialty-level reporting.
+        </p>
       </section>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Home Page</h2>
+        <h2 className="text-2xl font-semibold mb-4">Home Experience and Service Positioning</h2>
         <p className="text-gray-700 dark:text-gray-300 mb-4">
-          The landing page introduces MedCare services, explains the booking workflow, and provides direct navigation into the specialist and booking experience.
+          The landing page establishes trust and clarity through service highlights, booking steps,
+          and transparent care access principles. It frames the platform as both patient-friendly and operations-ready.
         </p>
         <div className="mx-auto max-w-2xl overflow-hidden rounded-lg border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
           <Image
@@ -93,10 +127,10 @@ export default function MedCarePage() {
           <div>
             <h3 className="text-lg font-semibold mb-2">Filtering Capabilities</h3>
             <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-              <li>Date range filter to analyze specific periods.</li>
-              <li>Multi-select specialist filter for focused performance tracking.</li>
-              <li>Chart style selection (interactive, static, or animated views).</li>
-              <li>One-click reset with cache clearing for fast re-analysis.</li>
+              <li>Date range filtering for period-based demand and revenue diagnostics.</li>
+              <li>Specialist-level filtering for targeted performance review.</li>
+              <li>Chart style switching for exploratory versus presentation mode analysis.</li>
+              <li>One-click reset and cache clearing for rapid iterative analysis.</li>
             </ul>
           </div>
           <div>
@@ -109,6 +143,10 @@ export default function MedCarePage() {
             </ul>
           </div>
         </div>
+        <p className="text-gray-700 dark:text-gray-300 mb-4">
+          Business implication: This view enables management to move from static reporting to active control,
+          where staffing, slot allocation, and campaign timing can be adjusted based on live KPI shifts.
+        </p>
         <div className="mx-auto max-w-3xl overflow-hidden rounded-lg border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
           <Image
             src="/projects/medcare/interactive-dashboard-advanced-filtering.png"
@@ -127,6 +165,10 @@ export default function MedCarePage() {
           <li>Color-coded visuals by medical specialty to improve interpretation speed.</li>
           <li>Multiple chart types to compare operational and financial performance.</li>
         </ul>
+        <p className="text-gray-700 dark:text-gray-300 mb-4">
+          Business implication: Visual diversity supports both diagnostic analytics and leadership communication,
+          improving speed-to-decision for non-technical stakeholders.
+        </p>
         <div className="mx-auto max-w-3xl overflow-hidden rounded-lg border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
           <Image
             src="/projects/medcare/comprehensive-analytics-visualizations.png"
@@ -145,6 +187,10 @@ export default function MedCarePage() {
           <li>Specialist count and average booking value per specialty.</li>
           <li>Revenue comparison across specialties for strategic staffing decisions.</li>
         </ul>
+        <p className="text-gray-700 dark:text-gray-300 mb-4">
+          Business implication: Specialty-level visibility helps identify overutilized and underutilized service lines,
+          informing hiring priorities, referral strategies, and marketing allocation.
+        </p>
         <div className="mx-auto max-w-3xl overflow-hidden rounded-lg border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
           <Image
             src="/projects/medcare/medical-specialty-performance.png"
@@ -163,6 +209,10 @@ export default function MedCarePage() {
           <li>Time-series analysis using filtered periods.</li>
           <li>Revenue growth visibility for planning and forecasting.</li>
         </ul>
+        <p className="text-gray-700 dark:text-gray-300 mb-4">
+          Business implication: Time-series monitoring supports budget planning, seasonal preparedness,
+          and proactive revenue risk management.
+        </p>
         <div className="mx-auto max-w-3xl overflow-hidden rounded-lg border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
           <Image
             src="/projects/medcare/revenue-trends-analysis.png"
@@ -181,6 +231,10 @@ export default function MedCarePage() {
           <li>Booking distribution throughout the day.</li>
           <li>Color-gradient popularity indicators for schedule optimization.</li>
         </ul>
+        <p className="text-gray-700 dark:text-gray-300 mb-4">
+          Business implication: Peak-hour intelligence supports better rota planning, wait-time reduction,
+          and improved patient experience through capacity balancing.
+        </p>
         <div className="mx-auto max-w-3xl overflow-hidden rounded-lg border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
           <Image
             src="/projects/medcare/peak-hours-analysis.png"
@@ -193,30 +247,51 @@ export default function MedCarePage() {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Highlights</h2>
+        <h2 className="text-2xl font-semibold mb-4">Data Management and Export</h2>
         <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-          <li>Secure administrator login with hashed passwords and session management.</li>
-          <li>Booking limit enforcement to prevent excessive active appointments.</li>
-          <li>Advanced dashboard filtering for targeted operational analysis.</li>
-          <li>Comprehensive analytics for specialist performance, revenue, and peak demand periods.</li>
-          <li>BigQuery-backed storage for reliable, centralized data management.</li>
+          <li>Expandable, filtered raw tables for analyst-level drill-down validation.</li>
+          <li>Tabbed data views for specialist performance, revenue trends, time-slot utilization, and specialty metrics.</li>
+          <li>CSV export for offline analysis, audit support, and stakeholder reporting.</li>
         </ul>
       </section>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Challenges and Solutions</h2>
+        <h2 className="text-2xl font-semibold mb-4">Security and Operational Controls</h2>
+        <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+          <li>Secure administrator login with hashed passwords and session management.</li>
+          <li>Booking limit enforcement to prevent excessive active appointments.</li>
+          <li>Controlled BigQuery API access for authorized data operations.</li>
+          <li>Validation-oriented workflow to preserve data quality and process consistency.</li>
+          <li>Centralized cloud storage to support reliability and auditable reporting.</li>
+        </ul>
+      </section>
+
+      <section className="mb-12">
+        <h2 className="text-2xl font-semibold mb-4">Challenges Solved</h2>
         <p className="text-gray-700 dark:text-gray-300">
-          The main challenges were building efficient SQL joins across related tables, keeping page navigation consistent,
-          and ensuring the dashboard responded correctly to filters. These were handled by testing queries in BigQuery,
-          using modular page structure, and applying validation and caching where needed.
+          The project addressed multi-table query complexity, filter-driven dashboard consistency,
+          and end-to-end page integration reliability. These were resolved through iterative SQL testing in BigQuery,
+          modular page design, parameterized filtering, caching for performance, and defensive validation for future data changes.
         </p>
       </section>
 
+      <section className="mb-12">
+        <h2 className="text-2xl font-semibold mb-4">Decision Playbook for Facility Managers</h2>
+        <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+          <li>Use peak-hour charts to reallocate staffing and reduce patient queue pressure.</li>
+          <li>Use specialty performance trends to guide recruitment and referral investment.</li>
+          <li>Track average booking value and monthly revenue to detect growth or margin risk early.</li>
+          <li>Apply date and specialist filters to evaluate operational impact of interventions.</li>
+          <li>Export filtered data for monthly governance and continuous improvement reviews.</li>
+        </ul>
+      </section>
+
       <section>
-        <h2 className="text-2xl font-semibold mb-4">Outcome</h2>
+        <h2 className="text-2xl font-semibold mb-4">Outcome and Business Value</h2>
         <p className="text-gray-700 dark:text-gray-300">
-          MedCare Booking System demonstrates how Streamlit and BigQuery can be combined into a practical healthcare
-          operations platform that improves patient booking access while supporting data-informed management.
+          MedCare Booking System demonstrates how digital booking and analytics can operate as one healthcare intelligence system.
+          The result is improved access for patients, stronger operational control for administrators, and a repeatable,
+          data-driven approach to improving service quality and facility performance.
         </p>
       </section>
     </main>
