@@ -55,6 +55,58 @@ export default function ProjectsPage() {
             </a>
           </div>
         </div>
+
+        <div className="border p-6 rounded-xl shadow-sm hover:shadow-md transition">
+          <h2 className="text-xl font-bold mb-2">Auto Analytics Portal</h2>
+
+          <p className="text-gray-700 mb-3 dark:text-gray-300">
+            Business Intelligence dashboard for car pricing analysis using BigQuery, SQL, and Streamlit.
+          </p>
+
+          <p className="text-sm text-gray-500 mb-4 dark:text-gray-400">
+            Streamlit • BigQuery • SQL • Pandas • Plotly
+          </p>
+
+          <div className="flex gap-4">
+            <a href="/projects/auto-analytics" className="text-blue-600 dark:text-blue-400">
+              View Case Study →
+            </a>
+            <a
+              href="https://github.com/Kholekile2/BIA715_DataExploration"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 dark:text-gray-300"
+            >
+              Code
+            </a>
+          </div>
+        </div>
+
+        <div className="border p-6 rounded-xl shadow-sm hover:shadow-md transition">
+          <h2 className="text-xl font-bold mb-2">MedCare Booking System</h2>
+
+          <p className="text-gray-700 mb-3 dark:text-gray-300">
+            Streamlit-based medical booking and analytics platform backed by BigQuery.
+          </p>
+
+          <p className="text-sm text-gray-500 mb-4 dark:text-gray-400">
+            Streamlit • BigQuery • Python • Pandas • Plotly
+          </p>
+
+          <div className="flex gap-4">
+            <a href="/projects/medcare" className="text-blue-600 dark:text-blue-400">
+              View Case Study →
+            </a>
+            <a
+              href="https://github.com/Kholekile2/Streamlit-Data-Exploration"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 dark:text-gray-300"
+            >
+              Code
+            </a>
+          </div>
+        </div>
       </div>
     </main>
   );

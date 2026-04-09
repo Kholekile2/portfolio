@@ -141,6 +141,64 @@ export default function Home() {
                 </a>
               </div>
             </div>
+
+            <div className="rounded-xl border border-zinc-200 bg-white p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+              <h3 className="text-xl font-bold">Auto Analytics Portal</h3>
+
+              <p className="mt-2 text-gray-700 dark:text-gray-300">
+                BI dashboard project analyzing used car pricing trends with BigQuery SQL queries and interactive Streamlit visuals.
+              </p>
+
+              <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+                Streamlit • BigQuery • SQL • Pandas • Plotly
+              </p>
+
+              <div className="mt-4 flex gap-4">
+                <Link
+                  href="/projects/auto-analytics"
+                  className="text-sm font-semibold text-zinc-900 underline decoration-zinc-300 underline-offset-4 hover:text-zinc-700 dark:text-zinc-100 dark:decoration-zinc-600 dark:hover:text-zinc-300"
+                >
+                  Case Study
+                </Link>
+                <a
+                  href="https://github.com/Kholekile2/BIA715_DataExploration"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-semibold text-zinc-900 underline decoration-zinc-300 underline-offset-4 hover:text-zinc-700 dark:text-zinc-100 dark:decoration-zinc-600 dark:hover:text-zinc-300"
+                >
+                  Code
+                </a>
+              </div>
+            </div>
+
+            <div className="rounded-xl border border-zinc-200 bg-white p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+              <h3 className="text-xl font-bold">MedCare Booking System</h3>
+
+              <p className="mt-2 text-gray-700 dark:text-gray-300">
+                Streamlit-based healthcare booking platform with specialist search, appointment management, and admin analytics.
+              </p>
+
+              <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+                Streamlit • BigQuery • Python • Pandas • Plotly
+              </p>
+
+              <div className="mt-4 flex gap-4">
+                <Link
+                  href="/projects/medcare"
+                  className="text-sm font-semibold text-zinc-900 underline decoration-zinc-300 underline-offset-4 hover:text-zinc-700 dark:text-zinc-100 dark:decoration-zinc-600 dark:hover:text-zinc-300"
+                >
+                  Case Study
+                </Link>
+                <a
+                  href="https://github.com/Kholekile2/Streamlit-Data-Exploration"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-semibold text-zinc-900 underline decoration-zinc-300 underline-offset-4 hover:text-zinc-700 dark:text-zinc-100 dark:decoration-zinc-600 dark:hover:text-zinc-300"
+                >
+                  Code
+                </a>
+              </div>
+            </div>
           </div>
         </section>
       </section>
