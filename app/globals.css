@@ -3,6 +3,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --surface: #ffffff;
+  --surface-border: #e4e4e7;
+  --accent: #0f766e;
+  --accent-soft: #ccfbf1;
 }
 
 @theme inline {
@@ -16,19 +20,69 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --surface: #111113;
+    --surface-border: #27272a;
+    --accent: #5eead4;
+    --accent-soft: #042f2e;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), "Segoe UI", sans-serif;
+}
+
+.page-shell {
+  background:
+    radial-gradient(circle at 15% 0%, color-mix(in srgb, var(--accent-soft) 55%, transparent), transparent 35%),
+    radial-gradient(circle at 85% 10%, color-mix(in srgb, var(--accent-soft) 40%, transparent), transparent 30%),
+    var(--background);
+}
+
+.surface-card {
+  @apply rounded-2xl border p-6 shadow-sm transition-all duration-200;
+  background: var(--surface);
+  border-color: var(--surface-border);
+}
+
+.surface-card:hover {
+  @apply -translate-y-0.5 shadow-md;
+}
+
+.chip {
+  @apply inline-flex items-center rounded-full border px-2.5 py-1 text-xs font-medium;
+  border-color: var(--surface-border);
+  background: color-mix(in srgb, var(--surface) 92%, var(--accent-soft));
+}
+
+.text-link {
+  @apply text-sm font-semibold underline underline-offset-4 transition-colors;
+  color: var(--foreground);
+  text-decoration-color: color-mix(in srgb, var(--foreground) 25%, transparent);
+}
+
+.text-link:hover {
+  color: color-mix(in srgb, var(--foreground) 82%, var(--accent));
 }
 
 .btn-primary {
-  @apply inline-flex h-11 items-center justify-center rounded-lg bg-zinc-900 px-6 text-sm font-semibold text-white transition-colors hover:bg-zinc-700 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-300;
+  @apply inline-flex h-11 items-center justify-center rounded-xl px-6 text-sm font-semibold text-white transition-all;
+  background: color-mix(in srgb, var(--accent) 88%, #000000);
+}
+
+.btn-primary:hover {
+  background: color-mix(in srgb, var(--accent) 75%, #000000);
+  @apply shadow-md;
 }
 
 .btn-secondary {
-  @apply inline-flex h-11 items-center justify-center rounded-lg border border-zinc-300 px-6 text-sm font-semibold text-zinc-900 transition-colors hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-100 dark:hover:bg-zinc-900;
+  @apply inline-flex h-11 items-center justify-center rounded-xl border px-6 text-sm font-semibold transition-colors;
+  border-color: var(--surface-border);
+  color: var(--foreground);
+  background: color-mix(in srgb, var(--surface) 96%, var(--accent-soft));
+}
+
+.btn-secondary:hover {
+  background: color-mix(in srgb, var(--surface) 88%, var(--accent-soft));
 }

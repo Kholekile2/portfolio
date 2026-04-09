@@ -1,8 +1,24 @@
 import Image from "next/image";
+import CaseStudyToc from "../../components/case-study-toc";
 
 export default function AutoAnalyticsPage() {
+  const sections = [
+    { id: "executive-summary", label: "Executive Summary" },
+    { id: "business-problem", label: "Business Problem" },
+    { id: "objectives", label: "Objectives and Questions" },
+    { id: "architecture", label: "Architecture and Data Flow" },
+    { id: "tech-stack", label: "Tech Stack" },
+    { id: "analysis-modules", label: "Analysis Modules" },
+    { id: "decision-framework", label: "Decision Framework" },
+    { id: "portfolio-focus", label: "Portfolio Focus" },
+    { id: "outcome", label: "Outcome and Business Value" },
+  ];
+
   return (
-    <main className="max-w-4xl mx-auto px-6 py-12">
+    <main className="page-shell min-h-screen px-6 py-12">
+      <section className="mx-auto max-w-6xl lg:grid lg:grid-cols-[minmax(0,1fr)_240px] lg:gap-10">
+      <div className="min-w-0 max-w-4xl">
+      <p className="chip mb-4">Business Intelligence Case Study</p>
       <h1 className="text-4xl font-bold mb-2">Auto Analytics Portal</h1>
       <p className="text-xl text-gray-700 mb-2 dark:text-gray-300">
         BigQuery and Streamlit Business Intelligence Case Study
@@ -12,19 +28,19 @@ export default function AutoAnalyticsPage() {
       </p>
 
       <div className="grid grid-cols-2 gap-3 mb-10 md:grid-cols-4">
-        <div className="rounded-lg border border-zinc-200 bg-white p-3 text-sm dark:border-zinc-800 dark:bg-zinc-900">
+        <div className="surface-card p-3 text-sm">
           <p className="text-gray-500 dark:text-gray-400">Analytics Focus</p>
           <p className="font-semibold">Price drivers</p>
         </div>
-        <div className="rounded-lg border border-zinc-200 bg-white p-3 text-sm dark:border-zinc-800 dark:bg-zinc-900">
+        <div className="surface-card p-3 text-sm">
           <p className="text-gray-500 dark:text-gray-400">Data Platform</p>
           <p className="font-semibold">Google BigQuery</p>
         </div>
-        <div className="rounded-lg border border-zinc-200 bg-white p-3 text-sm dark:border-zinc-800 dark:bg-zinc-900">
+        <div className="surface-card p-3 text-sm">
           <p className="text-gray-500 dark:text-gray-400">Delivery Pattern</p>
           <p className="font-semibold">Multi-page BI app</p>
         </div>
-        <div className="rounded-lg border border-zinc-200 bg-white p-3 text-sm dark:border-zinc-800 dark:bg-zinc-900">
+        <div className="surface-card p-3 text-sm">
           <p className="text-gray-500 dark:text-gray-400">Outcome</p>
           <p className="font-semibold">Pricing guidance</p>
         </div>
@@ -35,14 +51,14 @@ export default function AutoAnalyticsPage() {
           href="https://github.com/Kholekile2/BIA715_DataExploration"
           target="_blank"
           rel="noopener noreferrer"
-          className="px-4 py-2 border rounded"
+          className="btn-secondary"
         >
           View Code
         </a>
       </div>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Executive Summary</h2>
+        <h2 id="executive-summary" className="scroll-mt-24 text-2xl font-semibold mb-4">Executive Summary</h2>
         <p className="text-gray-700 dark:text-gray-300 mb-4">
           Auto Analytics Portal transforms raw used-car records into actionable pricing intelligence.
           Instead of relying on intuition, the dashboard quantifies how brand, mileage, year,
@@ -57,7 +73,7 @@ export default function AutoAnalyticsPage() {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Business Problem</h2>
+        <h2 id="business-problem" className="scroll-mt-24 text-2xl font-semibold mb-4">Business Problem</h2>
         <p className="text-gray-700 dark:text-gray-300">
           In used-car markets, weak pricing visibility creates direct margin risk.
           Sellers may underprice high-value stock, buyers may overpay, and teams lack a shared,
@@ -67,7 +83,7 @@ export default function AutoAnalyticsPage() {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Analytical Objectives and Key Questions</h2>
+        <h2 id="objectives" className="scroll-mt-24 text-2xl font-semibold mb-4">Analytical Objectives and Key Questions</h2>
         <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
           <li>Identify the strongest value drivers across the vehicle portfolio.</li>
           <li>Quantify directional relationships between usage, age, and price.</li>
@@ -78,7 +94,7 @@ export default function AutoAnalyticsPage() {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Architecture and Data Flow</h2>
+        <h2 id="architecture" className="scroll-mt-24 text-2xl font-semibold mb-4">Architecture and Data Flow</h2>
         <p className="text-gray-700 dark:text-gray-300 mb-4">
           The platform follows a lean two-layer analytics architecture:
         </p>
@@ -105,14 +121,14 @@ export default function AutoAnalyticsPage() {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Tech Stack</h2>
+        <h2 id="tech-stack" className="scroll-mt-24 text-2xl font-semibold mb-4">Tech Stack</h2>
         <p className="text-gray-700 dark:text-gray-300">
           Streamlit, Python, Google BigQuery, SQL, Pandas, Plotly Express, Pillow (PIL)
         </p>
       </section>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Analysis Modules, Insights, and Business Implications</h2>
+        <h2 id="analysis-modules" className="scroll-mt-24 text-2xl font-semibold mb-4">Analysis Modules, Insights, and Business Implications</h2>
 
         <div className="space-y-10">
           <div>
@@ -274,7 +290,7 @@ export default function AutoAnalyticsPage() {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Decision Framework for Business Teams</h2>
+        <h2 id="decision-framework" className="scroll-mt-24 text-2xl font-semibold mb-4">Decision Framework for Business Teams</h2>
         <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
           <li>Set baseline valuation by age and mileage before applying configuration adjustments.</li>
           <li>Apply fuel and transmission premiums as explicit pricing multipliers.</li>
@@ -285,7 +301,7 @@ export default function AutoAnalyticsPage() {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Portfolio Focus</h2>
+        <h2 id="portfolio-focus" className="scroll-mt-24 text-2xl font-semibold mb-4">Portfolio Focus</h2>
         <p className="text-gray-700 dark:text-gray-300 mb-4">
           This case study highlights my dashboard implementation and analytics delivery focus, including:
         </p>
@@ -299,12 +315,15 @@ export default function AutoAnalyticsPage() {
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mb-4">Outcome and Business Value</h2>
+        <h2 id="outcome" className="scroll-mt-24 text-2xl font-semibold mb-4">Outcome and Business Value</h2>
         <p className="text-gray-700 dark:text-gray-300">
           Auto Analytics Portal demonstrates how a compact BI stack can turn raw market records into operational pricing intelligence.
           The final output is not only descriptive reporting, but a repeatable decision system that improves pricing consistency,
           strengthens negotiation confidence, and supports data-led commercial strategy.
         </p>
+      </section>
+      </div>
+      <CaseStudyToc sections={sections} />
       </section>
     </main>
   );

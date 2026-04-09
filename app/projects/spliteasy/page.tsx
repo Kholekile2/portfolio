@@ -1,6 +1,25 @@
+import CaseStudyToc from "../../components/case-study-toc";
+
 export default function SplitEasyPage() {
+  const sections = [
+    { id: "executive-summary", label: "Executive Summary" },
+    { id: "problem", label: "Problem" },
+    { id: "solution", label: "Solution" },
+    { id: "tech-stack", label: "Tech Stack" },
+    { id: "architecture", label: "Architecture" },
+    { id: "production-features", label: "Production Features" },
+    { id: "algorithm", label: "Debt Simplification Algorithm" },
+    { id: "security", label: "Security and Data Integrity" },
+    { id: "engineering-highlights", label: "Engineering Highlights" },
+    { id: "challenges-solved", label: "Challenges Solved" },
+    { id: "results", label: "Results and Portfolio Value" },
+  ];
+
   return (
-    <main className="max-w-4xl mx-auto px-6 py-12">
+    <main className="page-shell min-h-screen px-6 py-12">
+      <section className="mx-auto max-w-6xl lg:grid lg:grid-cols-[minmax(0,1fr)_240px] lg:gap-10">
+      <div className="min-w-0 max-w-4xl">
+      <p className="chip mb-4">Full-stack Case Study</p>
       <h1 className="text-4xl font-bold mb-2">SplitEasy</h1>
       <p className="text-xl text-gray-700 mb-2 dark:text-gray-300">
         Shared Expense Tracker and Bill Splitting App
@@ -10,19 +29,19 @@ export default function SplitEasyPage() {
       </p>
 
       <div className="grid grid-cols-2 gap-3 mb-10 md:grid-cols-4">
-        <div className="rounded-lg border border-zinc-200 bg-white p-3 text-sm dark:border-zinc-800 dark:bg-zinc-900">
+        <div className="surface-card p-3 text-sm">
           <p className="text-gray-500 dark:text-gray-400">Build Timeline</p>
           <p className="font-semibold">~3 weeks</p>
         </div>
-        <div className="rounded-lg border border-zinc-200 bg-white p-3 text-sm dark:border-zinc-800 dark:bg-zinc-900">
+        <div className="surface-card p-3 text-sm">
           <p className="text-gray-500 dark:text-gray-400">Delivery Scope</p>
           <p className="font-semibold">10 phases, end-to-end</p>
         </div>
-        <div className="rounded-lg border border-zinc-200 bg-white p-3 text-sm dark:border-zinc-800 dark:bg-zinc-900">
+        <div className="surface-card p-3 text-sm">
           <p className="text-gray-500 dark:text-gray-400">Deployment</p>
           <p className="font-semibold">Vercel + Railway</p>
         </div>
-        <div className="rounded-lg border border-zinc-200 bg-white p-3 text-sm dark:border-zinc-800 dark:bg-zinc-900">
+        <div className="surface-card p-3 text-sm">
           <p className="text-gray-500 dark:text-gray-400">Data Layer</p>
           <p className="font-semibold">Supabase PostgreSQL</p>
         </div>
@@ -33,7 +52,7 @@ export default function SplitEasyPage() {
           href="https://spliteasy-alpha.vercel.app"
           target="_blank"
           rel="noopener noreferrer"
-          className="px-4 py-2 bg-black text-white rounded"
+          className="btn-primary"
         >
           Live Demo
         </a>
@@ -41,7 +60,7 @@ export default function SplitEasyPage() {
           href="https://github.com/Kholekile2/spliteasy"
           target="_blank"
           rel="noopener noreferrer"
-          className="px-4 py-2 border rounded"
+          className="btn-secondary"
         >
           View Code
         </a>
@@ -49,14 +68,14 @@ export default function SplitEasyPage() {
           href="https://spliteasy-production-09fc.up.railway.app/health"
           target="_blank"
           rel="noopener noreferrer"
-          className="px-4 py-2 border rounded"
+          className="btn-secondary"
         >
           API Health
         </a>
       </div>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Executive Summary</h2>
+        <h2 id="executive-summary" className="scroll-mt-24 text-2xl font-semibold mb-4">Executive Summary</h2>
         <p className="text-gray-700 dark:text-gray-300 mb-4">
           SplitEasy is a full-stack expense management product for groups. It handles logging, equal splitting,
           debt simplification, settlement tracking, and real-time synchronization across clients.
@@ -72,7 +91,7 @@ export default function SplitEasyPage() {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Problem</h2>
+        <h2 id="problem" className="scroll-mt-24 text-2xl font-semibold mb-4">Problem</h2>
         <p className="text-gray-700 dark:text-gray-300">
           Group expenses create a graph of overlapping debts that becomes hard to track manually.
           Naive tracking surfaces too many person-to-person obligations, increasing settlement friction
@@ -81,7 +100,7 @@ export default function SplitEasyPage() {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Solution</h2>
+        <h2 id="solution" className="scroll-mt-24 text-2xl font-semibold mb-4">Solution</h2>
         <p className="text-gray-700 dark:text-gray-300">
           SplitEasy combines fast expense capture, automatic equal splits, and a debt simplification algorithm
           that reduces settlement complexity to the minimum set of required payments.
@@ -90,7 +109,7 @@ export default function SplitEasyPage() {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Tech Stack</h2>
+        <h2 id="tech-stack" className="scroll-mt-24 text-2xl font-semibold mb-4">Tech Stack</h2>
         <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
           <li>Frontend: Next.js 14 App Router, TypeScript, Tailwind CSS.</li>
           <li>Backend: ASP.NET Core Minimal APIs with C# business logic.</li>
@@ -101,21 +120,21 @@ export default function SplitEasyPage() {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Architecture</h2>
+        <h2 id="architecture" className="scroll-mt-24 text-2xl font-semibold mb-4">Architecture</h2>
         <div className="grid gap-4 md:grid-cols-3">
-          <div className="rounded-xl border border-zinc-200 bg-white p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+          <div className="surface-card p-5">
             <h3 className="font-semibold mb-2">Presentation</h3>
             <p className="text-sm text-gray-700 dark:text-gray-300">
               Next.js App Router frontend handling routing, server-rendered entry points, and interactive views.
             </p>
           </div>
-          <div className="rounded-xl border border-zinc-200 bg-white p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+          <div className="surface-card p-5">
             <h3 className="font-semibold mb-2">Application</h3>
             <p className="text-sm text-gray-700 dark:text-gray-300">
               ASP.NET Core Minimal APIs implementing business logic, access checks, and settlement computation.
             </p>
           </div>
-          <div className="rounded-xl border border-zinc-200 bg-white p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+          <div className="surface-card p-5">
             <h3 className="font-semibold mb-2">Data</h3>
             <p className="text-sm text-gray-700 dark:text-gray-300">
               Supabase PostgreSQL with relational constraints, auth integration, RLS, and realtime channels.
@@ -125,7 +144,7 @@ export default function SplitEasyPage() {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Production Features</h2>
+        <h2 id="production-features" className="scroll-mt-24 text-2xl font-semibold mb-4">Production Features</h2>
         <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
           <li>Authentication via Supabase Auth with guarded routes and session handling.</li>
           <li>Group management: create groups, invite members, leave, and controlled deletion.</li>
@@ -138,7 +157,7 @@ export default function SplitEasyPage() {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Debt Simplification Algorithm</h2>
+        <h2 id="algorithm" className="scroll-mt-24 text-2xl font-semibold mb-4">Debt Simplification Algorithm</h2>
         <p className="text-gray-700 dark:text-gray-300 mb-4">
           The algorithm converts many bilateral debts into a reduced settlement plan.
           It computes each member&apos;s net position, separates debtors and creditors,
@@ -154,7 +173,7 @@ export default function SplitEasyPage() {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Security and Data Integrity</h2>
+        <h2 id="security" className="scroll-mt-24 text-2xl font-semibold mb-4">Security and Data Integrity</h2>
         <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
           <li>Row Level Security on all tables for tenant isolation at database level.</li>
           <li>Per-endpoint membership verification using x-user-id authorization checks.</li>
@@ -165,7 +184,7 @@ export default function SplitEasyPage() {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Engineering Highlights</h2>
+        <h2 id="engineering-highlights" className="scroll-mt-24 text-2xl font-semibold mb-4">Engineering Highlights</h2>
         <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
           <li>Realtime architecture with subscription fallback refetch on connect and reconnect.</li>
           <li>Server and client component split aligned with Next.js App Router boundaries.</li>
@@ -176,7 +195,7 @@ export default function SplitEasyPage() {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Challenges Solved</h2>
+        <h2 id="challenges-solved" className="scroll-mt-24 text-2xl font-semibold mb-4">Challenges Solved</h2>
         <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
           <li>Resolved model serialization failures by returning dedicated DTO records.</li>
           <li>Fixed null timestamp inserts by omitting nullable fields and preserving DB defaults.</li>
@@ -189,7 +208,7 @@ export default function SplitEasyPage() {
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mb-4">Results and Portfolio Value</h2>
+        <h2 id="results" className="scroll-mt-24 text-2xl font-semibold mb-4">Results and Portfolio Value</h2>
         <p className="text-gray-700 dark:text-gray-300 mb-4">
           SplitEasy demonstrates full ownership of a real, multi-user product from design to deployment.
           It combines algorithmic problem solving with production reliability and secure multi-tenant data handling.
@@ -201,6 +220,9 @@ export default function SplitEasyPage() {
           <li>Real-time collaborative UX supported by resilient data synchronization patterns.</li>
           <li>Documented engineering decisions and production-debugging outcomes across 10 build phases.</li>
         </ul>
+      </section>
+      </div>
+      <CaseStudyToc sections={sections} />
       </section>
     </main>
   );

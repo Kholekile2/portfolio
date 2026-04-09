@@ -1,6 +1,23 @@
+import CaseStudyToc from "../../components/case-study-toc";
+
 export default function DocChatPage() {
+  const sections = [
+    { id: "executive-summary", label: "Executive Summary" },
+    { id: "problem", label: "Problem" },
+    { id: "solution", label: "Solution" },
+    { id: "core-pipeline", label: "Core Pipeline" },
+    { id: "production-features", label: "Production Features" },
+    { id: "engineering-highlights", label: "Engineering Highlights" },
+    { id: "tech-stack", label: "Tech Stack" },
+    { id: "challenges-solved", label: "Challenges Solved" },
+    { id: "results", label: "Results and Market Relevance" },
+  ];
+
   return (
-    <main className="max-w-4xl mx-auto px-6 py-12">
+    <main className="page-shell min-h-screen px-6 py-12">
+      <section className="mx-auto max-w-6xl lg:grid lg:grid-cols-[minmax(0,1fr)_240px] lg:gap-10">
+      <div className="min-w-0 max-w-4xl">
+      <p className="chip mb-4">AI Case Study</p>
       <h1 className="text-4xl font-bold mb-2">DocChat</h1>
       <p className="text-xl text-gray-700 mb-2 dark:text-gray-300">
         AI-Powered Document Chat Application
@@ -10,19 +27,19 @@ export default function DocChatPage() {
       </p>
 
       <div className="grid grid-cols-2 gap-3 mb-10 md:grid-cols-4">
-        <div className="rounded-lg border border-zinc-200 bg-white p-3 text-sm dark:border-zinc-800 dark:bg-zinc-900">
+        <div className="surface-card p-3 text-sm">
           <p className="text-gray-500 dark:text-gray-400">Duration</p>
           <p className="font-semibold">5 weeks</p>
         </div>
-        <div className="rounded-lg border border-zinc-200 bg-white p-3 text-sm dark:border-zinc-800 dark:bg-zinc-900">
+        <div className="surface-card p-3 text-sm">
           <p className="text-gray-500 dark:text-gray-400">Delivery Model</p>
           <p className="font-semibold">4 phases, end-to-end</p>
         </div>
-        <div className="rounded-lg border border-zinc-200 bg-white p-3 text-sm dark:border-zinc-800 dark:bg-zinc-900">
+        <div className="surface-card p-3 text-sm">
           <p className="text-gray-500 dark:text-gray-400">Production Stack</p>
           <p className="font-semibold">Vercel + Railway</p>
         </div>
-        <div className="rounded-lg border border-zinc-200 bg-white p-3 text-sm dark:border-zinc-800 dark:bg-zinc-900">
+        <div className="surface-card p-3 text-sm">
           <p className="text-gray-500 dark:text-gray-400">AI Pattern</p>
           <p className="font-semibold">Full RAG pipeline</p>
         </div>
@@ -33,7 +50,7 @@ export default function DocChatPage() {
           href="https://ai-document-chat-sigma.vercel.app"
           target="_blank"
           rel="noopener noreferrer"
-          className="px-4 py-2 bg-black text-white rounded"
+          className="btn-primary"
         >
           Live Demo
         </a>
@@ -41,14 +58,14 @@ export default function DocChatPage() {
           href="https://github.com/Kholekile2/ai-document-chat"
           target="_blank"
           rel="noopener noreferrer"
-          className="px-4 py-2 border rounded"
+          className="btn-secondary"
         >
           View Code
         </a>
       </div>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Executive Summary</h2>
+        <h2 id="executive-summary" className="scroll-mt-24 text-2xl font-semibold mb-4">Executive Summary</h2>
         <p className="text-gray-700 dark:text-gray-300 mb-4">
           DocChat is a full-stack AI system built from scratch to solve document retrieval friction. Users upload PDFs,
           ask natural-language questions, and receive grounded answers streamed in real time. The project demonstrates
@@ -63,7 +80,7 @@ export default function DocChatPage() {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Problem</h2>
+        <h2 id="problem" className="scroll-mt-24 text-2xl font-semibold mb-4">Problem</h2>
         <p className="text-gray-700 dark:text-gray-300">
           Traditional PDF workflows rely on manual scanning and keyword matching, which fail when users ask with different
           terminology than the document text. This creates slow, error-prone information retrieval for knowledge workers,
@@ -72,24 +89,24 @@ export default function DocChatPage() {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Solution</h2>
+        <h2 id="solution" className="scroll-mt-24 text-2xl font-semibold mb-4">Solution</h2>
         <p className="text-gray-700 dark:text-gray-300 mb-4">
           DocChat implements Retrieval-Augmented Generation with three coordinated layers:
         </p>
         <div className="grid gap-4 md:grid-cols-3">
-          <div className="rounded-xl border border-zinc-200 bg-white p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+          <div className="surface-card p-5">
             <h3 className="font-semibold mb-2">1) Ingestion Layer</h3>
             <p className="text-sm text-gray-700 dark:text-gray-300">
               PDF text extraction, overlapping chunking, embedding generation, and pgvector storage.
             </p>
           </div>
-          <div className="rounded-xl border border-zinc-200 bg-white p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+          <div className="surface-card p-5">
             <h3 className="font-semibold mb-2">2) Retrieval Layer</h3>
             <p className="text-sm text-gray-700 dark:text-gray-300">
               Question embedding plus cosine similarity search to retrieve top semantic chunks.
             </p>
           </div>
-          <div className="rounded-xl border border-zinc-200 bg-white p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+          <div className="surface-card p-5">
             <h3 className="font-semibold mb-2">3) Generation Layer</h3>
             <p className="text-sm text-gray-700 dark:text-gray-300">
               Context-grounded GPT response generation with token streaming back to the browser.
@@ -99,7 +116,7 @@ export default function DocChatPage() {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Core Pipeline</h2>
+        <h2 id="core-pipeline" className="scroll-mt-24 text-2xl font-semibold mb-4">Core Pipeline</h2>
         <p className="text-gray-700 dark:text-gray-300 mb-4">Upload-time ingestion:</p>
         <p className="text-gray-700 dark:text-gray-300 mb-6">
           PDF -&gt; PdfPig extraction -&gt; 500-word chunks with 50-word overlap -&gt; OpenAI text-embedding-ada-002 -&gt;
@@ -113,7 +130,7 @@ export default function DocChatPage() {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Production Features</h2>
+        <h2 id="production-features" className="scroll-mt-24 text-2xl font-semibold mb-4">Production Features</h2>
         <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
           <li>Secure signup and login with Supabase Auth and middleware-protected routes.</li>
           <li>Step-by-step PDF processing with upload-to-ready status lifecycle.</li>
@@ -126,7 +143,7 @@ export default function DocChatPage() {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Engineering Highlights</h2>
+        <h2 id="engineering-highlights" className="scroll-mt-24 text-2xl font-semibold mb-4">Engineering Highlights</h2>
         <p className="text-gray-700 dark:text-gray-300 mb-4">
           The most valuable part of DocChat is not the chat UI itself, but the production engineering required to make retrieval, streaming, and security work reliably under real-world constraints.
         </p>
@@ -140,7 +157,7 @@ export default function DocChatPage() {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Tech Stack</h2>
+        <h2 id="tech-stack" className="scroll-mt-24 text-2xl font-semibold mb-4">Tech Stack</h2>
         <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
           <li>Frontend: Next.js App Router, TypeScript, Tailwind CSS.</li>
           <li>Backend: ASP.NET Core .NET 8 Minimal APIs.</li>
@@ -151,7 +168,7 @@ export default function DocChatPage() {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Challenges Solved</h2>
+        <h2 id="challenges-solved" className="scroll-mt-24 text-2xl font-semibold mb-4">Challenges Solved</h2>
         <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
           <li>Resolved token spacing defects by changing stream parsing from trim to trimEnd.</li>
           <li>Fixed null embedding writes using PostgreSQL RPC casting into vector type.</li>
@@ -163,7 +180,7 @@ export default function DocChatPage() {
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mb-4">Results and Market Relevance</h2>
+        <h2 id="results" className="scroll-mt-24 text-2xl font-semibold mb-4">Results and Market Relevance</h2>
         <p className="text-gray-700 dark:text-gray-300 mb-4">
           This project proves end-to-end capability in building and operating commercially relevant AI systems, not
           just prototype demos. The implemented RAG architecture directly maps to enterprise use cases such as internal
@@ -175,6 +192,9 @@ export default function DocChatPage() {
           <li>Security-aware architecture with layered auth and data isolation controls.</li>
           <li>Documented debugging and reliability improvements across multiple production issues.</li>
         </ul>
+      </section>
+      </div>
+      <CaseStudyToc sections={sections} />
       </section>
     </main>
   );
