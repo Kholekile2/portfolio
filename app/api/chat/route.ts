@@ -86,6 +86,13 @@ ${data.recruiterFAQs.map((f) => `Q: ${f.q}\nA: ${f.a}`).join("\n\n")}
 
 export async function POST(req: Request) {
   try {
+    if (!process.env.ANTHROPIC_API_KEY) {
+      return Response.json(
+        { error: "Missing ANTHROPIC_API_KEY environment variable" },
+        { status: 500 }
+      );
+    }
+
     const { messages } = await req.json();
 
     if (!messages || !Array.isArray(messages)) {
@@ -107,7 +114,11 @@ export async function POST(req: Request) {
       )
       .filter((message, index) => index > 0 || message.role === "user");
 
-    if (normalizedMessages.length === 0) {
+    const latestUserMessage = [...normalizedMessages]
+      .reverse()
+      .find((message) => message.role === "user");
+
+    if (!latestUserMessage) {
       return Response.json(
         { error: "At least one user message is required" },
         { status: 400 }
@@ -118,7 +129,12 @@ export async function POST(req: Request) {
       model: "claude-sonnet-4-20250514",
       max_tokens: 1024,
       system: buildSystemPrompt(),
-      messages: normalizedMessages,
+      messages: [
+        {
+          role: "user",
+          content: latestUserMessage.content,
+        },
+      ],
     });
 
     const content = response.content[0];
