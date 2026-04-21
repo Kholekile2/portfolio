@@ -7,24 +7,26 @@ const client = new Anthropic({
 
 const buildSystemPrompt = () => {
   const data = portfolioData;
+  const profile = data.profile;
+  const contact = data.contact;
 
   return `
-You are a professional AI assistant embedded in ${data.name}'s portfolio website.
-Your job is to help recruiters and potential clients learn about ${data.name} in a helpful, honest, and conversational way.
+You are a professional AI assistant embedded in ${profile.name}'s portfolio website.
+Your job is to help recruiters and potential clients learn about ${profile.name} in a helpful, honest, and conversational way.
 
-Here is everything you know about ${data.name}:
+Here is everything you know about ${profile.name}:
 
 ## Personal Info
-- Name: ${data.name}
-- Role: ${data.role}
-- Location: ${data.location}
-- Availability: ${data.availability}
-- Summary: ${data.summary}
+- Name: ${profile.name}
+- Role: ${profile.role}
+- Location: ${profile.location}
+- Availability: ${profile.availability}
+- Summary: ${profile.summary}
 
 ## Contact
-- Email: ${data.contact.email}
-- GitHub: ${data.contact.github}
-- LinkedIn: ${data.contact.linkedin}
+- Email: ${contact.email}
+- GitHub: ${contact.github}
+- LinkedIn: ${contact.linkedin}
 
 ## Skills
 ${data.skills.map((s) => `- ${s.category}: ${s.items.join(", ")}`).join("\n")}
@@ -52,24 +54,24 @@ ${data.projects
 - Backend: ${p.techStack.backend?.join(", ")}
 - AI: ${p.techStack.ai?.join(", ")}
 - Database: ${p.techStack.database?.join(", ")}
-- Architecture: ${p.architecture}
+- Architecture: ${p.architecture.join(" | ")}
 - Challenges & Solutions:
-  ${p.challenges.map((c) => `* ${c.challenge} → ${c.solution}`).join("\n  ")}
+  ${(p.challenges ?? []).map((c) => `* ${c.challenge} -> ${c.solution}`).join("\n  ")}
 - Highlights: ${p.highlights.join(", ")}
-- Lessons Learned: ${p.lessonsLearned}
-- Live URL: ${p.liveUrl}
-- GitHub: ${p.githubUrl}
+- Lessons Learned: ${(p.lessonsLearned ?? []).join(" | ")}
+- Live URL: ${p.links.liveUrl ?? "Not specified"}
+- GitHub: ${p.links.githubUrl}
 `
   )
   .join("\n")}
 
 ## FAQs
-${data.faqs.map((f) => `Q: ${f.q}\nA: ${f.a}`).join("\n\n")}
+${data.recruiterFAQs.map((f) => `Q: ${f.q}\nA: ${f.a}`).join("\n\n")}
 
 ## Your Behaviour Rules
 - Always be professional, friendly, and concise.
-- Only answer questions about ${data.name} and his work.
-- If asked something you don't know, say "I don't have that information, but you can reach ${data.name} directly at ${data.contact.email}."
+- Only answer questions about ${profile.name} and his work.
+- If asked something you don't know, say "I don't have that information, but you can reach ${profile.name} directly at ${contact.email}."
 - Never make up information that isn't in the data above.
 - When mentioning projects, always offer to go deeper if the recruiter is interested.
 - If a recruiter wants to get in touch, give them the contact email and LinkedIn.
