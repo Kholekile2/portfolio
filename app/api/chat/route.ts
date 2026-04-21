@@ -5,11 +5,6 @@ const client = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
 });
 
-type ChatMessage = {
-  role?: "user" | "assistant";
-  content?: string;
-};
-
 const buildSystemPrompt = () => {
   const data = portfolioData;
   const profile = data.profile;
@@ -86,13 +81,6 @@ ${data.recruiterFAQs.map((f) => `Q: ${f.q}\nA: ${f.a}`).join("\n\n")}
 
 export async function POST(req: Request) {
   try {
-    if (!process.env.ANTHROPIC_API_KEY) {
-      return Response.json(
-        { error: "Missing ANTHROPIC_API_KEY environment variable" },
-        { status: 500 }
-      );
-    }
-
     const { messages } = await req.json();
 
     if (!messages || !Array.isArray(messages)) {
@@ -102,39 +90,11 @@ export async function POST(req: Request) {
       );
     }
 
-    const normalizedMessages = (messages as ChatMessage[])
-      .filter(
-        (message): message is Required<Pick<ChatMessage, "role" | "content">> =>
-          Boolean(
-            message &&
-              (message.role === "user" || message.role === "assistant") &&
-              typeof message.content === "string" &&
-              message.content.trim().length > 0
-          )
-      )
-      .filter((message, index) => index > 0 || message.role === "user");
-
-    const latestUserMessage = [...normalizedMessages]
-      .reverse()
-      .find((message) => message.role === "user");
-
-    if (!latestUserMessage) {
-      return Response.json(
-        { error: "At least one user message is required" },
-        { status: 400 }
-      );
-    }
-
     const response = await client.messages.create({
       model: "claude-sonnet-4-20250514",
       max_tokens: 1024,
       system: buildSystemPrompt(),
-      messages: [
-        {
-          role: "user",
-          content: latestUserMessage.content,
-        },
-      ],
+      messages,
     });
 
     const content = response.content[0];
