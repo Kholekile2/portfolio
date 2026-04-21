@@ -5,6 +5,11 @@ const client = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
 });
 
+type ChatMessage = {
+  role?: "user" | "assistant";
+  content?: string;
+};
+
 const buildSystemPrompt = () => {
   const data = portfolioData;
   const profile = data.profile;
@@ -90,11 +95,30 @@ export async function POST(req: Request) {
       );
     }
 
+    const normalizedMessages = (messages as ChatMessage[])
+      .filter(
+        (message): message is Required<Pick<ChatMessage, "role" | "content">> =>
+          Boolean(
+            message &&
+              (message.role === "user" || message.role === "assistant") &&
+              typeof message.content === "string" &&
+              message.content.trim().length > 0
+          )
+      )
+      .filter((message, index) => index > 0 || message.role === "user");
+
+    if (normalizedMessages.length === 0) {
+      return Response.json(
+        { error: "At least one user message is required" },
+        { status: 400 }
+      );
+    }
+
     const response = await client.messages.create({
       model: "claude-sonnet-4-20250514",
       max_tokens: 1024,
       system: buildSystemPrompt(),
-      messages,
+      messages: normalizedMessages,
     });
 
     const content = response.content[0];
