@@ -50,10 +50,12 @@ ${data.projects
 - Problem: ${p.problem}
 - Solution: ${p.solution}
 - My Role: ${p.myRole}
+- Deployment: ${(p.deployment ?? []).length ? p.deployment!.join(", ") : "Not specified"}
 - Frontend: ${p.techStack.frontend?.join(", ")}
 - Backend: ${p.techStack.backend?.join(", ")}
 - AI: ${p.techStack.ai?.join(", ")}
 - Database: ${p.techStack.database?.join(", ")}
+- Infrastructure: ${p.techStack.infrastructure?.join(", ") ?? "Not specified"}
 - Architecture: ${p.architecture.join(" | ")}
 - Challenges & Solutions:
   ${(p.challenges ?? []).map((c) => `* ${c.challenge} -> ${c.solution}`).join("\n  ")}

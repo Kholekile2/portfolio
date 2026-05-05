@@ -116,6 +116,38 @@ export default function Home() {
 
           <div className="grid gap-6 md:grid-cols-2">
             <div className="surface-card">
+              <p className="chip mb-3">AI</p>
+              <h3 className="text-xl font-bold">MeetingMind</h3>
+
+              <p className="mt-2 text-gray-700 dark:text-gray-300">
+                AI meeting intelligence app that turns transcripts into summaries, action items,
+                key decisions, and follow-up chat context.
+              </p>
+
+              <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+                Next.js • FastAPI • MongoDB Atlas • Anthropic Claude • Cloudinary
+              </p>
+
+              <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
+                Outcome: Structured meeting intelligence with persistent chat history and cloud-backed storage.
+              </p>
+
+              <div className="mt-4 flex gap-4">
+                <Link href="/projects/meetingmind" className="text-link">
+                  Case Study
+                </Link>
+                <a
+                  href="https://meetingmind-sigma.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-link"
+                >
+                  Live Demo
+                </a>
+              </div>
+            </div>
+
+            <div className="surface-card">
               <p className="chip mb-3">Full-stack</p>
               <h3 className="text-xl font-bold">SplitEasy</h3>
 

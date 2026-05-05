@@ -86,6 +86,108 @@ const portfolioData = {
 
   projects: [
     {
+      id: "meetingmind",
+      name: "MeetingMind",
+      category: "AI",
+      summary:
+        "An AI meeting intelligence app that turns transcripts into summaries, action items, decisions, and chat-ready context.",
+      description:
+        "Transcript-first meeting assistant that uses Anthropic Claude to structure meeting notes, stores uploaded media in Cloudinary, persists data in MongoDB Atlas, and lets users ask follow-up questions about what was discussed.",
+      problem:
+        "Meeting outcomes are easy to lose across long transcripts, scattered action items, and separate chat threads, which makes follow-up work harder than it should be.",
+      solution:
+        "Built an AI workflow that ingests meeting input, extracts structured JSON summaries, action items, and key decisions with Claude Haiku, stores the results in MongoDB, and keeps the transcript available for grounded follow-up questions.",
+      myRole:
+        "Designed and built the full-stack product, including the Next.js frontend, FastAPI backend, AI prompting, cloud storage integration, persistence model, and recruiter-friendly chat experience.",
+      deployment: ["Vercel", "Railway", "Cloudinary", "MongoDB Atlas"],
+      techStack: {
+        frontend: ["Next.js", "TypeScript", "Tailwind CSS"],
+        backend: ["FastAPI", "Python", "MongoDB"],
+        ai: ["Anthropic Claude Haiku", "Structured JSON extraction", "Transcript-grounded chat"],
+        database: ["MongoDB Atlas", "Persistent meeting records", "Chat history storage"],
+        infrastructure: ["Clerk authentication", "Cloudinary audio storage", "CORS-protected API", "Background processing"],
+      },
+      architecture: [
+        "Users sign in with Clerk, then upload a meeting transcript, audio file, or transcript document from the Next.js frontend.",
+        "Audio assets are stored in Cloudinary so the backend can keep media separate from application data.",
+        "FastAPI creates a meeting record in MongoDB and marks it pending before kicking off AI processing in the background.",
+        "Claude Haiku converts the transcript into structured JSON containing the summary, action items, and key decisions.",
+        "The chatbot endpoint reuses the stored transcript plus previous chat messages to answer follow-up questions about the meeting.",
+        "Processed meetings and chat history stay persisted in MongoDB Atlas for later review.",
+      ],
+      features: [
+        "Transcript upload, pasted text input, and document ingestion for txt, md, csv, rtf, and docx transcripts",
+        "AI-generated meeting summaries with action items and owners",
+        "Key decision extraction for quick executive review",
+        "Meeting chat that answers questions using the transcript as context",
+        "Persisted chat history per meeting",
+        "Background AI processing with status updates from pending to completed or failed",
+        "Cloud-based media storage for uploaded audio files",
+      ],
+      highlights: [
+        "Uses Claude Haiku to turn messy meeting input into structured, recruiter-readable outcomes",
+        "Separates cloud storage, persistence, and AI processing so the app scales cleanly",
+        "Keeps chat answers grounded in the actual transcript instead of generic model memory",
+      ],
+      engineeringHighlights: [
+        "FastAPI route handlers manage upload, retrieval, chat, and deletion flows with explicit ownership checks",
+        "Background tasks update meeting state while AI processing runs asynchronously",
+        "MongoDB stores users, meetings, and chat messages in a way that preserves full conversation history",
+        "Cloudinary handles uploaded audio independently from application data to keep the backend focused on analysis",
+      ],
+      challenges: [
+        {
+          challenge: "Claude needed to return machine-readable meeting output.",
+          solution:
+            "Forced a strict JSON schema so summaries, action items, and decisions could be saved and rendered consistently.",
+        },
+        {
+          challenge: "AI processing could not block the upload response.",
+          solution:
+            "Used asyncio.create_task so the UI returns immediately while the meeting is analysed in the background.",
+        },
+        {
+          challenge: "Chat replies needed to stay grounded in the meeting itself.",
+          solution:
+            "Included the full transcript and previous messages in every prompt so follow-up answers stay specific and consistent.",
+        },
+        {
+          challenge: "MongoDB Atlas SSL handshakes failed on Railway.",
+          solution:
+            "Worked around the Python 3.12 TLS mismatch with Atlas by adjusting the connection string and pool timeouts.",
+        },
+        {
+          challenge: "Gemini was unreliable in production.",
+          solution:
+            "After 503 overload and 429 quota failures, the AI layer was switched to Anthropic Claude Haiku for stability.",
+        },
+        {
+          challenge: "New Clerk users were not saved in the app database.",
+          solution:
+            "Added a Svix-verified webhook so every signup is mirrored into MongoDB as a local user profile.",
+        },
+        {
+          challenge: "Deployment-only issues kept breaking the app.",
+          solution:
+            "Made CORS origin-driven, awaited Next.js 16 route params correctly, and forced a fresh Vercel build when cached pages hid UI changes.",
+        },
+      ],
+      outcomes: [
+        "Turns raw meeting input into structured actions, decisions, and searchable history",
+        "Provides a cloud-backed workflow that is practical for real post-meeting follow-up",
+      ],
+      lessonsLearned: [
+        "Structured outputs are essential when AI responses need to power a product UI",
+        "Cloud storage and database persistence should be separated so each layer has one job",
+        "Background processing makes AI workflows feel responsive instead of blocking the user",
+      ],
+      links: {
+        caseStudyPath: "/projects/meetingmind",
+        liveUrl: "https://meetingmind-sigma.vercel.app",
+        githubUrl: "https://github.com/Kholekile2/meetingmind",
+      },
+    },
+    {
       id: "docchat",
       name: "DocChat",
       category: "AI",

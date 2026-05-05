@@ -10,6 +10,38 @@ export default function ProjectsPage() {
       <div className="mt-10 grid gap-8 md:grid-cols-2">
         <div className="surface-card">
           <p className="chip mb-3">AI</p>
+          <h2 className="text-xl font-bold mb-2">MeetingMind</h2>
+
+          <p className="text-gray-700 mb-3 dark:text-gray-300">
+            AI meeting intelligence app that converts transcripts into summaries, action items,
+            key decisions, and a searchable follow-up chat experience.
+          </p>
+
+          <p className="text-sm text-gray-500 mb-4 dark:text-gray-400">
+            Next.js • FastAPI • MongoDB Atlas • Anthropic Claude • Cloudinary
+          </p>
+
+          <p className="text-sm text-gray-600 mb-4 dark:text-gray-300">
+            Transcript-first workflow with cloud storage, persistent meeting records, and grounded chat answers.
+          </p>
+
+          <div className="flex gap-4">
+            <a href="/projects/meetingmind" className="text-link">
+              View Case Study →
+            </a>
+            <a
+              href="https://meetingmind-sigma.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-link"
+            >
+              Live
+            </a>
+          </div>
+        </div>
+
+        <div className="surface-card">
+          <p className="chip mb-3">AI</p>
           <h2 className="text-xl font-bold mb-2">DocChat</h2>
 
           <p className="text-gray-700 mb-3 dark:text-gray-300">
