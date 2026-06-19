@@ -116,6 +116,41 @@ export default function Home() {
 
           <div className="grid gap-6 md:grid-cols-2">
             <div className="surface-card">
+              <p className="chip mb-3">Data Analysis</p>
+              <h3 className="text-xl font-bold">Global Superstore: Regional Profitability</h3>
+
+              <p className="mt-2 text-gray-700 dark:text-gray-300">
+                Excel analysis of ~51,000 orders across 13 regions — finding where a global retailer loses money,
+                testing the discounting hypothesis, ruling out shipping, and delivering a four-chart dashboard of recommendations.
+              </p>
+
+              <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+                Microsoft Excel • XLOOKUP • PivotTables • Dashboard Design
+              </p>
+
+              <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
+                Outcome: Concentrated losses in three regions traced to discounting, with targeted sub-category fixes identified.
+              </p>
+
+              <div className="mt-4 flex gap-4">
+                <Link
+                  href="/projects/global-superstore-regional-profitability"
+                  className="text-link"
+                >
+                  Case Study
+                </Link>
+                <a
+                  href="https://github.com/Kholekile2/Global-superstore-regional-profitability"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-link"
+                >
+                  Code
+                </a>
+              </div>
+            </div>
+
+            <div className="surface-card">
               <p className="chip mb-3">Business Intelligence</p>
               <h3 className="text-xl font-bold">Auto Analytics Portal</h3>
 
@@ -318,6 +353,7 @@ export default function Home() {
                 </a>
               </div>
             </div>
+
           </div>
         </section>
       </section>

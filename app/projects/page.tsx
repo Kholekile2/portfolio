@@ -9,6 +9,37 @@ export default function ProjectsPage() {
 
       <div className="mt-10 grid gap-8 md:grid-cols-2">
         <div className="surface-card">
+          <p className="chip mb-3">Data Analysis</p>
+          <h2 className="text-xl font-bold mb-2">Global Superstore: Regional Profitability</h2>
+
+          <p className="text-gray-700 mb-3 dark:text-gray-300">
+            Excel analysis of ~51,000 orders across 13 regions to find where a global retailer loses money and what actually drives it.
+          </p>
+
+          <p className="text-sm text-gray-500 mb-4 dark:text-gray-400">
+            Microsoft Excel • XLOOKUP • PivotTables • Dashboard Design
+          </p>
+
+          <p className="text-sm text-gray-600 mb-4 dark:text-gray-300">
+            Hypothesis-driven investigation: losses located, discounting confirmed as driver, shipping ruled out, sub-category fixes identified.
+          </p>
+
+          <div className="flex gap-4">
+            <a href="/projects/global-superstore-regional-profitability" className="text-link">
+              View Case Study →
+            </a>
+            <a
+              href="https://github.com/Kholekile2/Global-superstore-regional-profitability"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-link"
+            >
+              Code
+            </a>
+          </div>
+        </div>
+
+        <div className="surface-card">
           <p className="chip mb-3">Business Intelligence</p>
           <h2 className="text-xl font-bold mb-2">Auto Analytics Portal</h2>
 
@@ -194,6 +225,7 @@ export default function ProjectsPage() {
             </a>
           </div>
         </div>
+
       </div>
       </section>
     </main>
