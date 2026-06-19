@@ -609,6 +609,99 @@ const portfolioData = {
       },
     },
     {
+      id: "medical-billing-delay-prediction",
+      name: "Medical Billing Delay Prediction",
+      category: "Applied Research",
+      shortDescription:
+        "Predictive analytics study that identifies private patient invoices likely to be processed beyond a 14-day threshold, using XGBoost and SHAP on 50,000 real-world records from a South African medical billing bureau.",
+      tagline: "Catching delays at the point of capture, not in the collection queue.",
+      summary:
+        "Classification model that flags private patient invoices likely to exceed a 14-day processing threshold, built on 50,000 real records from a South African medical billing bureau using CRISP-DM, XGBoost, and SHAP explainability.",
+      problem:
+        "Medical billing bureaus carry the cash flow risk of every unresolved invoice. Roughly 24% of the bureau's private patient invoices were delayed beyond the 14-day threshold, but interventions only happened reactively — after delays had already occurred and turned into collection efforts.",
+      solution:
+        "Built and evaluated four classifiers (Logistic Regression, Decision Tree, Random Forest, XGBoost) on a 50,000-record dataset, selected XGBoost via bootstrap confidence interval analysis for its recall advantage, and applied SHAP TreeExplainer to translate predictions into a risk-based triage map for billing administrators.",
+      myRole:
+        "Sole researcher and analyst. Designed the study, performed all data cleaning and feature engineering, built and evaluated the models, conducted bootstrap statistical analysis, applied SHAP explainability, and translated findings into operational recommendations — as a postgraduate Applied Research Project for BIA 716 at the University of the Western Cape.",
+      deployment: [],
+      techStack: {
+        language: ["Python 3.12"],
+        modelling: ["scikit-learn", "XGBoost"],
+        data: ["pandas", "numpy", "scipy"],
+        explainability: ["SHAP"],
+        tools: ["Jupyter", "matplotlib", "seaborn", "Git", "GitHub", "PyCharm"],
+      },
+      architecture: [
+        "CRISP-DM methodology applied end to end across business understanding, data understanding, preparation, modelling, evaluation, and deployment recommendations.",
+        "50,000-record dataset cleaned and reduced from 32 raw variables to 6 predictors through quality screening, Cramér's V association testing, and pairwise multicollinearity assessment.",
+        "Four classifiers built and compared on a held-out test set of 15,000 records: Logistic Regression, Decision Tree, Random Forest, and XGBoost.",
+        "Bootstrap confidence interval analysis (1,000 paired resamples) used to test whether metric differences between ensemble models were statistically meaningful.",
+        "XGBoost selected as final model based on its statistically significant recall advantage — the metric prioritised for the bureau's cost asymmetry.",
+        "SHAP TreeExplainer applied to the full test set, with global importance, beeswarm, dependence plots, and waterfalls used to produce an operational triage map.",
+      ],
+      features: [
+        "Binary classification of private patient invoices as Timely or Delayed at the point of capture.",
+        "Bootstrap confidence interval procedure comparing five metrics across 1,000 test-set resamples.",
+        "SHAP-derived risk triage map identifying facility type and specialty combinations that consistently push toward delay.",
+        "Documented variable consolidation mappings reducing high-cardinality categoricals to clinically meaningful groups.",
+        "Stratified 70/30 train-test split preserving the 75.9/24.1 class distribution across the full 50,000 records.",
+        "Age.Bracket data leakage analysis with proposed two-model architecture to resolve it in production.",
+      ],
+      highlights: [
+        "XGBoost achieved ROC-AUC of 0.7570 and recall of 70.04%, meeting the study's acceptance threshold.",
+        "Bootstrap analysis revealed the two ensemble models were statistically tied on three of five metrics, with XGBoost winning on recall — the metric that mattered most.",
+        "SHAP identified Hospital facility type and Mental Health/General Practice specialties as the strongest risk drivers, translating model output into operational guidance.",
+      ],
+      engineeringHighlights: [
+        "Bootstrap confidence interval analysis (1,000 paired resamples) used to test whether the metric differences between Random Forest and XGBoost were statistically meaningful — not just visually different. The procedure revealed the two models were tied on three of five metrics and split the wins on the other two.",
+        "Recall-prioritised model selection grounded in the bureau's operational cost asymmetry, where missing a delayed invoice costs more than investigating a false alarm. XGBoost was chosen for its statistically significant recall advantage rather than its best-on-paper accuracy.",
+        "End-to-end variable engineering from 32 raw fields to a final set of 6 predictors, including consolidation of 118 Specialty naming variants into 9 clinical groups, 2,387 ICD-10 codes into 9 chapters, and 730 Service.Centre names into 9 facility types via keyword matching.",
+        "SHAP TreeExplainer applied to the full 15,000-record test set on the selected XGBoost model. Global importance, beeswarm direction, dependence plots, and individual prediction waterfalls used together to turn model behaviour into operational triage guidance.",
+        "Age.Bracket data leakage flagged honestly as a study limitation. The variable updates dynamically with time, so the strong Timely push it produces in training partly reflects time-yet-to-pass rather than a signal available at the point of capture — and the report says so.",
+        "Reproducibility built in from the start: stratified 70/30 split, all four models trained with random_state set to the student number, and a documented preparation pipeline that takes the raw dataset to the modelling table without dropping any records.",
+      ],
+      challenges: [
+        {
+          challenge: "Random Forest and XGBoost split the wins almost evenly on the test set",
+          solution:
+            "The two ensemble models produced metric differences of fractions of a percentage point — Random Forest slightly ahead on accuracy, XGBoost slightly ahead on recall. Picking by eye would have been guesswork. Built a bootstrap confidence interval procedure that resamples the test set with replacement 1,000 times, computes the paired metric difference on each resample, and tests whether zero falls inside the resulting interval. The result showed the models were statistically tied on three metrics and significantly different on two — clarifying the selection decision into a question of which metric the bureau cared about most.",
+        },
+        {
+          challenge: "Age.Bracket data leakage at the point of capture",
+          solution:
+            "SHAP showed Age.Bracket as one of the strongest directional drivers, with young debt brackets pushing very strongly toward Timely. The supervisor flagged this as a possible leakage concern — and it was. Age.Bracket updates dynamically in the billing system, so the value in training reflects time that had already passed. In production every new invoice would start at zero, removing the signal. Acknowledged the issue as a limitation in the report and proposed a two-model architecture in the recommendations: one model trained without Age.Bracket for fresh invoices, and a second model retaining it for invoices already aged beyond 30 days.",
+        },
+        {
+          challenge: "Translating model output into something a billing administrator can act on",
+          solution:
+            "A ROC-AUC of 0.7570 means nothing to an administrator deciding which invoice to chase next. Used SHAP directional analysis to identify specific risk and safe categories at the predictor level — Hospital invoices and Mental Health and General Practice specialties pushed toward Delayed, while Consulting Rooms and Obstetrics, Dental, and Ophthalmology specialties pushed toward Timely. Turned this into a risk-based triage map in the recommendations, with specific signal combinations and the suggested workflow for each.",
+        },
+        {
+          challenge: "The third research objective could not be tested because the data did not contain a reliable service delivery date",
+          solution:
+            "The original objective asked whether the temporal gap between service delivery and invoice capture predicts delay. The dataset had Capture.Date and Latest.Capture.Date but no clean service delivery field. Rather than dropping the objective or inventing a proxy that would look like the answer to a different question, recorded the objective as partially met, explained why directly in the report, and proposed engineering a true service-to-capture feature as the first item in the future research section.",
+        },
+      ],
+      outcomes: [
+        "XGBoost model achieved ROC-AUC of 0.7570 and recall of 70.04%, meeting the pre-specified acceptance threshold.",
+        "Bootstrap analysis provided a statistically defensible basis for selecting XGBoost over Random Forest on recall.",
+        "SHAP triage map translated model predictions into six specific risk/safe category combinations for operational use.",
+        "Study completed as a postgraduate Applied Research Project for BIA 716 at the University of the Western Cape.",
+      ],
+      lessonsLearned: [
+        "Small metric differences are not the same as real metric differences. Bootstrap confidence intervals turn 'XGBoost looks slightly better' into a question with a defensible answer.",
+        "Choosing the right metric is more important than choosing the right model. The bureau's cost asymmetry — a missed delay hurts more than a false alarm — is what made recall the deciding metric, not anything about XGBoost itself.",
+        "Explainability is what makes a model deployable. A 0.7570 AUC by itself is a number on a page; SHAP turns it into a triage map a billing administrator can actually use.",
+        "When a finding is too convenient, check it for leakage. Age.Bracket looked like the most powerful predictor in the model — but the same property that made it look powerful was the one that would erase its value in production.",
+        "Honest limitations strengthen a report, they don't weaken it. The third objective could not be tested directly, and saying so plainly — with a concrete recommendation for how to fix it next time — was more credible than smoothing it over.",
+      ],
+      thumbnail: "/projects/medical-billing/shap_beeswarm_xgb.png",
+      links: {
+        caseStudyPath: "/projects/medical-billing-delay-prediction",
+        githubUrl: "https://github.com/Kholekile2/medical-billing-prediction",
+      },
+    },
+    {
       id: "global-superstore-regional-profitability",
       name: "Global Superstore: Regional Profitability Analysis",
       shortDescription:

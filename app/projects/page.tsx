@@ -9,6 +9,37 @@ export default function ProjectsPage() {
 
       <div className="mt-10 grid gap-8 md:grid-cols-2">
         <div className="surface-card">
+          <p className="chip mb-3">Applied Research</p>
+          <h2 className="text-xl font-bold mb-2">Medical Billing Delay Prediction</h2>
+
+          <p className="text-gray-700 mb-3 dark:text-gray-300">
+            XGBoost and SHAP study on 50,000 private patient invoices to flag billing delays at the point of capture, not in the collection queue.
+          </p>
+
+          <p className="text-sm text-gray-500 mb-4 dark:text-gray-400">
+            Python • XGBoost • scikit-learn • SHAP • pandas
+          </p>
+
+          <p className="text-sm text-gray-600 mb-4 dark:text-gray-300">
+            Bootstrap confidence interval analysis used to select the final model on recall — the metric that matched the bureau's cost structure.
+          </p>
+
+          <div className="flex gap-4">
+            <a href="/projects/medical-billing-delay-prediction" className="text-link">
+              View Case Study →
+            </a>
+            <a
+              href="https://github.com/Kholekile2/medical-billing-prediction"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-link"
+            >
+              Code
+            </a>
+          </div>
+        </div>
+
+        <div className="surface-card">
           <p className="chip mb-3">Data Analysis</p>
           <h2 className="text-xl font-bold mb-2">Global Superstore: Regional Profitability</h2>
 

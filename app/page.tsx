@@ -116,6 +116,37 @@ export default function Home() {
 
           <div className="grid gap-6 md:grid-cols-2">
             <div className="surface-card">
+              <p className="chip mb-3">Applied Research</p>
+              <h3 className="text-xl font-bold">Medical Billing Delay Prediction</h3>
+
+              <p className="mt-2 text-gray-700 dark:text-gray-300">
+                XGBoost and SHAP study on 50,000 private patient invoices to flag billing delays at the point of capture — using bootstrap confidence intervals to select the final model on recall.
+              </p>
+
+              <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+                Python • XGBoost • scikit-learn • SHAP • pandas
+              </p>
+
+              <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
+                Outcome: ROC-AUC 0.7570, recall 70.04%, and a SHAP triage map translating model output into operational guidance for billing administrators.
+              </p>
+
+              <div className="mt-4 flex gap-4">
+                <Link href="/projects/medical-billing-delay-prediction" className="text-link">
+                  Case Study
+                </Link>
+                <a
+                  href="https://github.com/Kholekile2/medical-billing-prediction"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-link"
+                >
+                  Code
+                </a>
+              </div>
+            </div>
+
+            <div className="surface-card">
               <p className="chip mb-3">Data Analysis</p>
               <h3 className="text-xl font-bold">Global Superstore: Regional Profitability</h3>
 

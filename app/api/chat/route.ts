@@ -56,10 +56,10 @@ ${data.projects
 - AI: ${p.techStack.ai?.join(", ")}
 - Database: ${p.techStack.database?.join(", ")}
 - Infrastructure: ${p.techStack.infrastructure?.join(", ") ?? "Not specified"}
-- Architecture: ${p.architecture.join(" | ")}
+- Architecture: ${(p.architecture ?? []).join(" | ")}
 - Challenges & Solutions:
   ${(p.challenges ?? []).map((c) => `* ${c.challenge} -> ${c.solution}`).join("\n  ")}
-- Highlights: ${p.highlights.join(", ")}
+- Highlights: ${(p.highlights ?? []).join(", ")}
 - Lessons Learned: ${(p.lessonsLearned ?? []).join(" | ")}
 - Live URL: ${p.links.liveUrl ?? "Not specified"}
 - GitHub: ${p.links.githubUrl}
