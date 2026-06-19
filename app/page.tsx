@@ -284,6 +284,40 @@ export default function Home() {
                 </a>
               </div>
             </div>
+
+            <div className="surface-card">
+              <p className="chip mb-3">Data & Ethics</p>
+              <h3 className="text-xl font-bold">Student Support Insights</h3>
+
+              <p className="mt-2 text-gray-700 dark:text-gray-300">
+                Responsible-by-design data tool that helps educational programmes identify learner support needs before disengagement — with architecturally-enforced consent and ethics-as-code tests.
+              </p>
+
+              <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+                Streamlit • Python • Pandas • Plotly • pytest
+              </p>
+
+              <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
+                Outcome: Turns learner data into early support triggers instead of late-stage judgement.
+              </p>
+
+              <div className="mt-4 flex gap-4">
+                <Link
+                  href="/projects/student-support-insights"
+                  className="text-link"
+                >
+                  Case Study
+                </Link>
+                <a
+                  href="https://github.com/Kholekile2/StudentSupportTool-"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-link"
+                >
+                  Code
+                </a>
+              </div>
+            </div>
           </div>
         </section>
       </section>

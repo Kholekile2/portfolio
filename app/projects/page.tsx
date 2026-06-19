@@ -163,6 +163,37 @@ export default function ProjectsPage() {
             </a>
           </div>
         </div>
+
+        <div className="surface-card">
+          <p className="chip mb-3">Data & Ethics</p>
+          <h2 className="text-xl font-bold mb-2">Student Support Insights</h2>
+
+          <p className="text-gray-700 mb-3 dark:text-gray-300">
+            Responsible-by-design data tool that identifies learner support needs before disengagement occurs.
+          </p>
+
+          <p className="text-sm text-gray-500 mb-4 dark:text-gray-400">
+            Streamlit • Python • Pandas • Plotly • pytest
+          </p>
+
+          <p className="text-sm text-gray-600 mb-4 dark:text-gray-300">
+            Three-page application with architecturally-enforced consent, validation-as-safeguard, and ethics-as-code tests.
+          </p>
+
+          <div className="flex gap-4">
+            <a href="/projects/student-support-insights" className="text-link">
+              View Case Study →
+            </a>
+            <a
+              href="https://github.com/Kholekile2/StudentSupportTool-"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-link"
+            >
+              Code
+            </a>
+          </div>
+        </div>
       </div>
       </section>
     </main>

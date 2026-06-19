@@ -513,6 +513,101 @@ const portfolioData = {
         githubUrl: "https://github.com/Kholekile2/Streamlit-Data-Exploration",
       },
     },
+    {
+      id: "student-support-insights",
+      name: "Student Support Insights Tool",
+      category: "Data & Ethics",
+      shortDescription:
+        "Responsible-by-design data tool that helps educational programmes identify learner support needs early — with architecturally-enforced consent, validation as ethical safeguard, and ethics-as-code tests.",
+      tagline: "Identifying need triggers support, not judgement.",
+      summary:
+        "A responsible-by-design data tool that helps educational programmes identify learner support needs before learners disengage.",
+      description:
+        "Three-page Streamlit application with architecturally-enforced consent, validation pipeline that surfaces data quality issues, and ethics-enforced-in-code test suite.",
+      problem:
+        "Digital-skills programmes collect detailed learner data at intake but rarely use it for early support. Problems are noticed late, support is reactive, and learners least able to ask for help are most likely to disengage quietly.",
+      solution:
+        "Built a three-page Streamlit application that identifies learner need and triggers support through aggregate dashboards with no names, individual learner pages that surface stated need first, and architecturally-enforced consent guards.",
+      myRole:
+        "Designed the end-to-end system including the data validation pipeline, recommendation engine, ethical design enforcement in code, and the three-page application architecture.",
+      buildTime: "~4 weeks",
+      phases: "SFIA Level 3 integrated project",
+      techStack: {
+        language: ["Python 3.11"],
+        frontend: ["Streamlit"],
+        data: ["pandas", "Plotly"],
+        testing: ["pytest"],
+        tools: ["Git", "GitHub", "VS Code"],
+      },
+      architecture: [
+        "UI Layer: Three Streamlit pages (Dashboard, Learner Detail, About) each with consent guards",
+        "Logic Layer: Rule-based recommendation engine and validation pipeline in utils/, tested separately from UI",
+        "Data Layer: Synthetic CSV dataset with documented data dictionary defining the consent boundary",
+      ],
+      features: [
+        "Three-page Streamlit application: Dashboard, Learner Detail, and About",
+        "Eight sidebar filters that combine to narrow the dashboard view to any subgroup of learners",
+        "Four colour-coded KPIs and six charts organised into Reach / Struggle / Voice story rows",
+        "Live-computed insights and recommendations panels that update as filters change",
+        "Binding per-session responsible-use agreement that gates all data access — enforced on every page with personal data",
+        "Learner Detail view that surfaces the learner's own stated need first and pairs every signal with a concrete support action",
+        "Accountability form on the Learner Detail page for staff to record what was actually done",
+        "Filtered CSV export with optional inclusion of rows flagged for data quality issues",
+        "CSV upload with schema validation — missing required columns produce a clear error",
+      ],
+      highlights: [
+        "Helping path easier than harming path — every signal paired with a support action",
+        "Learner's voice ranks first — stated need shown before system inferences, enforced in code",
+        "Consent is architectural — no data renders until user identifies and agrees to responsible-use statement",
+        "Validation as ethical safeguard — bad data is surfaced, not silently fixed",
+      ],
+      engineeringHighlights: [
+        "Single-source-of-truth architecture: all data flows through one loader module, so the data dictionary, validation rules, and test suite move together",
+        "Validation pipeline that surfaces data quality issues (duplicates, out-of-range scores, malformed entries) rather than silently cleaning them",
+        "Eight pytest test cases — two of which enforce ethical design rules in code (every learner gets at least one recommendation; stated need always ranks first)",
+        "Five documented bugs with full root-cause analysis, including a consent-gate bypass on the Learner Detail page found through user-led testing",
+        "Rule-based recommendation engine that is fully traceable — every suggestion the tool makes can be traced back to a transparent rule",
+        "Confidence bands derived on every data load rather than stored in the CSV, so the source of truth stays the raw score",
+      ],
+      challenges: [
+        {
+          challenge: "Consent gate bypass on the Learner Detail page",
+          solution:
+            "The agreement guard was implemented in app.py but not actually present in pages/1_Learner_Detail.py — so navigating directly to the Learner Detail URL bypassed consent entirely. Fixed by inserting the guard as the first Streamlit operation after set_page_config, before any title, data load, or UI renders. The most serious bug in the project, and the one I'm most glad I caught through testing rather than after submission.",
+        },
+        {
+          challenge: "Sample-size honesty in the dashboard charts",
+          solution:
+            "A 1.67 average from three respondents isn't really an average — it's three opinions in a row. Added sample size annotations (n=3, n=20, etc.) above every chart bar so small samples can't be over-interpreted, and used lighter bar colours when n is below 5 as a visual cue.",
+        },
+        {
+          challenge: "0÷0 division crashes on small filter selections",
+          solution:
+            "When a filter produced a subset where one device-access category had zero learners, the percentage calculation hit 0÷0 and the page crashed with IntCastingNaNError. Replaced zero row sums with NaN before division and built chart labels using a NaN-safe function so empty groups now produce a graceful caption instead of a crash.",
+        },
+        {
+          challenge: "Telling the story of the analysis honestly",
+          solution:
+            "One finding (90% of phone-only learners are at Medium or High attendance risk) was so striking it was tempting to lead the report with it. But that framing reads as judging phone-only learners. Reframed every finding to pair the constraint with the supportive response — same fact, different action, no judgement implied.",
+        },
+      ],
+      outcomes: [
+        "Turns learner data into early support triggers instead of late-stage judgement",
+        "Provides a framework for responsible data use in educational contexts",
+      ],
+      lessonsLearned: [
+        "Data is a way of shaping how people think about other people — every column you decide to collect is a decision about what you're allowed to judge someone on",
+        "Validation belongs in the architecture, not in documentation. A test that asserts an ethical design rule is enforcement; a paragraph claiming the same rule is hope",
+        "The type of a column tells you what questions you're allowed to ask of it. Categorical columns get distributions; numerical columns get averages; mixing them up produces nonsense",
+        "Reading a chart and writing about a chart are two different steps. You have to reconcile what you wrote against what the chart actually shows, line by line, before submission",
+        "Single source of truth makes refactoring safe. When the data dictionary, the loader, and the test suite all reference each other, a change in one forces matching changes in the others",
+      ],
+      thumbnail: "/projects/student-support-insights/dashboard.png",
+      links: {
+        caseStudyPath: "/projects/student-support-insights",
+        githubUrl: "https://github.com/Kholekile2/StudentSupportTool-",
+      },
+    },
   ],
 
   recruiterFAQs: [
