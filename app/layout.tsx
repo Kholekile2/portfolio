@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Kholekile Mpengesi | Portfolio",
-  description: "Portfolio website for Kholekile Mpengesi, Full-Stack Developer and Data Analytics professional.",
+  description: "Portfolio of Kholekile Mpengesi, Data Analytics and BI specialist and Full Stack Developer.",
   icons: {
     icon: "/icon.svg",
   },

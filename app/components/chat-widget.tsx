@@ -11,7 +11,7 @@ interface Message {
 const INITIAL_MESSAGE: Message = {
   role: "assistant",
   content:
-    "Hi! 👋 I'm an AI assistant for this portfolio. Ask me anything about his projects, skills, or experience — or let me know if you'd like to get in touch!",
+    "Hi! 👋 I'm an AI assistant for this portfolio. Ask me anything about his projects, skills, or experience, or let me know if you'd like to get in touch!",
 };
 
 export default function ChatWidget() {

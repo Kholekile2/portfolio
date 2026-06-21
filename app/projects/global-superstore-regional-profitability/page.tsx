@@ -29,9 +29,9 @@ export default function GlobalSuperstoreRegionalProfitabilityPage() {
             driving those losses
           </p>
           <p className="text-gray-600 mb-8 dark:text-gray-300">
-            A self-directed project analysing around 51,000 order records from the public Global Superstore
+            A self directed project analysing around 51,000 order records from the public Global Superstore
             dataset, using XLOOKUP, PivotTables, calculated fields, and data validation, finishing with a
-            four-chart dashboard that turns the findings into clear recommendations.
+            four chart dashboard that turns the findings into clear recommendations.
           </p>
 
           <div className="grid grid-cols-2 gap-3 mb-10 md:grid-cols-4">
@@ -49,7 +49,7 @@ export default function GlobalSuperstoreRegionalProfitabilityPage() {
             </div>
             <div className="surface-card p-3 text-sm">
               <p className="text-gray-500 dark:text-gray-400">Output</p>
-              <p className="font-semibold">4-chart dashboard</p>
+              <p className="font-semibold">4 chart dashboard</p>
             </div>
           </div>
 
@@ -78,7 +78,7 @@ export default function GlobalSuperstoreRegionalProfitabilityPage() {
               <li>Cleaned and validated around 51,000 order line items, including converting text dates and building calculated profit margin and shipping delay fields.</li>
               <li>Mapped regional margin targets onto every row with XLOOKUP, so actual performance could be judged against a goal.</li>
               <li>Used PivotTables to locate the losses, test the discounting hypothesis, and rule out shipping as an alternative cause.</li>
-              <li>Built a four-chart dashboard that follows one argument: where the problem is, what causes it, what it is not, and where to act.</li>
+              <li>Built a four chart dashboard that follows one argument: where the problem is, what causes it, what it is not, and where to act.</li>
             </ul>
           </section>
 
@@ -126,7 +126,7 @@ export default function GlobalSuperstoreRegionalProfitabilityPage() {
               <div className="surface-card overflow-hidden mb-3">
                 <Image
                   src="/projects/global-superstore-regional-profitability/dashboard.png"
-                  alt="Global Superstore Regional Profitability dashboard — four charts"
+                  alt="Global Superstore Regional Profitability dashboard, four charts"
                   width={1860}
                   height={920}
                   className="w-full h-auto"
@@ -146,11 +146,11 @@ export default function GlobalSuperstoreRegionalProfitabilityPage() {
               Approach
             </h2>
             <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-              <li>Cleaned and validated the data: confirmed the dates were stored as text and converted them to real dates, built profit margin (Profit ÷ Sales) and shipping delay (Ship Date − Order Date), and checked for full-row duplicates.</li>
+              <li>Cleaned and validated the data: confirmed the dates were stored as text and converted them to real dates, built profit margin (Profit ÷ Sales) and shipping delay (Ship Date − Order Date), and checked for full row duplicates.</li>
               <li>Mapped targets onto the data: built a reference table of regional margin targets and pulled them onto every row with XLOOKUP, so actual margins could be compared against a goal.</li>
               <li>Tested the hypothesis with PivotTables: compared total profit, sales, average margin, and average discount across regions to locate the losses and test whether discounting explained them.</li>
               <li>Ruled out alternatives: tested shipping delay and shipping cost against the weak regions to check whether shipping, rather than discounting, was the driver. It was not.</li>
-              <li>Drilled into products: broke the problem regions down by sub-category, and confirmed the most extreme finding against its sales volume before reporting it.</li>
+              <li>Drilled into products: broke the problem regions down by sub category, and confirmed the most extreme finding against its sales volume before reporting it.</li>
             </ul>
           </section>
 
@@ -203,7 +203,7 @@ export default function GlobalSuperstoreRegionalProfitabilityPage() {
               <li>Dates arrived as text and would not calculate, so they were diagnosed (ISNUMBER returned false) and rebuilt into real dates before any date maths.</li>
               <li>Profit margin and shipping delay were derived as calculated columns rather than trusted from the source, and a Met Target column turned raw margin into a business judgement.</li>
               <li>Region targets live on their own reference sheet and are pulled into the data via XLOOKUP, so the targets can be changed in one place and flow through automatically.</li>
-              <li>Summary tables feeding the dashboard were stored as static values, separate from the live pivots, so the charts stay stable while the pivots can still be re-sorted freely.</li>
+              <li>Summary tables feeding the dashboard were stored as static values, separate from the live pivots, so the charts stay stable while the pivots can still be re sorted freely.</li>
             </ul>
           </section>
 

@@ -25,7 +25,7 @@ export default function MeetingMindPage() {
           <p className="chip mb-4">AI Case Study</p>
           <h1 className="text-4xl font-bold mb-2">{project.name}</h1>
           <p className="text-xl text-gray-700 mb-2 dark:text-gray-300">
-            AI meeting intelligence for summaries, action items, decisions, and grounded follow-up chat
+            AI meeting intelligence for summaries, action items, decisions, and grounded follow up chat
           </p>
           <p className="text-gray-600 mb-8 dark:text-gray-300">
             Built with Next.js, FastAPI, MongoDB Atlas, Anthropic Claude, Cloudinary, and Clerk.
@@ -77,12 +77,12 @@ export default function MeetingMindPage() {
               MeetingMind is a meeting intelligence app that turns transcripts into something people can
               actually work with after a call ends. Instead of leaving users with a long recording or a wall of
               notes, it produces a structured summary, action items with owners, key decisions, and a chat view
-              that can answer follow-up questions based on the meeting itself.
+              that can answer follow up questions based on the meeting itself.
             </p>
             <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-              <li>Structured output instead of free-form AI text, so the results can power a clean UI.</li>
-              <li>Transcript-grounded chat that keeps answers tied to what was actually discussed.</li>
-              <li>Cloud-backed persistence for meetings, messages, and uploaded assets.</li>
+              <li>Structured output instead of free form AI text, so the results can power a clean UI.</li>
+              <li>Transcript grounded chat that keeps answers tied to what was actually discussed.</li>
+              <li>Cloud backed persistence for meetings, messages, and uploaded assets.</li>
               <li>Async processing so the upload flow stays responsive while AI work runs in the background.</li>
             </ul>
           </section>
@@ -108,7 +108,7 @@ export default function MeetingMindPage() {
               What I Built
             </h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              I built a full-stack meeting assistant with a Next.js frontend and a FastAPI backend. Users sign in,
+              I built a full stack meeting assistant with a Next.js frontend and a FastAPI backend. Users sign in,
               upload a transcript or meeting file, and the backend saves the meeting in MongoDB before kicking off
               AI processing in the background. Claude then turns the transcript into structured JSON containing the
               summary, action items, and key decisions.
@@ -134,9 +134,9 @@ export default function MeetingMindPage() {
                 </p>
               </div>
               <div className="surface-card p-5">
-                <h3 className="font-semibold mb-2">Transcript-grounded chat</h3>
+                <h3 className="font-semibold mb-2">Transcript grounded chat</h3>
                 <p className="text-sm text-gray-700 dark:text-gray-300">
-                  The chat endpoint combines the stored transcript with previous messages, so follow-up answers are
+                  The chat endpoint combines the stored transcript with previous messages, so follow up answers are
                   anchored to the actual meeting and stay consistent across turns.
                 </p>
               </div>
@@ -163,7 +163,7 @@ export default function MeetingMindPage() {
             </h2>
             <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
               <li>Vercel hosts the Next.js frontend so the interface is fast and easy to share.</li>
-              <li>Railway runs the FastAPI backend and handles the AI and meeting-processing APIs.</li>
+              <li>Railway runs the FastAPI backend and handles the AI and meeting processing APIs.</li>
               <li>MongoDB Atlas stores users, meetings, summaries, action items, and chat history.</li>
               <li>Cloudinary keeps uploaded audio separate from the core application data.</li>
               <li>Clerk handles authentication so meeting data stays tied to the right user.</li>
@@ -208,13 +208,13 @@ export default function MeetingMindPage() {
               <div className="surface-card p-5">
                 <h3 className="font-semibold mb-2">Frontend</h3>
                 <p className="text-sm text-gray-700 dark:text-gray-300">
-                  Next.js handles the meeting upload flow, dashboard screens, and chatbot-style interaction.
+                  Next.js handles the meeting upload flow, dashboard screens, and chatbot style interaction.
                 </p>
               </div>
               <div className="surface-card p-5">
                 <h3 className="font-semibold mb-2">Backend API</h3>
                 <p className="text-sm text-gray-700 dark:text-gray-300">
-                  FastAPI manages upload validation, meeting persistence, AI processing, and transcript-grounded
+                  FastAPI manages upload validation, meeting persistence, AI processing, and transcript grounded
                   chat endpoints.
                 </p>
               </div>

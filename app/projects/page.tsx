@@ -4,7 +4,7 @@ export default function ProjectsPage() {
       <section className="mx-auto max-w-5xl">
         <h1 className="text-3xl font-bold tracking-tight md:text-4xl">Projects</h1>
         <p className="mt-3 max-w-3xl text-gray-600 dark:text-gray-300">
-          Selected case studies focused on production engineering, analytics decision systems, and AI-enabled products.
+          Data analytics, business intelligence, and applied machine learning, with full stack engineering to make the analysis deployable and usable.
         </p>
 
       <div className="mt-10 grid gap-8 md:grid-cols-2">
@@ -21,7 +21,7 @@ export default function ProjectsPage() {
           </p>
 
           <p className="text-sm text-gray-600 mb-4 dark:text-gray-300">
-            Bootstrap confidence interval analysis used to select the final model on recall — the metric that matched the bureau's cost structure.
+            Bootstrap confidence interval analysis used to select the final model on recall, the metric that matched the bureau's cost structure.
           </p>
 
           <div className="flex gap-4">
@@ -52,7 +52,7 @@ export default function ProjectsPage() {
           </p>
 
           <p className="text-sm text-gray-600 mb-4 dark:text-gray-300">
-            Hypothesis-driven investigation: losses located, discounting confirmed as driver, shipping ruled out, sub-category fixes identified.
+            Hypothesis driven investigation: losses located, discounting confirmed as driver, shipping ruled out, sub category fixes identified.
           </p>
 
           <div className="flex gap-4">
@@ -137,7 +137,7 @@ export default function ProjectsPage() {
           <h2 className="text-xl font-bold mb-2">Student Support Insights</h2>
 
           <p className="text-gray-700 mb-3 dark:text-gray-300">
-            Responsible-by-design data tool that identifies learner support needs before disengagement occurs.
+            Responsible by design data tool that identifies learner support needs before disengagement occurs.
           </p>
 
           <p className="text-sm text-gray-500 mb-4 dark:text-gray-400">
@@ -145,7 +145,7 @@ export default function ProjectsPage() {
           </p>
 
           <p className="text-sm text-gray-600 mb-4 dark:text-gray-300">
-            Three-page application with architecturally-enforced consent, validation-as-safeguard, and ethics-as-code tests.
+            Three page application with architecturally enforced consent, validation as safeguard, and ethics as code tests.
           </p>
 
           <div className="flex gap-4">
@@ -169,7 +169,7 @@ export default function ProjectsPage() {
 
           <p className="text-gray-700 mb-3 dark:text-gray-300">
             AI meeting intelligence app that converts transcripts into summaries, action items,
-            key decisions, and a searchable follow-up chat experience.
+            key decisions, and a searchable follow up chat experience.
           </p>
 
           <p className="text-sm text-gray-500 mb-4 dark:text-gray-400">
@@ -177,7 +177,7 @@ export default function ProjectsPage() {
           </p>
 
           <p className="text-sm text-gray-600 mb-4 dark:text-gray-300">
-            Transcript-first workflow with cloud storage, persistent meeting records, and grounded chat answers.
+            Transcript first workflow with cloud storage, persistent meeting records, and grounded chat answers.
           </p>
 
           <div className="flex gap-4">
@@ -208,7 +208,7 @@ export default function ProjectsPage() {
           </p>
 
           <p className="text-sm text-gray-600 mb-4 dark:text-gray-300">
-            Enterprise-style RAG workflow from document ingestion to grounded streamed answers.
+            Enterprise style RAG workflow from document ingestion to grounded streamed answers.
           </p>
 
           <div className="flex gap-4">
@@ -227,11 +227,11 @@ export default function ProjectsPage() {
         </div>
 
         <div className="surface-card">
-          <p className="chip mb-3">Full-stack</p>
+          <p className="chip mb-3">Full stack</p>
           <h2 className="text-xl font-bold mb-2">SplitEasy</h2>
 
           <p className="text-gray-700 mb-3 dark:text-gray-300">
-            Production expense-sharing platform with realtime updates and a custom debt simplification algorithm.
+            Production expense sharing platform with realtime updates and a custom debt simplification algorithm.
           </p>
 
           <p className="text-sm text-gray-500 mb-4 dark:text-gray-400">
@@ -239,7 +239,7 @@ export default function ProjectsPage() {
           </p>
 
           <p className="text-sm text-gray-600 mb-4 dark:text-gray-300">
-            Realtime shared-expense platform with algorithmic debt simplification for low-friction settlement.
+            Realtime shared expense platform with algorithmic debt simplification for low friction settlement.
           </p>
 
           <div className="flex gap-4">

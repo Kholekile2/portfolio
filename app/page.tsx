@@ -7,17 +7,17 @@ export default function Home() {
       <section className="mx-auto max-w-5xl">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1.15fr)_320px] lg:items-start">
           <div>
-            <p className="chip mb-4">Open to software and data roles</p>
+            <p className="chip mb-4">Data Analytics &amp; BI | Open to new roles</p>
 
             <h1 className="text-4xl font-bold tracking-tight md:text-5xl">Kholekile Mpengesi</h1>
 
             <p className="mt-3 text-xl text-gray-700 dark:text-gray-300">
-              Full-Stack Developer | Data Analytics and AI
+              Data Analytics &amp; BI | Full Stack Developer
             </p>
 
             <p className="mt-4 max-w-2xl text-gray-600 dark:text-gray-300">
-              I build production web applications, analytics dashboards, and AI-powered systems.
-              My work combines software engineering, data analysis, and practical problem solving across the stack.
+              Most analysis stays in a notebook. I make it usable: through dashboards, prediction pipelines,
+              and AI powered tools grounded in real business problems.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-4">
@@ -50,7 +50,7 @@ export default function Home() {
         <div className="mt-10 grid gap-4 md:grid-cols-3">
           <div className="surface-card p-4">
             <p className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">Primary Focus</p>
-            <p className="mt-2 text-sm text-gray-700 dark:text-gray-300">Full-stack product engineering with business-facing analytics.</p>
+            <p className="mt-2 text-sm text-gray-700 dark:text-gray-300">Data analytics, BI, and applied ML, with engineering to make it deployable.</p>
           </div>
           <div className="surface-card p-4">
             <p className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">Core Stack</p>
@@ -66,14 +66,17 @@ export default function Home() {
           <h2 className="mb-4 text-2xl font-semibold">About Me</h2>
 
           <p className="text-gray-700 dark:text-gray-300">
-            I&apos;m a postgraduate student specialising in Data Analytics and Business Intelligence,
-            with hands-on experience building scalable web applications, analytics platforms,
-            and AI-enabled tools. I focus on systems that are useful, reliable, and grounded in real business needs.
+            I&apos;m a postgraduate student specialising in Data Analytics and Business Intelligence at UWC.
+            What draws me to data work is the space between what a dataset contains and what a decision maker needs.
+            A 0.7570 AUC is a number on a page; SHAP turns it into a triage map a billing administrator can act on Monday morning.
+            That translation is what I care about.
           </p>
 
           <p className="mt-4 text-gray-700 dark:text-gray-300">
-            My work combines full-stack development with data and machine learning concepts,
-            allowing me to build systems that are not only functional, but also decision-supportive and data-driven.
+            Through my postgraduate work and personal projects, I&apos;ve built up the technical side to go alongside the analysis:
+            BI dashboards, Streamlit tools, prediction pipelines, and AI powered products.
+            I don&apos;t have years of industry experience yet, but I&apos;m deliberate about what I build and why,
+            and the projects on this site are the clearest evidence of that.
           </p>
         </section>
 
@@ -81,12 +84,12 @@ export default function Home() {
           <h2 className="mb-4 text-2xl font-semibold">Tech Stack</h2>
 
           <div className="grid grid-cols-2 gap-3 text-sm text-gray-700 dark:text-gray-300 md:grid-cols-3">
+            <div className="surface-card p-4">Python &amp; R (Data Analysis, ML)</div>
+            <div className="surface-card p-4">SQL (BigQuery, PostgreSQL, MySQL)</div>
+            <div className="surface-card p-4">Microsoft Excel &amp; Power BI</div>
+            <div className="surface-card p-4">Microsoft Azure &amp; AI Services</div>
             <div className="surface-card p-4">C# / .NET (ASP.NET Core, Blazor)</div>
             <div className="surface-card p-4">JavaScript / TypeScript (Next.js)</div>
-            <div className="surface-card p-4">Python &amp; R (Data Analysis)</div>
-            <div className="surface-card p-4">SQL (PostgreSQL, MySQL, BigQuery)</div>
-            <div className="surface-card p-4">Microsoft Azure &amp; AI Services</div>
-            <div className="surface-card p-4">Supabase &amp; Realtime Systems</div>
           </div>
         </section>
 
@@ -94,21 +97,39 @@ export default function Home() {
           <h2 className="mb-4 text-2xl font-semibold">Experience</h2>
 
           <p className="text-gray-700 dark:text-gray-300">
-            Currently working as an AI Cloud Administrator &amp; Data Analyst
-            at Forvis Mazars, where I support cloud-based AI solutions, data
-            analysis, and reporting using Microsoft Azure.
+            Currently doing an apprenticeship as an AI Cloud Administrator and Data Analyst at Forvis Mazars,
+            where I get practical exposure to data analysis, reporting, and cloud based AI solutions on Microsoft Azure.
+            It has given me a real look at how analytics work operates in a professional environment.
           </p>
 
           <p className="mt-4 text-gray-700 dark:text-gray-300">
-            Currently working as a Software Developer at the University of the
-            Western Cape, contributing to AI and software development projects
-            within the UWC CoLab. Developing full-stack applications,
-            implementing AI solutions, and collaborating on projects to deliver
-            practical, user-centered software. Skilled in React, ASP.NET Core,
-            Tailwind CSS, and integrating AI-driven features. Focused on
-            building efficient, scalable, and maintainable solutions while
-            gaining hands-on experience in real-world software development.
+            Also interning at the UWC CoLab, where I contribute to software and AI projects as part of the team.
+            I have had the chance to work on real features using React, ASP.NET Core, and Tailwind CSS,
+            which has been a useful bridge between what I build independently and what collaborative development actually looks like.
           </p>
+        </section>
+
+        <section className="mt-16 max-w-3xl">
+          <h2 className="mb-4 text-2xl font-semibold">Certifications</h2>
+
+          <div className="grid gap-3 sm:grid-cols-2">
+            <div className="surface-card p-4">
+              <p className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">Microsoft</p>
+              <p className="mt-1 text-sm font-medium text-gray-800 dark:text-gray-200">Azure Developer Associate (AZ-204)</p>
+            </div>
+            <div className="surface-card p-4">
+              <p className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">Microsoft</p>
+              <p className="mt-1 text-sm font-medium text-gray-800 dark:text-gray-200">Azure AI Engineer Associate (AI-102)</p>
+            </div>
+            <div className="surface-card p-4">
+              <p className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">Simplilearn</p>
+              <p className="mt-1 text-sm font-medium text-gray-800 dark:text-gray-200">Power BI for Beginners</p>
+            </div>
+            <div className="surface-card p-4">
+              <p className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">Cognitive Class</p>
+              <p className="mt-1 text-sm font-medium text-gray-800 dark:text-gray-200">SQL and Relational Databases 101</p>
+            </div>
+          </div>
         </section>
 
         <section className="mt-16">
@@ -120,7 +141,7 @@ export default function Home() {
               <h3 className="text-xl font-bold">Medical Billing Delay Prediction</h3>
 
               <p className="mt-2 text-gray-700 dark:text-gray-300">
-                XGBoost and SHAP study on 50,000 private patient invoices to flag billing delays at the point of capture — using bootstrap confidence intervals to select the final model on recall.
+                XGBoost and SHAP study on 50,000 private patient invoices to flag billing delays at the point of capture, using bootstrap confidence intervals to select the final model on recall.
               </p>
 
               <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
@@ -128,7 +149,7 @@ export default function Home() {
               </p>
 
               <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
-                Outcome: ROC-AUC 0.7570, recall 70.04%, and a SHAP triage map translating model output into operational guidance for billing administrators.
+                Outcome: ROC AUC 0.7570, recall 70.04%, and a SHAP triage map translating model output into operational guidance for billing administrators.
               </p>
 
               <div className="mt-4 flex gap-4">
@@ -151,8 +172,8 @@ export default function Home() {
               <h3 className="text-xl font-bold">Global Superstore: Regional Profitability</h3>
 
               <p className="mt-2 text-gray-700 dark:text-gray-300">
-                Excel analysis of ~51,000 orders across 13 regions — finding where a global retailer loses money,
-                testing the discounting hypothesis, ruling out shipping, and delivering a four-chart dashboard of recommendations.
+                Excel analysis of ~51,000 orders across 13 regions, finding where a global retailer loses money,
+                testing the discounting hypothesis, ruling out shipping, and delivering a four chart dashboard of recommendations.
               </p>
 
               <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
@@ -160,7 +181,7 @@ export default function Home() {
               </p>
 
               <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
-                Outcome: Concentrated losses in three regions traced to discounting, with targeted sub-category fixes identified.
+                Outcome: Concentrated losses in three regions traced to discounting, with targeted sub category fixes identified.
               </p>
 
               <div className="mt-4 flex gap-4">
@@ -254,7 +275,7 @@ export default function Home() {
               <h3 className="text-xl font-bold">Student Support Insights</h3>
 
               <p className="mt-2 text-gray-700 dark:text-gray-300">
-                Responsible-by-design data tool that helps educational programmes identify learner support needs before disengagement — with architecturally-enforced consent and ethics-as-code tests.
+                Responsible by design data tool that helps educational programmes identify learner support needs before disengagement, with architecturally enforced consent and ethics as code tests.
               </p>
 
               <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
@@ -262,7 +283,7 @@ export default function Home() {
               </p>
 
               <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
-                Outcome: Turns learner data into early support triggers instead of late-stage judgement.
+                Outcome: Turns learner data into early support triggers instead of late stage judgement.
               </p>
 
               <div className="mt-4 flex gap-4">
@@ -289,7 +310,7 @@ export default function Home() {
 
               <p className="mt-2 text-gray-700 dark:text-gray-300">
                 AI meeting intelligence app that turns transcripts into summaries, action items,
-                key decisions, and follow-up chat context.
+                key decisions, and follow up chat context.
               </p>
 
               <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
@@ -297,7 +318,7 @@ export default function Home() {
               </p>
 
               <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
-                Outcome: Structured meeting intelligence with persistent chat history and cloud-backed storage.
+                Outcome: Structured meeting intelligence with persistent chat history and cloud backed storage.
               </p>
 
               <div className="mt-4 flex gap-4">
@@ -321,7 +342,7 @@ export default function Home() {
 
               <p className="mt-2 text-gray-700 dark:text-gray-300">
                 Production RAG application that turns PDFs into conversational knowledge with grounded,
-                real-time answers.
+                real time answers.
               </p>
 
               <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
@@ -329,7 +350,7 @@ export default function Home() {
               </p>
 
               <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
-                Outcome: Enterprise-style RAG pipeline with grounded streaming responses.
+                Outcome: Enterprise style RAG pipeline with grounded streaming responses.
               </p>
 
               <div className="mt-4 flex gap-4">
@@ -351,11 +372,11 @@ export default function Home() {
             </div>
 
             <div className="surface-card">
-              <p className="chip mb-3">Full-stack</p>
+              <p className="chip mb-3">Full stack</p>
               <h3 className="text-xl font-bold">SplitEasy</h3>
 
               <p className="mt-2 text-gray-700 dark:text-gray-300">
-                Production expense-sharing platform with realtime updates, secure multi-user workflows,
+                Production expense sharing platform with realtime updates, secure multi user workflows,
                 and a custom debt simplification algorithm that minimizes settlement steps.
               </p>
 

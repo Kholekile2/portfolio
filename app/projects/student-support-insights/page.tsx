@@ -27,7 +27,7 @@ export default function StudentSupportInsightsPage() {
           <p className="chip mb-4">Data & Ethics Case Study</p>
           <h1 className="text-4xl font-bold mb-2">{project.name}</h1>
           <p className="text-xl text-gray-700 mb-2 dark:text-gray-300">
-            A responsible-by-design data tool that helps educational programmes identify learner support needs
+            A responsible by design data tool that helps educational programmes identify learner support needs
             before learners disengage
           </p>
           <p className="text-gray-600 mb-8 dark:text-gray-300">
@@ -71,17 +71,17 @@ export default function StudentSupportInsightsPage() {
               Overview
             </h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              The Student Support Insights Tool helps an educational programme understand its enrolled learners
-              — who they are, where confidence and risk concentrate, and what they themselves are asking for —
-              so staff can act on real need before learners disengage. The tool runs as a three-page Streamlit
-              application with a binding per-session responsible-use agreement, architecturally-enforced consent,
+              The Student Support Insights Tool helps an educational programme understand its enrolled learners:
+              who they are, where confidence and risk concentrate, and what they themselves are asking for,
+              so staff can act on real need before learners disengage. The tool runs as a three page Streamlit
+              application with a binding per session responsible use agreement, architecturally enforced consent,
               and a validation pipeline that surfaces data quality issues rather than silently cleaning them.
             </p>
             <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-              <li>Aggregate dashboard with eight filters, four colour-coded KPIs, and six charts organised into Reach, Struggle, and Voice rows.</li>
+              <li>Aggregate dashboard with eight filters, four colour coded KPIs, and six charts organised into Reach, Struggle, and Voice rows.</li>
               <li>Individual learner page that surfaces the learner&apos;s own stated need first and pairs every signal with a concrete support action.</li>
-              <li>Live-computed insights and recommendations panels that update as filters change.</li>
-              <li>Eight pytest cases — two of which enforce ethical design rules in code, not just documentation.</li>
+              <li>Live computed insights and recommendations panels that update as filters change.</li>
+              <li>Eight pytest cases, two of which enforce ethical design rules in code, not just documentation.</li>
             </ul>
           </section>
 
@@ -90,14 +90,14 @@ export default function StudentSupportInsightsPage() {
               The Problem
             </h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              Digital-skills programmes routinely collect detailed information about their learners at intake —
+              Digital skills programmes routinely collect detailed information about their learners at intake:
               age, province, device access, internet stability, confidence ratings, stated support needs. Then
               the data sits in a spreadsheet and is rarely used. Problems are noticed late, support is given
               reactively, and the learners least able to ask for help are the most likely to disappear quietly.
             </p>
             <p className="text-gray-700 dark:text-gray-300">
               The deeper problem is that the same data that could surface a learner&apos;s need early is also the
-              data that makes them easy to write off. A &quot;phone-only&quot; learner is a learner who needs a device
+              data that makes them easy to write off. A &quot;phone only&quot; learner is a learner who needs a device
               loan, or a learner the programme decides not to invest in. The tool the programme uses determines
               which of those framings wins.
             </p>
@@ -108,7 +108,7 @@ export default function StudentSupportInsightsPage() {
               What I Built
             </h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              A three-page Streamlit application built around a single design principle: identifying a learner&apos;s
+              A three page Streamlit application built around a single design principle: identifying a learner&apos;s
               need should trigger support, not judgement, and the design must actively make the helping path
               easier than the harming path. The dashboard shows aggregate views with no individual learners
               named. The Learner Detail page surfaces the learner&apos;s own voice first and pairs every signal
@@ -116,8 +116,8 @@ export default function StudentSupportInsightsPage() {
             </p>
             <p className="text-gray-700 dark:text-gray-300">
               The architecture enforces three rules at runtime: no data renders until the user identifies
-              themselves and agrees to a responsible-use statement, every signal shown is paired with a support
-              action, and every action taken is recorded against the learner — creating an audit trail the
+              themselves and agrees to a responsible use statement, every signal shown is paired with a support
+              action, and every action taken is recorded against the learner, creating an audit trail the
               programme can be held accountable to.
             </p>
           </section>
@@ -131,14 +131,14 @@ export default function StudentSupportInsightsPage() {
               <div className="surface-card overflow-hidden mb-3">
                 <Image
                   src="/projects/student-support-insights/dashboard.png"
-                  alt="Student Support Insights Tool — Dashboard view"
+                  alt="Student Support Insights Tool: Dashboard view"
                   width={1860}
                   height={920}
                   className="w-full h-auto"
                 />
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                The Dashboard. Four colour-coded KPIs summarise the current view, and six charts are organised
+                The Dashboard. Four colour coded KPIs summarise the current view, and six charts are organised
                 into three story rows: Reach (where the programme serves), Struggle (where confidence and risk
                 concentrate), and Voice (what learners themselves asked for). No individual learners are named
                 on this page.
@@ -149,18 +149,18 @@ export default function StudentSupportInsightsPage() {
               <div className="surface-card overflow-hidden mb-3">
                 <Image
                   src="/projects/student-support-insights/risk-by-device.png"
-                  alt="Attendance risk profile by device access — the chart that changed the conversation"
+                  alt="Attendance risk profile by device access, the chart that changed the conversation"
                   width={1080}
                   height={720}
                   className="w-full h-auto"
                 />
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                The chart that changed the conversation about the tool&apos;s purpose. 90% of phone-only learners
+                The chart that changed the conversation about the tool&apos;s purpose. 90% of phone only learners
                 are at Medium or High attendance risk, compared to 23% of learners with their own laptop. The
-                takeaway isn&apos;t that phone-only learners are less committed — it&apos;s that device access is a
+                takeaway isn&apos;t that phone only learners are less committed. Device access is a
                 structural constraint the programme can act on. Sample sizes are shown above each bar so small
-                samples can&apos;t be over-interpreted.
+                samples can&apos;t be over interpreted.
               </p>
             </div>
           </section>
@@ -173,7 +173,7 @@ export default function StudentSupportInsightsPage() {
               <div className="surface-card p-5">
                 <h3 className="font-semibold mb-2">Helping path easier than harming path</h3>
                 <p className="text-sm text-gray-700 dark:text-gray-300">
-                  Every signal the tool surfaces is paired with a concrete support action. A &quot;phone-only&quot;
+                  Every signal the tool surfaces is paired with a concrete support action. A &quot;phone only&quot;
                   flag appears next to &quot;suggest device loan,&quot; never as a bare label.
                 </p>
               </div>
@@ -187,15 +187,15 @@ export default function StudentSupportInsightsPage() {
               <div className="surface-card p-5">
                 <h3 className="font-semibold mb-2">Consent is architectural</h3>
                 <p className="text-sm text-gray-700 dark:text-gray-300">
-                  Until the user identifies themselves and agrees to the responsible-use statement, no data
-                  renders — not even on individual learner pages, which have their own guard.
+                  Until the user identifies themselves and agrees to the responsible use statement, no data
+                  renders, not even on individual learner pages, which have their own guard.
                 </p>
               </div>
               <div className="surface-card p-5">
                 <h3 className="font-semibold mb-2">Validation as ethical safeguard</h3>
                 <p className="text-sm text-gray-700 dark:text-gray-300">
                   Bad data is surfaced, not silently fixed. The tool refuses to act on assumptions. Duplicates,
-                  out-of-range scores, and malformed entries are flagged for the user to review.
+                  out of range scores, and malformed entries are flagged for the user to review.
                 </p>
               </div>
             </div>
@@ -206,10 +206,10 @@ export default function StudentSupportInsightsPage() {
               Data Workflow
             </h2>
             <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-              <li>A single entry point in <code>utils/data_loader.py</code> handles all data loading, validation, and band derivation — no other part of the codebase loads data directly.</li>
+              <li>A single entry point in <code>utils/data_loader.py</code> handles all data loading, validation, and band derivation. No other part of the codebase loads data directly.</li>
               <li>The data dictionary defines what &quot;valid&quot; means; the loader enforces it; the test suite protects those rules from being accidentally removed.</li>
-              <li>Synthetic dataset of 51 learners with deliberate dirt (one duplicate ID, one out-of-range score, one malformed province) so the validation pipeline has something to catch.</li>
-              <li>Confidence bands (Low / Medium / High) are derived on every load — never set manually, never trusted from input.</li>
+              <li>Synthetic dataset of 51 learners with deliberate dirt (one duplicate ID, one out of range score, one malformed province) so the validation pipeline has something to catch.</li>
+              <li>Confidence bands (Low / Medium / High) are derived on every load, never set manually, never trusted from input.</li>
               <li>Dashboard insights are computed live from the filtered DataFrame, so observations update as the user narrows the view.</li>
             </ul>
           </section>
@@ -245,29 +245,29 @@ export default function StudentSupportInsightsPage() {
             <p className="text-gray-700 dark:text-gray-300 mb-6">
               The application is separated into a UI layer (the three Streamlit pages), a logic layer (the
               recommendation engine and validation rules), and a data layer (the loader and synthetic dataset).
-              That separation made the test suite straightforward — the rules can be tested without spinning up
+              That separation made the test suite straightforward. The rules can be tested without spinning up
               a UI, and the UI can be rebuilt without touching the rules.
             </p>
             <div className="grid gap-4 md:grid-cols-3">
               <div className="surface-card p-5">
                 <h3 className="font-semibold mb-2">UI Layer</h3>
                 <p className="text-sm text-gray-700 dark:text-gray-300">
-                  Three Streamlit pages — Dashboard, Learner Detail, and About — each with its own consent guard
+                  Three Streamlit pages, Dashboard, Learner Detail, and About, each with its own consent guard
                   and rendering logic.
                 </p>
               </div>
               <div className="surface-card p-5">
                 <h3 className="font-semibold mb-2">Logic Layer</h3>
                 <p className="text-sm text-gray-700 dark:text-gray-300">
-                  Rule-based recommendation engine and validation pipeline live in <code>utils/</code>, separated
-                  from any UI concern so they can be unit-tested in isolation.
+                  Rule based recommendation engine and validation pipeline live in <code>utils/</code>, separated
+                  from any UI concern so they can be unit tested in isolation.
                 </p>
               </div>
               <div className="surface-card p-5">
                 <h3 className="font-semibold mb-2">Data Layer</h3>
                 <p className="text-sm text-gray-700 dark:text-gray-300">
                   Synthetic CSV dataset with a documented data dictionary that defines the consent boundary of
-                  the system — the columns the tool is allowed to know about a learner.
+                  the system, specifically the columns the tool is allowed to know about a learner.
                 </p>
               </div>
             </div>
@@ -304,7 +304,7 @@ export default function StudentSupportInsightsPage() {
             </h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
               Building this project taught me more about how to think about data than how to write Python. The
-              biggest shift was understanding that data is not just numbers — it is a way of shaping how people
+              biggest shift was understanding that data is not just numbers. It is a way of shaping how people
               think about other people, and the choices you make in handling it carry weight the numbers
               themselves don&apos;t show. Every column you decide to collect is a decision about what you are
               allowed to judge someone on.

@@ -1,23 +1,23 @@
 const portfolioData = {
   profile: {
     name: "Kholekile Mpengesi",
-    headline: "Full-Stack Developer | Data Analytics and AI",
-    role: "Full-Stack Developer",
+    headline: "Data Analytics & BI | Full Stack Developer",
+    role: "Data Analyst & Developer",
     location: "Cape Town, South Africa",
     availability: "Immediately",
     summary:
-      "I build production web applications, analytics dashboards, and AI-powered systems. My work combines software engineering, data analysis, and practical problem solving across the stack.",
+      "I turn data into decisions and build the engineering to deliver them. My work centres on analytics, business intelligence, and applied machine learning, with production software to make the analysis usable.",
     shortPitch:
-      "Postgraduate data analytics and business intelligence specialist with hands-on full-stack delivery experience across AI, analytics, and decision-support products.",
+      "Postgraduate student in Data Analytics and Business Intelligence, with project work and practical exposure across analytics, machine learning, and full stack development.",
     currentFocus: [
-      "Full-stack product engineering with business-facing analytics",
-      "AI-enabled application workflows",
-      "Reliable systems grounded in real business needs",
+      "Data analytics, BI, and applied ML for real business decisions",
+      "AI enabled analytics workflows and decision support systems",
+      "Engineering that makes insights deployable, not just correct",
     ],
     portfolioMetadata: {
       siteTitle: "Kholekile Mpengesi | Portfolio",
       siteDescription:
-        "Portfolio website for Kholekile Mpengesi, Full-Stack Developer and Data Analytics professional.",
+        "Portfolio of Kholekile Mpengesi, a Data Analytics and BI postgraduate student and developer based in Cape Town.",
     },
   },
 
@@ -31,6 +31,18 @@ const portfolioData = {
 
   skills: [
     {
+      category: "Data and AI",
+      items: ["Python", "R", "OpenAI", "Azure AI Services", "RAG systems"],
+    },
+    {
+      category: "Analytics and BI",
+      items: ["Streamlit", "Pandas", "Plotly", "Microsoft Excel", "Power BI", "Business Intelligence dashboards"],
+    },
+    {
+      category: "Databases and Query",
+      items: ["SQL", "BigQuery", "PostgreSQL", "Supabase", "pgvector", "MySQL"],
+    },
+    {
       category: "Backend",
       items: ["C#", ".NET", "ASP.NET Core", "Minimal APIs", "REST APIs"],
     },
@@ -39,25 +51,13 @@ const portfolioData = {
       items: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
     },
     {
-      category: "Data and AI",
-      items: ["Python", "R", "OpenAI", "Azure AI Services", "RAG systems"],
-    },
-    {
-      category: "Databases and Query",
-      items: ["SQL", "PostgreSQL", "Supabase", "BigQuery", "pgvector", "MySQL"],
-    },
-    {
-      category: "Analytics and BI",
-      items: ["Streamlit", "Pandas", "Plotly", "Business Intelligence dashboards"],
-    },
-    {
       category: "Cloud and Deployment",
       items: ["Microsoft Azure", "Vercel", "Railway"],
     },
     {
       category: "Engineering Practices",
       items: [
-        "Security-by-design",
+        "Security by design",
         "Row Level Security",
         "Realtime systems",
         "Performance optimization",
@@ -67,20 +67,39 @@ const portfolioData = {
 
   experience: [
     {
-      role: "AI Cloud Administrator and Data Analyst",
+      role: "AI Cloud Administrator and Data Analyst (Apprenticeship)",
       company: "Forvis Mazars",
       period: "Current",
       description:
-        "Supports cloud-based AI solutions, data analysis, and reporting using Microsoft Azure.",
-      keywords: ["Azure", "AI cloud", "data analysis", "reporting"],
+        "Apprenticeship providing practical exposure to data analysis, reporting, and cloud based AI solutions on Microsoft Azure.",
+      keywords: ["Azure", "AI cloud", "data analysis", "reporting", "apprenticeship"],
     },
     {
-      role: "Software Developer",
+      role: "Software Developer (Internship)",
       company: "University of the Western Cape (UWC CoLab)",
       period: "Current",
       description:
-        "Contributes to AI and software development projects by building full-stack applications, implementing AI solutions, and collaborating to deliver practical user-centered software.",
-      keywords: ["full-stack", "AI solutions", "React", "ASP.NET Core", "Tailwind CSS"],
+        "Internship contributing to software and AI projects, including building features with React, ASP.NET Core, and Tailwind CSS alongside the broader team.",
+      keywords: ["internship", "React", "ASP.NET Core", "Tailwind CSS", "AI projects"],
+    },
+  ],
+
+  certifications: [
+    {
+      name: "Azure Developer Associate (AZ-204)",
+      issuer: "Microsoft",
+    },
+    {
+      name: "Azure AI Engineer Associate (AI-102)",
+      issuer: "Microsoft",
+    },
+    {
+      name: "Power BI for Beginners",
+      issuer: "Simplilearn",
+    },
+    {
+      name: "SQL and Relational Databases 101",
+      issuer: "Cognitive Class",
     },
   ],
 
@@ -90,42 +109,42 @@ const portfolioData = {
       name: "MeetingMind",
       category: "AI",
       summary:
-        "An AI meeting intelligence app that turns transcripts into summaries, action items, decisions, and chat-ready context.",
+        "An AI meeting intelligence app that turns transcripts into summaries, action items, decisions, and chat ready context.",
       description:
-        "Transcript-first meeting assistant that uses Anthropic Claude to structure meeting notes, stores uploaded media in Cloudinary, persists data in MongoDB Atlas, and lets users ask follow-up questions about what was discussed.",
+        "Transcript first meeting assistant that uses Anthropic Claude to structure meeting notes, stores uploaded media in Cloudinary, persists data in MongoDB Atlas, and lets users ask follow up questions about what was discussed.",
       problem:
-        "Meeting outcomes are easy to lose across long transcripts, scattered action items, and separate chat threads, which makes follow-up work harder than it should be.",
+        "Meeting outcomes are easy to lose across long transcripts, scattered action items, and separate chat threads, which makes follow up work harder than it should be.",
       solution:
-        "Built an AI workflow that ingests meeting input, extracts structured JSON summaries, action items, and key decisions with Claude Haiku, stores the results in MongoDB, and keeps the transcript available for grounded follow-up questions.",
+        "Built an AI workflow that ingests meeting input, extracts structured JSON summaries, action items, and key decisions with Claude Haiku, stores the results in MongoDB, and keeps the transcript available for grounded follow up questions.",
       myRole:
-        "Designed and built the full-stack product, including the Next.js frontend, FastAPI backend, AI prompting, cloud storage integration, persistence model, and recruiter-friendly chat experience.",
+        "Designed and built the full stack product, including the Next.js frontend, FastAPI backend, AI prompting, cloud storage integration, persistence model, and recruiter friendly chat experience.",
       deployment: ["Vercel", "Railway", "Cloudinary", "MongoDB Atlas"],
       techStack: {
         frontend: ["Next.js", "TypeScript", "Tailwind CSS"],
         backend: ["FastAPI", "Python", "MongoDB"],
-        ai: ["Anthropic Claude Haiku", "Structured JSON extraction", "Transcript-grounded chat"],
+        ai: ["Anthropic Claude Haiku", "Structured JSON extraction", "Transcript grounded chat"],
         database: ["MongoDB Atlas", "Persistent meeting records", "Chat history storage"],
-        infrastructure: ["Clerk authentication", "Cloudinary audio storage", "CORS-protected API", "Background processing"],
+        infrastructure: ["Clerk authentication", "Cloudinary audio storage", "CORS protected API", "Background processing"],
       },
       architecture: [
         "Users sign in with Clerk, then upload a meeting transcript, audio file, or transcript document from the Next.js frontend.",
         "Audio assets are stored in Cloudinary so the backend can keep media separate from application data.",
         "FastAPI creates a meeting record in MongoDB and marks it pending before kicking off AI processing in the background.",
         "Claude Haiku converts the transcript into structured JSON containing the summary, action items, and key decisions.",
-        "The chatbot endpoint reuses the stored transcript plus previous chat messages to answer follow-up questions about the meeting.",
+        "The chatbot endpoint reuses the stored transcript plus previous chat messages to answer follow up questions about the meeting.",
         "Processed meetings and chat history stay persisted in MongoDB Atlas for later review.",
       ],
       features: [
         "Transcript upload, pasted text input, and document ingestion for txt, md, csv, rtf, and docx transcripts",
-        "AI-generated meeting summaries with action items and owners",
+        "AI generated meeting summaries with action items and owners",
         "Key decision extraction for quick executive review",
         "Meeting chat that answers questions using the transcript as context",
         "Persisted chat history per meeting",
         "Background AI processing with status updates from pending to completed or failed",
-        "Cloud-based media storage for uploaded audio files",
+        "Cloud based media storage for uploaded audio files",
       ],
       highlights: [
-        "Uses Claude Haiku to turn messy meeting input into structured, recruiter-readable outcomes",
+        "Uses Claude Haiku to turn messy meeting input into structured, recruiter readable outcomes",
         "Separates cloud storage, persistence, and AI processing so the app scales cleanly",
         "Keeps chat answers grounded in the actual transcript instead of generic model memory",
       ],
@@ -137,7 +156,7 @@ const portfolioData = {
       ],
       challenges: [
         {
-          challenge: "Claude needed to return machine-readable meeting output.",
+          challenge: "Claude needed to return machine readable meeting output.",
           solution:
             "Forced a strict JSON schema so summaries, action items, and decisions could be saved and rendered consistently.",
         },
@@ -149,7 +168,7 @@ const portfolioData = {
         {
           challenge: "Chat replies needed to stay grounded in the meeting itself.",
           solution:
-            "Included the full transcript and previous messages in every prompt so follow-up answers stay specific and consistent.",
+            "Included the full transcript and previous messages in every prompt so follow up answers stay specific and consistent.",
         },
         {
           challenge: "MongoDB Atlas SSL handshakes failed on Railway.",
@@ -164,17 +183,17 @@ const portfolioData = {
         {
           challenge: "New Clerk users were not saved in the app database.",
           solution:
-            "Added a Svix-verified webhook so every signup is mirrored into MongoDB as a local user profile.",
+            "Added a Svix verified webhook so every signup is mirrored into MongoDB as a local user profile.",
         },
         {
-          challenge: "Deployment-only issues kept breaking the app.",
+          challenge: "Deployment only issues kept breaking the app.",
           solution:
-            "Made CORS origin-driven, awaited Next.js 16 route params correctly, and forced a fresh Vercel build when cached pages hid UI changes.",
+            "Made CORS origin driven, awaited Next.js 16 route params correctly, and forced a fresh Vercel build when cached pages hid UI changes.",
         },
       ],
       outcomes: [
         "Turns raw meeting input into structured actions, decisions, and searchable history",
-        "Provides a cloud-backed workflow that is practical for real post-meeting follow-up",
+        "Provides a cloud backed workflow that is practical for real post meeting follow up",
       ],
       lessonsLearned: [
         "Structured outputs are essential when AI responses need to power a product UI",
@@ -193,22 +212,22 @@ const portfolioData = {
       category: "AI",
       summary: "An AI app that lets users chat with their PDF documents using a full RAG pipeline.",
       description:
-        "Production RAG application that converts PDFs into grounded conversational knowledge with real-time streamed answers and persistent conversation history.",
+        "Production RAG application that converts PDFs into grounded conversational knowledge with real time streamed answers and persistent conversation history.",
       problem:
         "Keyword search in long PDFs is slow and brittle; users struggle to find precise answers when wording differs from search terms.",
       solution:
-        "Built an end-to-end Retrieval-Augmented Generation pipeline: extract PDF text, chunk with overlap, generate embeddings, retrieve top-matching chunks, and stream grounded answers.",
+        "Built an end to end Retrieval Augmented Generation pipeline: extract PDF text, chunk with overlap, generate embeddings, retrieve top matching chunks, and stream grounded answers.",
       myRole:
-        "Built from scratch as a full-stack AI application, including pipeline design, implementation details, production deployment, and security controls.",
+        "Built from scratch as a full stack AI application, including pipeline design, implementation details, production deployment, and security controls.",
       buildTime: "5 weeks",
-      phases: "4, end-to-end",
+      phases: "4, end to end",
       deployment: ["Vercel", "Railway"],
       techStack: {
         frontend: ["Next.js App Router", "TypeScript", "Tailwind CSS"],
         backend: ["ASP.NET Core .NET 8 Minimal APIs", "C#"],
         ai: ["OpenAI text-embedding-ada-002", "OpenAI GPT-4o-mini"],
         database: ["Supabase PostgreSQL", "pgvector"],
-        infrastructure: ["Supabase REST API", "Server-Sent Events"],
+        infrastructure: ["Supabase REST API", "Server Sent Events"],
       },
       architecture: [
         "User uploads a PDF document.",
@@ -217,26 +236,26 @@ const portfolioData = {
         "Each chunk is embedded with OpenAI and stored in Supabase pgvector.",
         "User question is embedded and matched by cosine similarity.",
         "Top relevant chunks are passed to GPT-4o-mini as constrained context.",
-        "Answer streams token-by-token and conversation history is persisted.",
+        "Answer streams token by token and conversation history is persisted.",
       ],
       features: [
         "Auth flow: sign up, log in, log out with protected routes",
         "PDF upload and ingestion pipeline",
         "Grounded document Q&A with semantic retrieval",
-        "Real-time streaming responses",
+        "Real time streaming responses",
         "Conversation history persistence",
-        "Multi-document support",
-        "Two-step document deletion with cascading data cleanup",
+        "Multi document support",
+        "Two step document deletion with cascading data cleanup",
       ],
       highlights: [
-        "Complete production-grade RAG pipeline from ingestion to retrieval to streaming output",
+        "Complete production grade RAG pipeline from ingestion to retrieval to streaming output",
         "Grounded responses constrained to document context",
         "Layered security across frontend, API, and database",
       ],
       engineeringHighlights: [
         "Implemented streaming token forwarding in C# using IAsyncEnumerable",
         "Solved Supabase vector casting gap via PostgreSQL RPC function",
-        "Fixed shared HttpClient header race conditions with per-request HttpRequestMessage",
+        "Fixed shared HttpClient header race conditions with per request HttpRequestMessage",
         "Designed relational schema with foreign keys and cascade deletes",
       ],
       challenges: [
@@ -258,7 +277,7 @@ const portfolioData = {
         },
       ],
       outcomes: [
-        "Enterprise-style RAG workflow from document ingestion to grounded streamed answers",
+        "Enterprise style RAG workflow from document ingestion to grounded streamed answers",
         "Production deployment with separate frontend and backend layers",
       ],
       lessonsLearned: [
@@ -275,19 +294,19 @@ const portfolioData = {
     {
       id: "spliteasy",
       name: "SplitEasy",
-      category: "Full-stack",
+      category: "Full stack",
       summary:
-        "A production expense-sharing app that minimizes settlement transactions using a custom debt simplification algorithm.",
+        "A production expense sharing app that minimizes settlement transactions using a custom debt simplification algorithm.",
       description:
-        "Realtime shared-expense platform with secure multi-user workflows, group management, settlement tracking, and a C# algorithm that reduces transaction complexity.",
+        "Realtime shared expense platform with secure multi user workflows, group management, settlement tracking, and a C# algorithm that reduces transaction complexity.",
       problem:
-        "Group expense tracking becomes confusing with many cross-debts, leading to high transaction complexity and poor settlement clarity.",
+        "Group expense tracking becomes confusing with many cross debts, leading to high transaction complexity and poor settlement clarity.",
       solution:
-        "Implemented structured expense logging, automatic equal splitting, and a greedy net-balance algorithm that computes the minimum required payments.",
+        "Implemented structured expense logging, automatic equal splitting, and a greedy net balance algorithm that computes the minimum required payments.",
       myRole:
-        "Built the full-stack architecture, designed algorithmic settlement logic, implemented security controls, and deployed frontend and backend services.",
+        "Built the full stack architecture, designed algorithmic settlement logic, implemented security controls, and deployed frontend and backend services.",
       buildTime: "~3 weeks",
-      phases: "10, end-to-end",
+      phases: "10, end to end",
       deployment: ["Vercel", "Railway"],
       techStack: {
         frontend: ["Next.js App Router", "TypeScript", "Tailwind CSS"],
@@ -308,7 +327,7 @@ const portfolioData = {
           "Calculate each member's net balance from expenses and settlements.",
           "Split members into debtors (negative) and creditors (positive).",
           "Repeatedly match largest debtor and creditor, settle min(amounts), and continue.",
-          "Use a 0.01 threshold to avoid floating-point currency edge cases.",
+          "Use a 0.01 threshold to avoid floating point currency edge cases.",
         ],
       },
       features: [
@@ -317,7 +336,7 @@ const portfolioData = {
         "Invite members by email",
         "Expense creation with categories",
         "Automatic equal split",
-        "Settlement summary and settle-up flow",
+        "Settlement summary and settle up flow",
         "Realtime updates across clients",
         "Group statistics by total/payer/category",
         "PDF report export",
@@ -325,20 +344,20 @@ const portfolioData = {
         "Account deletion",
       ],
       highlights: [
-        "17 features delivered across end-to-end shared-expense workflow",
+        "17 features delivered across end to end shared expense workflow",
         "Custom C# algorithm reduces settlement to minimal payment steps",
-        "Security-first implementation across database, API, and frontend",
+        "Security first implementation across database, API, and frontend",
       ],
       engineeringHighlights: [
-        "Mixed Next.js server/client component strategy",
+        "Mixed Next.js server and client component strategy",
         "Realtime resiliency with refetch on subscription connect",
-        "7-table relational schema with foreign keys, cascade deletes, and auth trigger",
-        "DTO-based API contracts to avoid serialization pitfalls",
+        "7 table relational schema with foreign keys, cascade deletes, and auth trigger",
+        "DTO based API contracts to avoid serialization pitfalls",
       ],
       security: [
         "Row Level Security on all relevant tables",
-        "API-level group membership authorization checks",
-        "Service-role key isolated to backend",
+        "API level group membership authorization checks",
+        "Service role key isolated to backend",
         "CORS restricted to trusted frontend origins",
         "Secrets managed via environment variables",
       ],
@@ -362,12 +381,12 @@ const portfolioData = {
       ],
       outcomes: [
         "Reduces settlement complexity into minimal payment steps",
-        "Production deployment with realtime multi-user workflows",
+        "Production deployment with realtime multi user workflows",
       ],
       lessonsLearned: [
-        "Schema design and cascade behavior are foundational for reliable multi-user apps",
-        "RLS must be paired with API-level authorization for defense-in-depth",
-        "Production debugging requires log-driven, evidence-based troubleshooting",
+        "Schema design and cascade behavior are foundational for reliable multi user apps",
+        "RLS must be paired with API level authorization for defense in depth",
+        "Production debugging requires log driven, evidence based troubleshooting",
       ],
       links: {
         caseStudyPath: "/projects/spliteasy",
@@ -381,11 +400,11 @@ const portfolioData = {
       name: "Auto Analytics Portal",
       category: "Business Intelligence",
       summary:
-        "A BigQuery + Streamlit decision-support dashboard for used-car pricing strategy.",
+        "A BigQuery + Streamlit decision support dashboard for used car pricing strategy.",
       description:
-        "Transforms raw vehicle records into pricing intelligence through SQL-driven analysis and interactive visualizations for valuation, inventory, and negotiation decisions.",
+        "Transforms raw vehicle records into pricing intelligence through SQL driven analysis and interactive visualizations for valuation, inventory, and negotiation decisions.",
       problem:
-        "Used-car pricing decisions are often inconsistent and intuition-based, causing margin risk and valuation uncertainty.",
+        "Used car pricing decisions are often inconsistent and intuition based, causing margin risk and valuation uncertainty.",
       solution:
         "Built a BI workflow that quantifies key price drivers (brand, mileage, year, fuel type, transmission, model) and presents actionable insights through an interactive dashboard.",
       myRole:
@@ -415,26 +434,26 @@ const portfolioData = {
         "Model analysis",
       ],
       highlights: [
-        "Converts pricing uncertainty into evidence-based valuation signals",
+        "Converts pricing uncertainty into evidence based valuation signals",
         "Supports faster listing, negotiation, and stock positioning decisions",
-        "Demonstrates warehouse-to-dashboard BI pipeline delivery",
+        "Demonstrates warehouse to dashboard BI pipeline delivery",
       ],
       decisionFramework: [
         "Set baseline valuation by age and mileage",
-        "Apply fuel/transmission premium adjustments",
-        "Use model tiers for margin-vs-volume strategy",
+        "Apply fuel and transmission premium adjustments",
+        "Use model tiers for margin vs volume strategy",
         "Track consistency through repeatable dashboard views",
       ],
       portfolioFocus: [
         "BigQuery SQL query design and testing",
-        "Streamlit multi-page architecture",
+        "Streamlit multi page architecture",
         "Interactive Plotly visualizations",
         "Performance optimization with caching and sampling",
         "Business insight communication",
       ],
       outcomes: [
         "Turns pricing uncertainty into repeatable valuation decisions",
-        "Supports data-led commercial pricing strategy",
+        "Supports data led commercial pricing strategy",
       ],
       links: {
         caseStudyPath: "/projects/auto-analytics",
@@ -446,13 +465,13 @@ const portfolioData = {
       name: "MedCare Booking System",
       category: "Healthcare Analytics",
       summary:
-        "A healthcare operations platform combining specialist booking workflows with BigQuery-powered analytics.",
+        "A healthcare operations platform combining specialist booking workflows with BigQuery powered analytics.",
       description:
         "Integrates patient booking and administrator decision support through dashboard filtering, KPI tracking, specialty performance views, and revenue/capacity analytics.",
       problem:
         "Manual appointment coordination causes delays, poor specialist visibility, and high admin overhead.",
       solution:
-        "Built a unified digital booking and BI environment with real-time operational visibility, enabling better staffing, utilization, and revenue decisions.",
+        "Built a unified digital booking and BI environment with real time operational visibility, enabling better staffing, utilization, and revenue decisions.",
       myRole:
         "Delivered the analytics and workflow system design, data model alignment, visualization modules, and operational decision framing.",
       techStack: {
@@ -465,20 +484,20 @@ const portfolioData = {
         "Presentation: Streamlit booking and analytics pages",
         "Application: Python workflow and validation logic",
         "Data: BigQuery relational model",
-        "Fact-model approach centered on Bookings linked to Clients, Specialists, Dates, and TimeSlots",
+        "Fact model approach centered on Bookings linked to Clients, Specialists, Dates, and TimeSlots",
       ],
       dataFlow: [
         "User interactions trigger BigQuery reads/writes",
         "Pandas performs shaping and metric aggregation",
         "Plotly visualizes utilization, specialist performance, and revenue trends",
-        "Filter-driven views enable targeted diagnosis and planning",
+        "Filter driven views enable targeted diagnosis and planning",
       ],
       features: [
-        "Patient-facing booking workflow",
+        "Patient facing booking workflow",
         "Admin dashboard with advanced filtering",
         "KPI monitoring (bookings, revenue, specialist count, average booking value)",
         "Specialty performance analysis",
-        "Revenue trends and peak-hours analytics",
+        "Revenue trends and peak hours analytics",
         "Filtered raw data tables and CSV export",
         "Security controls and booking limits",
       ],
@@ -488,25 +507,25 @@ const portfolioData = {
         "Enables managerial decision playbooks with measurable KPIs",
       ],
       decisionPlaybook: [
-        "Use peak-hour insights to rebalance staffing",
+        "Use peak hour insights to rebalance staffing",
         "Use specialty trends for recruitment and referral decisions",
         "Track booking value and revenue trends for risk detection",
         "Use date/specialist filters to evaluate interventions",
       ],
       challenges: [
         {
-          challenge: "Multi-table query and integration complexity.",
+          challenge: "Multi table query and integration complexity.",
           solution:
             "Resolved with iterative SQL testing, modular page design, and parameterized filtering.",
         },
         {
           challenge: "Maintaining dashboard consistency under multiple filters.",
-          solution: "Applied defensive validation and filter-aware architecture.",
+          solution: "Applied defensive validation and filter aware architecture.",
         },
       ],
       outcomes: [
         "Improved patient access and stronger administrator control",
-        "Data-driven approach to service quality and facility performance improvement",
+        "Data led approach to service quality and facility performance improvement",
       ],
       links: {
         caseStudyPath: "/projects/medcare",
@@ -518,18 +537,18 @@ const portfolioData = {
       name: "Student Support Insights Tool",
       category: "Data & Ethics",
       shortDescription:
-        "Responsible-by-design data tool that helps educational programmes identify learner support needs early — with architecturally-enforced consent, validation as ethical safeguard, and ethics-as-code tests.",
+        "Responsible by design data tool that helps educational programmes identify learner support needs early, with architecturally enforced consent, validation as ethical safeguard, and ethics as code tests.",
       tagline: "Identifying need triggers support, not judgement.",
       summary:
-        "A responsible-by-design data tool that helps educational programmes identify learner support needs before learners disengage.",
+        "A responsible by design data tool that helps educational programmes identify learner support needs before learners disengage.",
       description:
-        "Three-page Streamlit application with architecturally-enforced consent, validation pipeline that surfaces data quality issues, and ethics-enforced-in-code test suite.",
+        "Three page Streamlit application with architecturally enforced consent, validation pipeline that surfaces data quality issues, and ethics enforced in code test suite.",
       problem:
-        "Digital-skills programmes collect detailed learner data at intake but rarely use it for early support. Problems are noticed late, support is reactive, and learners least able to ask for help are most likely to disengage quietly.",
+        "Digital skills programmes collect detailed learner data at intake but rarely use it for early support. Problems are noticed late, support is reactive, and learners least able to ask for help are most likely to disengage quietly.",
       solution:
-        "Built a three-page Streamlit application that identifies learner need and triggers support through aggregate dashboards with no names, individual learner pages that surface stated need first, and architecturally-enforced consent guards.",
+        "Built a three page Streamlit application that identifies learner need and triggers support through aggregate dashboards with no names, individual learner pages that surface stated need first, and architecturally enforced consent guards.",
       myRole:
-        "Designed the end-to-end system including the data validation pipeline, recommendation engine, ethical design enforcement in code, and the three-page application architecture.",
+        "Designed the end to end system including the data validation pipeline, recommendation engine, ethical design enforcement in code, and the three page application architecture.",
       buildTime: "~4 weeks",
       phases: "SFIA Level 3 integrated project",
       techStack: {
@@ -541,62 +560,62 @@ const portfolioData = {
       },
       architecture: [
         "UI Layer: Three Streamlit pages (Dashboard, Learner Detail, About) each with consent guards",
-        "Logic Layer: Rule-based recommendation engine and validation pipeline in utils/, tested separately from UI",
+        "Logic Layer: Rule based recommendation engine and validation pipeline in utils/, tested separately from UI",
         "Data Layer: Synthetic CSV dataset with documented data dictionary defining the consent boundary",
       ],
       features: [
-        "Three-page Streamlit application: Dashboard, Learner Detail, and About",
+        "Three page Streamlit application: Dashboard, Learner Detail, and About",
         "Eight sidebar filters that combine to narrow the dashboard view to any subgroup of learners",
-        "Four colour-coded KPIs and six charts organised into Reach / Struggle / Voice story rows",
-        "Live-computed insights and recommendations panels that update as filters change",
-        "Binding per-session responsible-use agreement that gates all data access — enforced on every page with personal data",
+        "Four colour coded KPIs and six charts organised into Reach / Struggle / Voice story rows",
+        "Live computed insights and recommendations panels that update as filters change",
+        "Binding per session responsible use agreement that gates all data access, enforced on every page with personal data",
         "Learner Detail view that surfaces the learner's own stated need first and pairs every signal with a concrete support action",
         "Accountability form on the Learner Detail page for staff to record what was actually done",
         "Filtered CSV export with optional inclusion of rows flagged for data quality issues",
-        "CSV upload with schema validation — missing required columns produce a clear error",
+        "CSV upload with schema validation, missing required columns produce a clear error",
       ],
       highlights: [
-        "Helping path easier than harming path — every signal paired with a support action",
-        "Learner's voice ranks first — stated need shown before system inferences, enforced in code",
-        "Consent is architectural — no data renders until user identifies and agrees to responsible-use statement",
-        "Validation as ethical safeguard — bad data is surfaced, not silently fixed",
+        "Helping path easier than harming path, every signal paired with a support action",
+        "Learner's voice ranks first, stated need shown before system inferences, enforced in code",
+        "Consent is architectural, no data renders until user identifies and agrees to responsible use statement",
+        "Validation as ethical safeguard, bad data is surfaced, not silently fixed",
       ],
       engineeringHighlights: [
-        "Single-source-of-truth architecture: all data flows through one loader module, so the data dictionary, validation rules, and test suite move together",
-        "Validation pipeline that surfaces data quality issues (duplicates, out-of-range scores, malformed entries) rather than silently cleaning them",
-        "Eight pytest test cases — two of which enforce ethical design rules in code (every learner gets at least one recommendation; stated need always ranks first)",
-        "Five documented bugs with full root-cause analysis, including a consent-gate bypass on the Learner Detail page found through user-led testing",
-        "Rule-based recommendation engine that is fully traceable — every suggestion the tool makes can be traced back to a transparent rule",
+        "Single source of truth architecture: all data flows through one loader module, so the data dictionary, validation rules, and test suite move together",
+        "Validation pipeline that surfaces data quality issues (duplicates, out of range scores, malformed entries) rather than silently cleaning them",
+        "Eight pytest test cases, two of which enforce ethical design rules in code (every learner gets at least one recommendation; stated need always ranks first)",
+        "Five documented bugs with full root cause analysis, including a consent gate bypass on the Learner Detail page found through user led testing",
+        "Rule based recommendation engine that is fully traceable, every suggestion the tool makes can be traced back to a transparent rule",
         "Confidence bands derived on every data load rather than stored in the CSV, so the source of truth stays the raw score",
       ],
       challenges: [
         {
           challenge: "Consent gate bypass on the Learner Detail page",
           solution:
-            "The agreement guard was implemented in app.py but not actually present in pages/1_Learner_Detail.py — so navigating directly to the Learner Detail URL bypassed consent entirely. Fixed by inserting the guard as the first Streamlit operation after set_page_config, before any title, data load, or UI renders. The most serious bug in the project, and the one I'm most glad I caught through testing rather than after submission.",
+            "The agreement guard was implemented in app.py but not actually present in pages/1_Learner_Detail.py, so navigating directly to the Learner Detail URL bypassed consent entirely. Fixed by inserting the guard as the first Streamlit operation after set_page_config, before any title, data load, or UI renders. The most serious bug in the project, and the one I'm most glad I caught through testing rather than after submission.",
         },
         {
-          challenge: "Sample-size honesty in the dashboard charts",
+          challenge: "Sample size honesty in the dashboard charts",
           solution:
-            "A 1.67 average from three respondents isn't really an average — it's three opinions in a row. Added sample size annotations (n=3, n=20, etc.) above every chart bar so small samples can't be over-interpreted, and used lighter bar colours when n is below 5 as a visual cue.",
+            "A 1.67 average from three respondents isn't really an average. It's three opinions in a row. Added sample size annotations (n=3, n=20, etc.) above every chart bar so small samples can't be over interpreted, and used lighter bar colours when n is below 5 as a visual cue.",
         },
         {
           challenge: "0÷0 division crashes on small filter selections",
           solution:
-            "When a filter produced a subset where one device-access category had zero learners, the percentage calculation hit 0÷0 and the page crashed with IntCastingNaNError. Replaced zero row sums with NaN before division and built chart labels using a NaN-safe function so empty groups now produce a graceful caption instead of a crash.",
+            "When a filter produced a subset where one device access category had zero learners, the percentage calculation hit 0÷0 and the page crashed with IntCastingNaNError. Replaced zero row sums with NaN before division and built chart labels using a NaN safe function so empty groups now produce a graceful caption instead of a crash.",
         },
         {
           challenge: "Telling the story of the analysis honestly",
           solution:
-            "One finding (90% of phone-only learners are at Medium or High attendance risk) was so striking it was tempting to lead the report with it. But that framing reads as judging phone-only learners. Reframed every finding to pair the constraint with the supportive response — same fact, different action, no judgement implied.",
+            "One finding (90% of phone only learners are at Medium or High attendance risk) was so striking it was tempting to lead the report with it. But that framing reads as judging phone only learners. Reframed every finding to pair the constraint with the supportive response, same fact, different action, no judgement implied.",
         },
       ],
       outcomes: [
-        "Turns learner data into early support triggers instead of late-stage judgement",
+        "Turns learner data into early support triggers instead of late stage judgement",
         "Provides a framework for responsible data use in educational contexts",
       ],
       lessonsLearned: [
-        "Data is a way of shaping how people think about other people — every column you decide to collect is a decision about what you're allowed to judge someone on",
+        "Data is a way of shaping how people think about other people, every column you decide to collect is a decision about what you're allowed to judge someone on",
         "Validation belongs in the architecture, not in documentation. A test that asserts an ethical design rule is enforcement; a paragraph claiming the same rule is hope",
         "The type of a column tells you what questions you're allowed to ask of it. Categorical columns get distributions; numerical columns get averages; mixing them up produces nonsense",
         "Reading a chart and writing about a chart are two different steps. You have to reconcile what you wrote against what the chart actually shows, line by line, before submission",
@@ -613,16 +632,16 @@ const portfolioData = {
       name: "Medical Billing Delay Prediction",
       category: "Applied Research",
       shortDescription:
-        "Predictive analytics study that identifies private patient invoices likely to be processed beyond a 14-day threshold, using XGBoost and SHAP on 50,000 real-world records from a South African medical billing bureau.",
+        "Predictive analytics study that identifies private patient invoices likely to be processed beyond a 14 day threshold, using XGBoost and SHAP on 50,000 real world records from a South African medical billing bureau.",
       tagline: "Catching delays at the point of capture, not in the collection queue.",
       summary:
-        "Classification model that flags private patient invoices likely to exceed a 14-day processing threshold, built on 50,000 real records from a South African medical billing bureau using CRISP-DM, XGBoost, and SHAP explainability.",
+        "Classification model that flags private patient invoices likely to exceed a 14 day processing threshold, built on 50,000 real records from a South African medical billing bureau using CRISP-DM, XGBoost, and SHAP explainability.",
       problem:
-        "Medical billing bureaus carry the cash flow risk of every unresolved invoice. Roughly 24% of the bureau's private patient invoices were delayed beyond the 14-day threshold, but interventions only happened reactively — after delays had already occurred and turned into collection efforts.",
+        "Medical billing bureaus carry the cash flow risk of every unresolved invoice. Roughly 24% of the bureau's private patient invoices were delayed beyond the 14 day threshold, but interventions only happened reactively, after delays had already occurred and turned into collection efforts.",
       solution:
-        "Built and evaluated four classifiers (Logistic Regression, Decision Tree, Random Forest, XGBoost) on a 50,000-record dataset, selected XGBoost via bootstrap confidence interval analysis for its recall advantage, and applied SHAP TreeExplainer to translate predictions into a risk-based triage map for billing administrators.",
+        "Built and evaluated four classifiers (Logistic Regression, Decision Tree, Random Forest, XGBoost) on a 50,000 record dataset, selected XGBoost via bootstrap confidence interval analysis for its recall advantage, and applied SHAP TreeExplainer to translate predictions into a risk based triage map for billing administrators.",
       myRole:
-        "Sole researcher and analyst. Designed the study, performed all data cleaning and feature engineering, built and evaluated the models, conducted bootstrap statistical analysis, applied SHAP explainability, and translated findings into operational recommendations — as a postgraduate Applied Research Project for BIA 716 at the University of the Western Cape.",
+        "Sole researcher and analyst. Designed the study, performed all data cleaning and feature engineering, built and evaluated the models, conducted bootstrap statistical analysis, applied SHAP explainability, and translated findings into operational recommendations, as a postgraduate Applied Research Project for BIA 716 at the University of the Western Cape.",
       deployment: [],
       techStack: {
         language: ["Python 3.12"],
@@ -633,67 +652,67 @@ const portfolioData = {
       },
       architecture: [
         "CRISP-DM methodology applied end to end across business understanding, data understanding, preparation, modelling, evaluation, and deployment recommendations.",
-        "50,000-record dataset cleaned and reduced from 32 raw variables to 6 predictors through quality screening, Cramér's V association testing, and pairwise multicollinearity assessment.",
+        "50,000 record dataset cleaned and reduced from 32 raw variables to 6 predictors through quality screening, Cramér's V association testing, and pairwise multicollinearity assessment.",
         "Four classifiers built and compared on a held-out test set of 15,000 records: Logistic Regression, Decision Tree, Random Forest, and XGBoost.",
         "Bootstrap confidence interval analysis (1,000 paired resamples) used to test whether metric differences between ensemble models were statistically meaningful.",
-        "XGBoost selected as final model based on its statistically significant recall advantage — the metric prioritised for the bureau's cost asymmetry.",
+        "XGBoost selected as final model based on its statistically significant recall advantage, the metric prioritised for the bureau's cost asymmetry.",
         "SHAP TreeExplainer applied to the full test set, with global importance, beeswarm, dependence plots, and waterfalls used to produce an operational triage map.",
       ],
       features: [
         "Binary classification of private patient invoices as Timely or Delayed at the point of capture.",
-        "Bootstrap confidence interval procedure comparing five metrics across 1,000 test-set resamples.",
-        "SHAP-derived risk triage map identifying facility type and specialty combinations that consistently push toward delay.",
-        "Documented variable consolidation mappings reducing high-cardinality categoricals to clinically meaningful groups.",
-        "Stratified 70/30 train-test split preserving the 75.9/24.1 class distribution across the full 50,000 records.",
-        "Age.Bracket data leakage analysis with proposed two-model architecture to resolve it in production.",
+        "Bootstrap confidence interval procedure comparing five metrics across 1,000 test set resamples.",
+        "SHAP derived risk triage map identifying facility type and specialty combinations that consistently push toward delay.",
+        "Documented variable consolidation mappings reducing high cardinality categoricals to clinically meaningful groups.",
+        "Stratified 70/30 train test split preserving the 75.9/24.1 class distribution across the full 50,000 records.",
+        "Age.Bracket data leakage analysis with proposed two model architecture to resolve it in production.",
       ],
       highlights: [
         "XGBoost achieved ROC-AUC of 0.7570 and recall of 70.04%, meeting the study's acceptance threshold.",
-        "Bootstrap analysis revealed the two ensemble models were statistically tied on three of five metrics, with XGBoost winning on recall — the metric that mattered most.",
+        "Bootstrap analysis revealed the two ensemble models were statistically tied on three of five metrics, with XGBoost winning on recall, the metric that mattered most.",
         "SHAP identified Hospital facility type and Mental Health/General Practice specialties as the strongest risk drivers, translating model output into operational guidance.",
       ],
       engineeringHighlights: [
-        "Bootstrap confidence interval analysis (1,000 paired resamples) used to test whether the metric differences between Random Forest and XGBoost were statistically meaningful — not just visually different. The procedure revealed the two models were tied on three of five metrics and split the wins on the other two.",
-        "Recall-prioritised model selection grounded in the bureau's operational cost asymmetry, where missing a delayed invoice costs more than investigating a false alarm. XGBoost was chosen for its statistically significant recall advantage rather than its best-on-paper accuracy.",
-        "End-to-end variable engineering from 32 raw fields to a final set of 6 predictors, including consolidation of 118 Specialty naming variants into 9 clinical groups, 2,387 ICD-10 codes into 9 chapters, and 730 Service.Centre names into 9 facility types via keyword matching.",
-        "SHAP TreeExplainer applied to the full 15,000-record test set on the selected XGBoost model. Global importance, beeswarm direction, dependence plots, and individual prediction waterfalls used together to turn model behaviour into operational triage guidance.",
-        "Age.Bracket data leakage flagged honestly as a study limitation. The variable updates dynamically with time, so the strong Timely push it produces in training partly reflects time-yet-to-pass rather than a signal available at the point of capture — and the report says so.",
+        "Bootstrap confidence interval analysis (1,000 paired resamples) used to test whether the metric differences between Random Forest and XGBoost were statistically meaningful, not just visually different. The procedure revealed the two models were tied on three of five metrics and split the wins on the other two.",
+        "Recall prioritised model selection grounded in the bureau's operational cost asymmetry, where missing a delayed invoice costs more than investigating a false alarm. XGBoost was chosen for its statistically significant recall advantage rather than its best on paper accuracy.",
+        "End to end variable engineering from 32 raw fields to a final set of 6 predictors, including consolidation of 118 Specialty naming variants into 9 clinical groups, 2,387 ICD-10 codes into 9 chapters, and 730 Service.Centre names into 9 facility types via keyword matching.",
+        "SHAP TreeExplainer applied to the full 15,000 record test set on the selected XGBoost model. Global importance, beeswarm direction, dependence plots, and individual prediction waterfalls used together to turn model behaviour into operational triage guidance.",
+        "Age.Bracket data leakage flagged honestly as a study limitation. The variable updates dynamically with time, so the strong Timely push it produces in training partly reflects time yet to pass rather than a signal available at the point of capture, and the report says so.",
         "Reproducibility built in from the start: stratified 70/30 split, all four models trained with random_state set to the student number, and a documented preparation pipeline that takes the raw dataset to the modelling table without dropping any records.",
       ],
       challenges: [
         {
           challenge: "Random Forest and XGBoost split the wins almost evenly on the test set",
           solution:
-            "The two ensemble models produced metric differences of fractions of a percentage point — Random Forest slightly ahead on accuracy, XGBoost slightly ahead on recall. Picking by eye would have been guesswork. Built a bootstrap confidence interval procedure that resamples the test set with replacement 1,000 times, computes the paired metric difference on each resample, and tests whether zero falls inside the resulting interval. The result showed the models were statistically tied on three metrics and significantly different on two — clarifying the selection decision into a question of which metric the bureau cared about most.",
+            "The two ensemble models produced metric differences of fractions of a percentage point, Random Forest slightly ahead on accuracy, XGBoost slightly ahead on recall. Picking by eye would have been guesswork. Built a bootstrap confidence interval procedure that resamples the test set with replacement 1,000 times, computes the paired metric difference on each resample, and tests whether zero falls inside the resulting interval. The result showed the models were statistically tied on three metrics and significantly different on two, clarifying the selection decision into a question of which metric the bureau cared about most.",
         },
         {
           challenge: "Age.Bracket data leakage at the point of capture",
           solution:
-            "SHAP showed Age.Bracket as one of the strongest directional drivers, with young debt brackets pushing very strongly toward Timely. The supervisor flagged this as a possible leakage concern — and it was. Age.Bracket updates dynamically in the billing system, so the value in training reflects time that had already passed. In production every new invoice would start at zero, removing the signal. Acknowledged the issue as a limitation in the report and proposed a two-model architecture in the recommendations: one model trained without Age.Bracket for fresh invoices, and a second model retaining it for invoices already aged beyond 30 days.",
+            "SHAP showed Age.Bracket as one of the strongest directional drivers, with young debt brackets pushing very strongly toward Timely. The supervisor flagged this as a possible leakage concern, and it was. Age.Bracket updates dynamically in the billing system, so the value in training reflects time that had already passed. In production every new invoice would start at zero, removing the signal. Acknowledged the issue as a limitation in the report and proposed a two model architecture in the recommendations: one model trained without Age.Bracket for fresh invoices, and a second model retaining it for invoices already aged beyond 30 days.",
         },
         {
           challenge: "Translating model output into something a billing administrator can act on",
           solution:
-            "A ROC-AUC of 0.7570 means nothing to an administrator deciding which invoice to chase next. Used SHAP directional analysis to identify specific risk and safe categories at the predictor level — Hospital invoices and Mental Health and General Practice specialties pushed toward Delayed, while Consulting Rooms and Obstetrics, Dental, and Ophthalmology specialties pushed toward Timely. Turned this into a risk-based triage map in the recommendations, with specific signal combinations and the suggested workflow for each.",
+            "A ROC-AUC of 0.7570 means nothing to an administrator deciding which invoice to chase next. Used SHAP directional analysis to identify specific risk and safe categories at the predictor level: Hospital invoices and Mental Health and General Practice specialties pushed toward Delayed, while Consulting Rooms and Obstetrics, Dental, and Ophthalmology specialties pushed toward Timely. Turned this into a risk based triage map in the recommendations, with specific signal combinations and the suggested workflow for each.",
         },
         {
           challenge: "The third research objective could not be tested because the data did not contain a reliable service delivery date",
           solution:
-            "The original objective asked whether the temporal gap between service delivery and invoice capture predicts delay. The dataset had Capture.Date and Latest.Capture.Date but no clean service delivery field. Rather than dropping the objective or inventing a proxy that would look like the answer to a different question, recorded the objective as partially met, explained why directly in the report, and proposed engineering a true service-to-capture feature as the first item in the future research section.",
+            "The original objective asked whether the temporal gap between service delivery and invoice capture predicts delay. The dataset had Capture.Date and Latest.Capture.Date but no clean service delivery field. Rather than dropping the objective or inventing a proxy that would look like the answer to a different question, recorded the objective as partially met, explained why directly in the report, and proposed engineering a true service to capture feature as the first item in the future research section.",
         },
       ],
       outcomes: [
-        "XGBoost model achieved ROC-AUC of 0.7570 and recall of 70.04%, meeting the pre-specified acceptance threshold.",
+        "XGBoost model achieved ROC-AUC of 0.7570 and recall of 70.04%, meeting the prespecified acceptance threshold.",
         "Bootstrap analysis provided a statistically defensible basis for selecting XGBoost over Random Forest on recall.",
         "SHAP triage map translated model predictions into six specific risk/safe category combinations for operational use.",
         "Study completed as a postgraduate Applied Research Project for BIA 716 at the University of the Western Cape.",
       ],
       lessonsLearned: [
         "Small metric differences are not the same as real metric differences. Bootstrap confidence intervals turn 'XGBoost looks slightly better' into a question with a defensible answer.",
-        "Choosing the right metric is more important than choosing the right model. The bureau's cost asymmetry — a missed delay hurts more than a false alarm — is what made recall the deciding metric, not anything about XGBoost itself.",
+        "Choosing the right metric is more important than choosing the right model. The bureau's cost asymmetry, a missed delay hurts more than a false alarm, is what made recall the deciding metric, not anything about XGBoost itself.",
         "Explainability is what makes a model deployable. A 0.7570 AUC by itself is a number on a page; SHAP turns it into a triage map a billing administrator can actually use.",
-        "When a finding is too convenient, check it for leakage. Age.Bracket looked like the most powerful predictor in the model — but the same property that made it look powerful was the one that would erase its value in production.",
-        "Honest limitations strengthen a report, they don't weaken it. The third objective could not be tested directly, and saying so plainly — with a concrete recommendation for how to fix it next time — was more credible than smoothing it over.",
+        "When a finding is too convenient, check it for leakage. Age.Bracket looked like the most powerful predictor in the model, but the same property that made it look powerful was the one that would erase its value in production.",
+        "Honest limitations strengthen a report, they don't weaken it. The third objective could not be tested directly, and saying so plainly, with a concrete recommendation for how to fix it next time, was more credible than smoothing it over.",
       ],
       thumbnail: "/projects/medical-billing/shap_beeswarm_xgb.png",
       links: {
@@ -705,7 +724,7 @@ const portfolioData = {
       id: "global-superstore-regional-profitability",
       name: "Global Superstore: Regional Profitability Analysis",
       shortDescription:
-        "An Excel analysis of around 51,000 orders across 13 regions to find where a global retailer loses money and what actually drives it — testing the discounting hypothesis, ruling out shipping, and ending with a four-chart dashboard of recommendations.",
+        "An Excel analysis of around 51,000 orders across 13 regions to find where a global retailer loses money and what actually drives it, testing the discounting hypothesis, ruling out shipping, and ending with a four chart dashboard of recommendations.",
       tagline: "The striking finding is rarely the whole story.",
       thumbnail: "/projects/global-superstore-regional-profitability/dashboard.png",
       links: {
@@ -726,16 +745,16 @@ const portfolioData = {
       features: [
         "Cleaned and validated ~51,000 order line items, including converting text dates into usable dates.",
         "Calculated profit margin and shipping delay fields derived on load rather than trusted from the source.",
-        "XLOOKUP-based mapping of regional margin targets onto every row, with a Met Target verdict column.",
+        "XLOOKUP based mapping of regional margin targets onto every row, with a Met Target verdict column.",
         "PivotTable analysis comparing profit, sales, margin, and discount across 13 regions.",
         "Shipping cost and delay tested as alternative causes and ruled out.",
-        "Sub-category drill-down within the loss making regions, with the most extreme finding checked against its sample size.",
-        "Four-chart dashboard arranged as a single argument, with each chart titled by its finding.",
+        "Sub category drill down within the loss making regions, with the most extreme finding checked against its sample size.",
+        "Four chart dashboard arranged as a single argument, with each chart titled by its finding.",
       ],
       lessonsLearned: [
         "Test your own conclusion before trusting it. The fix that mattered most was actively trying to disprove the discounting hypothesis by checking shipping, rather than only gathering support for it.",
         "Total profit can hide an unhealthy business. Margin, not raw total, is what reveals whether each sale is actually healthy.",
-        "Position on screen is not the same as rank by value. Sorting a pivot by the number you care about prevents reading a high-up row as the highest value.",
+        "Position on screen is not the same as rank by value. Sorting a pivot by the number you care about prevents reading a high up row as the highest value.",
         "A dramatic number deserves a look at its sample size. The most extreme result rested on the fewest sales, so it earned a caveat rather than a headline.",
         "Be honest about what data can and cannot claim. The analysis shows discounting is associated with the losses, not that it is the proven sole cause.",
       ],
@@ -745,15 +764,15 @@ const portfolioData = {
   recruiterFAQs: [
     {
       q: "What kind of roles are you currently open to?",
-      a: "I am open to software engineering, data analytics, and AI-focused opportunities.",
+      a: "I am open to software engineering, data analytics, and AI focused opportunities.",
     },
     {
       q: "What is your strongest differentiator as a candidate?",
-      a: "I combine full-stack delivery with analytics and AI implementation, so I can ship products that are technically solid and decision-supportive.",
+      a: "I am a postgraduate student with a genuine interest in data analytics and a portfolio of real projects that show it. I am early in my career but I come with a clear direction, a bias toward learning, and work that speaks for itself.",
     },
     {
-      q: "Do you have production deployment experience?",
-      a: "Yes. My projects include production-style deployments across platforms like Vercel and Railway, with security and reliability considerations built in.",
+      q: "Do you have deployment experience?",
+      a: "My portfolio projects are live on Vercel and Railway, built with authentication, security, and reliability in mind. They are personal projects rather than company production systems, but I have approached each one with the same rigour I would bring to a professional environment.",
     },
     {
       q: "How should recruiters contact you?",
@@ -762,7 +781,7 @@ const portfolioData = {
   ],
 
   agentUseGuidelines: {
-    tone: "Professional, concise, recruiter-friendly.",
+    tone: "Professional, concise, recruiter friendly.",
     responsePolicy: [
       "Prefer facts from this data object before generating inferred claims.",
       "If a metric or date is unknown, say it is not specified instead of guessing.",

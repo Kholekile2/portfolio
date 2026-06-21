@@ -27,10 +27,10 @@ export default function MedCarePage() {
       <p className="chip mb-4">Healthcare Analytics Case Study</p>
       <h1 className="text-4xl font-bold mb-2">MedCare Booking System</h1>
       <p className="text-xl text-gray-700 mb-2 dark:text-gray-300">
-        Streamlit-Based Medical Facility Management and Analytics Platform
+        Streamlit Based Medical Facility Management and Analytics Platform
       </p>
       <p className="text-gray-600 mb-8 dark:text-gray-300">
-        Healthcare operations case study combining patient booking workflows with decision-grade analytics for capacity, revenue, and specialist performance.
+        Healthcare operations case study combining patient booking workflows with decision grade analytics for capacity, revenue, and specialist performance.
       </p>
 
       <div className="grid grid-cols-2 gap-3 mb-10 md:grid-cols-4">
@@ -71,9 +71,9 @@ export default function MedCarePage() {
           optimize specialist allocation, and improve service quality.
         </p>
         <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-          <li>Patient-facing workflow for discovery, booking, and confirmation in one interface.</li>
+          <li>Patient facing workflow for discovery, booking, and confirmation in one interface.</li>
           <li>Admin dashboard with filtering, KPI monitoring, and visual performance analysis.</li>
-          <li>BigQuery-backed architecture enabling scalable, query-driven healthcare reporting.</li>
+          <li>BigQuery backed architecture enabling scalable, query driven healthcare reporting.</li>
           <li>Operational controls including authentication, booking limits, and auditable data access.</li>
         </ul>
       </section>
@@ -83,7 +83,7 @@ export default function MedCarePage() {
         <p className="text-gray-700 dark:text-gray-300">
           Manual appointment coordination leads to long response times, weak visibility into specialist availability,
           and high administrative overhead. MedCare addresses this by creating a unified digital booking and BI environment
-          where patient access and operational decisions are both supported by real-time data.
+          where patient access and operational decisions are both supported by real time data.
         </p>
       </section>
 
@@ -116,13 +116,13 @@ export default function MedCarePage() {
         <ol className="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-2">
           <li>Users interact with Streamlit pages (patient flow or admin analytics flow).</li>
           <li>Actions trigger SQL reads or writes through the BigQuery API.</li>
-          <li>Pandas performs shaping and aggregation for metric-level analysis.</li>
+          <li>Pandas performs shaping and aggregation for metric level analysis.</li>
           <li>Plotly visualizes utilization, specialist performance, and revenue behavior.</li>
-          <li>Filter-aware dashboard views support targeted operational diagnosis.</li>
+          <li>Filter aware dashboard views support targeted operational diagnosis.</li>
         </ol>
         <p className="text-gray-700 dark:text-gray-300 mt-4">
-          The core model follows a star-schema-like pattern where Bookings acts as the fact table linked to Clients,
-          Specialists, Dates, and TimeSlots. This enables scalable joins for time-series and specialty-level reporting.
+          The core model follows a star schema like pattern where Bookings acts as the fact table linked to Clients,
+          Specialists, Dates, and TimeSlots. This enables scalable joins for time series and specialty level reporting.
         </p>
       </section>
 
@@ -130,7 +130,7 @@ export default function MedCarePage() {
         <h2 id="home-experience" className="scroll-mt-24 text-2xl font-semibold mb-4">Home Experience and Service Positioning</h2>
         <p className="text-gray-700 dark:text-gray-300 mb-4">
           The landing page establishes trust and clarity through service highlights, booking steps,
-          and transparent care access principles. It frames the platform as both patient-friendly and operations-ready.
+          and transparent care access principles. It frames the platform as both patient friendly and operations ready.
         </p>
         <div className="mx-auto max-w-2xl overflow-hidden rounded-lg border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
           <Image
@@ -149,10 +149,10 @@ export default function MedCarePage() {
           <div>
             <h3 className="text-lg font-semibold mb-2">Filtering Capabilities</h3>
             <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-              <li>Date range filtering for period-based demand and revenue diagnostics.</li>
-              <li>Specialist-level filtering for targeted performance review.</li>
+              <li>Date range filtering for period based demand and revenue diagnostics.</li>
+              <li>Specialist level filtering for targeted performance review.</li>
               <li>Chart style switching for exploratory versus presentation mode analysis.</li>
-              <li>One-click reset and cache clearing for rapid iterative analysis.</li>
+              <li>One click reset and cache clearing for rapid iterative analysis.</li>
             </ul>
           </div>
           <div>
@@ -184,12 +184,12 @@ export default function MedCarePage() {
         <h2 id="visualizations" className="scroll-mt-24 text-2xl font-semibold mb-4">Comprehensive Analytics Visualizations</h2>
         <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2 mb-4">
           <li>Interactive specialist booking charts with ranking and hover context.</li>
-          <li>Color-coded visuals by medical specialty to improve interpretation speed.</li>
+          <li>Color coded visuals by medical specialty to improve interpretation speed.</li>
           <li>Multiple chart types to compare operational and financial performance.</li>
         </ul>
         <p className="text-gray-700 dark:text-gray-300 mb-4">
           Business implication: Visual diversity supports both diagnostic analytics and leadership communication,
-          improving speed-to-decision for non-technical stakeholders.
+          improving speed to decision for non technical stakeholders.
         </p>
         <div className="mx-auto max-w-3xl overflow-hidden rounded-lg border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
           <Image
@@ -210,7 +210,7 @@ export default function MedCarePage() {
           <li>Revenue comparison across specialties for strategic staffing decisions.</li>
         </ul>
         <p className="text-gray-700 dark:text-gray-300 mb-4">
-          Business implication: Specialty-level visibility helps identify overutilized and underutilized service lines,
+          Business implication: Specialty level visibility helps identify overutilized and underutilized service lines,
           informing hiring priorities, referral strategies, and marketing allocation.
         </p>
         <div className="mx-auto max-w-3xl overflow-hidden rounded-lg border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
@@ -228,11 +228,11 @@ export default function MedCarePage() {
         <h2 id="revenue-trends" className="scroll-mt-24 text-2xl font-semibold mb-4">Revenue Trends Analysis</h2>
         <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2 mb-4">
           <li>Monthly revenue line charts with markers.</li>
-          <li>Time-series analysis using filtered periods.</li>
+          <li>Time series analysis using filtered periods.</li>
           <li>Revenue growth visibility for planning and forecasting.</li>
         </ul>
         <p className="text-gray-700 dark:text-gray-300 mb-4">
-          Business implication: Time-series monitoring supports budget planning, seasonal preparedness,
+          Business implication: Time series monitoring supports budget planning, seasonal preparedness,
           and proactive revenue risk management.
         </p>
         <div className="mx-auto max-w-3xl overflow-hidden rounded-lg border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
@@ -249,12 +249,12 @@ export default function MedCarePage() {
       <section className="mb-12">
         <h2 id="peak-hours" className="scroll-mt-24 text-2xl font-semibold mb-4">Peak Hours Analysis</h2>
         <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2 mb-4">
-          <li>Time-slot utilization analysis by hour.</li>
+          <li>Time slot utilization analysis by hour.</li>
           <li>Booking distribution throughout the day.</li>
-          <li>Color-gradient popularity indicators for schedule optimization.</li>
+          <li>Color gradient popularity indicators for schedule optimization.</li>
         </ul>
         <p className="text-gray-700 dark:text-gray-300 mb-4">
-          Business implication: Peak-hour intelligence supports better rota planning, wait-time reduction,
+          Business implication: Peak hour intelligence supports better rota planning, wait time reduction,
           and improved patient experience through capacity balancing.
         </p>
         <div className="mx-auto max-w-3xl overflow-hidden rounded-lg border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
@@ -271,8 +271,8 @@ export default function MedCarePage() {
       <section className="mb-12">
         <h2 id="data-export" className="scroll-mt-24 text-2xl font-semibold mb-4">Data Management and Export</h2>
         <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-          <li>Expandable, filtered raw tables for analyst-level drill-down validation.</li>
-          <li>Tabbed data views for specialist performance, revenue trends, time-slot utilization, and specialty metrics.</li>
+          <li>Expandable, filtered raw tables for analyst level drill down validation.</li>
+          <li>Tabbed data views for specialist performance, revenue trends, time slot utilization, and specialty metrics.</li>
           <li>CSV export for offline analysis, audit support, and stakeholder reporting.</li>
         </ul>
       </section>
@@ -283,7 +283,7 @@ export default function MedCarePage() {
           <li>Secure administrator login with hashed passwords and session management.</li>
           <li>Booking limit enforcement to prevent excessive active appointments.</li>
           <li>Controlled BigQuery API access for authorized data operations.</li>
-          <li>Validation-oriented workflow to preserve data quality and process consistency.</li>
+          <li>Validation oriented workflow to preserve data quality and process consistency.</li>
           <li>Centralized cloud storage to support reliability and auditable reporting.</li>
         </ul>
       </section>
@@ -291,8 +291,8 @@ export default function MedCarePage() {
       <section className="mb-12">
         <h2 id="challenges" className="scroll-mt-24 text-2xl font-semibold mb-4">Challenges Solved</h2>
         <p className="text-gray-700 dark:text-gray-300">
-          The project addressed multi-table query complexity, filter-driven dashboard consistency,
-          and end-to-end page integration reliability. These were resolved through iterative SQL testing in BigQuery,
+          The project addressed multi table query complexity, filter driven dashboard consistency,
+          and end to end page integration reliability. These were resolved through iterative SQL testing in BigQuery,
           modular page design, parameterized filtering, caching for performance, and defensive validation for future data changes.
         </p>
       </section>
@@ -300,7 +300,7 @@ export default function MedCarePage() {
       <section className="mb-12">
         <h2 id="decision-playbook" className="scroll-mt-24 text-2xl font-semibold mb-4">Decision Playbook for Facility Managers</h2>
         <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-          <li>Use peak-hour charts to reallocate staffing and reduce patient queue pressure.</li>
+          <li>Use peak hour charts to reallocate staffing and reduce patient queue pressure.</li>
           <li>Use specialty performance trends to guide recruitment and referral investment.</li>
           <li>Track average booking value and monthly revenue to detect growth or margin risk early.</li>
           <li>Apply date and specialist filters to evaluate operational impact of interventions.</li>
@@ -313,7 +313,7 @@ export default function MedCarePage() {
         <p className="text-gray-700 dark:text-gray-300">
           MedCare Booking System demonstrates how digital booking and analytics can operate as one healthcare intelligence system.
           The result is improved access for patients, stronger operational control for administrators, and a repeatable,
-          data-driven approach to improving service quality and facility performance.
+          data led approach to improving service quality and facility performance.
         </p>
       </section>
       </div>
