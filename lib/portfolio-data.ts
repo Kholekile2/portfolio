@@ -1,23 +1,23 @@
 const portfolioData = {
   profile: {
     name: "Kholekile Mpengesi",
-    headline: "Data Analytics & BI | Full Stack Developer",
-    role: "Data Analyst & Developer",
+    headline: "Data Analyst | SQL, Power BI, Python | Background in Backend Development",
+    role: "Data Analyst",
     location: "Cape Town, South Africa",
     availability: "Immediately",
     summary:
-      "I turn data into decisions and build the engineering to deliver them. My work centres on analytics, business intelligence, and applied machine learning, with production software to make the analysis usable.",
+      "I work in data analytics with a background in software development that I still draw on when a project needs it. Most of my experience has come from paid client projects for small businesses through the UWC Future Innovation Lab, plus a Cloud Administrator and Data Analyst apprenticeship at Forvis Mazars.",
     shortPitch:
-      "Postgraduate student in Data Analytics and Business Intelligence, with project work and practical exposure across analytics, machine learning, and full stack development.",
+      "Data analyst with a completed Postgraduate Diploma in Data Analysis and Business Intelligence from UWC. Experience in SQL, Power BI, Python, and Microsoft Azure, from client work at the UWC Future Innovation Lab and an apprenticeship at Forvis Mazars.",
     currentFocus: [
-      "Data analytics, BI, and applied ML for real business decisions",
-      "AI enabled analytics workflows and decision support systems",
-      "Engineering that makes insights deployable, not just correct",
+      "Data cleaning, SQL analysis, and BI dashboards for small business contexts",
+      "Building practical skills under more senior analysts at Forvis Mazars",
+      "Looking for a role to apply existing knowledge and keep growing",
     ],
     portfolioMetadata: {
       siteTitle: "Kholekile Mpengesi | Portfolio",
       siteDescription:
-        "Portfolio of Kholekile Mpengesi, a Data Analytics and BI postgraduate student and developer based in Cape Town.",
+        "Portfolio of Kholekile Mpengesi, a data analyst based in Cape Town with a background in backend development.",
     },
   },
 
@@ -31,56 +31,43 @@ const portfolioData = {
 
   skills: [
     {
-      category: "Data and AI",
-      items: ["Python", "R", "OpenAI", "Azure AI Services", "RAG systems"],
-    },
-    {
-      category: "Analytics and BI",
-      items: ["Streamlit", "Pandas", "Plotly", "Microsoft Excel", "Power BI", "Business Intelligence dashboards"],
-    },
-    {
-      category: "Databases and Query",
-      items: ["SQL", "BigQuery", "PostgreSQL", "Supabase", "pgvector", "MySQL"],
-    },
-    {
-      category: "Backend",
-      items: ["C#", ".NET", "ASP.NET Core", "Minimal APIs", "REST APIs"],
-    },
-    {
-      category: "Frontend",
-      items: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
-    },
-    {
-      category: "Cloud and Deployment",
-      items: ["Microsoft Azure", "Vercel", "Railway"],
-    },
-    {
-      category: "Engineering Practices",
+      category: "Primary (data work)",
       items: [
-        "Security by design",
-        "Row Level Security",
-        "Realtime systems",
-        "Performance optimization",
+        "SQL (PostgreSQL, MySQL, SQLite, Microsoft SQL Server, BigQuery)",
+        "Microsoft Excel (PivotTables, XLOOKUP, VBA)",
+        "Microsoft Power BI (Power Query, DAX)",
+        "Python (pandas, NumPy, scikit-learn, XGBoost, SHAP)",
+        "R",
+        "Microsoft Azure",
+      ],
+    },
+    {
+      category: "Secondary (from backend development background)",
+      items: [
+        "C# and ASP.NET Core",
+        "MySQL and Entity Framework",
+        "Next.js and TypeScript",
+        "Git and GitHub",
       ],
     },
   ],
 
   experience: [
     {
-      role: "AI Cloud Administrator and Data Analyst (Apprenticeship)",
+      role: "Cloud Administrator and Data Analyst (Apprenticeship)",
       company: "Forvis Mazars",
       period: "Current",
       description:
-        "Apprenticeship providing practical exposure to data analysis, reporting, and cloud based AI solutions on Microsoft Azure.",
-      keywords: ["Azure", "AI cloud", "data analysis", "reporting", "apprenticeship"],
+        "Apprenticeship at a global audit and advisory firm. The programme is built around Microsoft Azure administration and certification, with most day to day work covering data analytics, SQL, Power BI dashboards, and report accuracy checks.",
+      keywords: ["Azure", "SQL", "Power BI", "data analytics", "reporting", "apprenticeship"],
     },
     {
-      role: "Software Developer (Internship)",
-      company: "University of the Western Cape (UWC CoLab)",
-      period: "Current",
+      role: "Data Analyst and Backend Developer",
+      company: "UWC Future Innovation Lab",
+      period: "August 2024 to present",
       description:
-        "Internship contributing to software and AI projects, including building features with React, ASP.NET Core, and Tailwind CSS alongside the broader team.",
-      keywords: ["internship", "React", "ASP.NET Core", "Tailwind CSS", "AI projects"],
+        "Paid client work for small businesses across retail and food service. Analytics work covers data cleaning, dashboards, reports, and light modelling. Largest engagement was Feedem (October 2024), a food service business on the UWC campus. Also served as Technical Lead on KhathalaCare, a healthcare provider discovery web application, and contributed to MzansiMed GPT, a Gates Foundation funded multilingual healthcare assistant.",
+      keywords: ["SQL", "Python", "Power BI", "data cleaning", "dashboards", "client work", "KhathalaCare", "MzansiMed GPT", "Feedem"],
     },
   ],
 
@@ -759,20 +746,71 @@ const portfolioData = {
         "Be honest about what data can and cannot claim. The analysis shows discounting is associated with the losses, not that it is the proven sole cause.",
       ],
     },
+    {
+      id: "online-retail-sql-powerbi",
+      name: "Online Retail II: Database Build, SQL Analysis and Power BI Dashboard",
+      shortDescription:
+        "A SQL and Power BI project built on a two year, over one million row transactional dataset — cleaning genuinely messy data, designing a normalized PostgreSQL database from scratch, analysing it with window functions, CTEs and a full RFM segmentation, and finishing with a two page dashboard.",
+      tagline: "The same average can describe two completely different products.",
+      summary:
+        "A self-directed SQL and Power BI project analysing 1,055,238 order line items from the public Online Retail II dataset, cleaning the raw data, designing a normalized PostgreSQL star schema, writing analytical SQL including window functions and a subquery, and finishing with a two page Power BI dashboard.",
+      problem:
+        "Raw transaction data rarely arrives ready to answer anything. Before any question about revenue, customers, or stock can be answered honestly, the data itself has to be understood, cleaned, and structured properly, including deciding what to do with values that are technically valid but ambiguous, such as a missing customer ID or a product with ten different recorded names.",
+      solution:
+        "Treated the project as four connected stages: profiled the data thoroughly enough to know exactly what was wrong with it, designed and built a normalized PostgreSQL database around what that profiling found, wrote SQL that answers real questions about revenue, products, and customers, and brought that same analysis into Power BI without silently redoing or duplicating any of it.",
+      thumbnail: "/projects/online-retail-sql-powerbi/sales_overview.png",
+      links: {
+        caseStudyPath: "/projects/online-retail-sql-powerbi",
+        githubUrl: "https://github.com/Kholekile2/online-retail-ii-analysis",
+      },
+      techStack: {
+        tools: ["PostgreSQL", "pgAdmin", "Power BI", "Power Query"],
+        data: [
+          "window functions",
+          "common table expressions",
+          "subqueries",
+          "star schema design",
+          "foreign key relationships",
+          "DAX measures",
+        ],
+        skills: [
+          "data cleaning",
+          "database design",
+          "customer segmentation",
+          "dashboard design",
+          "translating SQL logic into DAX rather than duplicating it",
+        ],
+      },
+      features: [
+        "Cleaned and validated a two year, 1,055,238 row transactional dataset in Power Query, including type corrections, a systematic method for finding every non product code, and resolving inconsistent product descriptions.",
+        "Designed and built a normalized PostgreSQL database using a star schema, one fact table and three dimension tables, with working foreign key constraints.",
+        "Built a synthetic inventory table from actual product demand patterns, treating steady sellers and spike driven products differently rather than applying one formula across the whole catalog.",
+        "Wrote analytical SQL covering joins, window functions (RANK, LAG, running totals), common table expressions, and a subquery.",
+        "Built a full RFM customer segmentation model, scoring recency, frequency and monetary value into quartiles and grouping customers into four segments.",
+        "Connected Power BI directly to the database and built a two page dashboard, using DAX measures and calculated columns to reproduce the SQL logic rather than duplicate it separately.",
+      ],
+      lessonsLearned: [
+        "A number that looks wrong is worth chasing down, not shrugging off. A one row mismatch between Power Query and Postgres turned out to be a stale profiling reading once checked with a direct SQL comparison, not real data loss.",
+        "An average can hide two completely different products. One item's typical monthly demand was driven almost entirely by a single bulk order, and treating it the same as a genuinely steady seller would have badly overstated its stock needs.",
+        "Don't duplicate logic that already works. Rebuilding customer segmentation in DAX partway through, the tested SQL version already existed, so it was brought in as a database view instead of maintaining two versions that could quietly drift apart.",
+        "A dominant category can make a chart useless. The UK accounted for about 85 percent of all revenue, so it was stated as a fact in writing but left out of the country comparison chart, since one bar would have made every other country invisible.",
+        "Filters have to be reapplied deliberately in every query. A ranking rebuilt with a window function let a shipping fee code slip into the results the first time, since the database enforces no business rules on its own.",
+      ],
+    },
   ],
 
   recruiterFAQs: [
     {
       q: "What kind of roles are you currently open to?",
-      a: "I am open to software engineering, data analytics, and AI focused opportunities.",
+      a: "I am looking for a data analyst role where I can work with SQL, Power BI, or Python on real business problems. I am open to junior or graduate level positions.",
     },
     {
-      q: "What is your strongest differentiator as a candidate?",
-      a: "I am a postgraduate student with a genuine interest in data analytics and a portfolio of real projects that show it. I am early in my career but I come with a clear direction, a bias toward learning, and work that speaks for itself.",
+      q: "What is your background?",
+      a: "I completed a Postgraduate Diploma in Data Analysis and Business Intelligence at UWC. My hands on experience comes from two years of paid client work at the UWC Future Innovation Lab and a Cloud Administrator and Data Analyst apprenticeship at Forvis Mazars. I also have a background in backend development, which I draw on when a project needs it.",
     },
     {
-      q: "Do you have deployment experience?",
-      a: "My portfolio projects are live on Vercel and Railway, built with authentication, security, and reliability in mind. They are personal projects rather than company production systems, but I have approached each one with the same rigour I would bring to a professional environment.",
+      q: "What tools and technologies do you work with?",
+      a: "My main tools are SQL, Microsoft Excel, Power BI, Python (pandas, NumPy, scikit-learn), R, and Microsoft Azure. On the development side I have used C#, ASP.NET Core, Next.js, and TypeScript.",
     },
     {
       q: "How should recruiters contact you?",

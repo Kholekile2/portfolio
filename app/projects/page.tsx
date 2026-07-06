@@ -9,27 +9,27 @@ export default function ProjectsPage() {
 
       <div className="mt-10 grid gap-8 md:grid-cols-2">
         <div className="surface-card">
-          <p className="chip mb-3">Applied Research</p>
-          <h2 className="text-xl font-bold mb-2">Medical Billing Delay Prediction</h2>
+          <p className="chip mb-3">Data Analysis</p>
+          <h2 className="text-xl font-bold mb-2">Online Retail II: SQL &amp; Power BI</h2>
 
           <p className="text-gray-700 mb-3 dark:text-gray-300">
-            XGBoost and SHAP study on 50,000 private patient invoices to flag billing delays at the point of capture, not in the collection queue.
+            SQL and Power BI project on 1,055,238 order lines: a normalized PostgreSQL database built from scratch, analytical SQL, and a two page dashboard.
           </p>
 
           <p className="text-sm text-gray-500 mb-4 dark:text-gray-400">
-            Python • XGBoost • scikit-learn • SHAP • pandas
+            PostgreSQL • Power BI • Power Query • DAX • Window Functions
           </p>
 
           <p className="text-sm text-gray-600 mb-4 dark:text-gray-300">
-            Bootstrap confidence interval analysis used to select the final model on recall, the metric that matched the bureau's cost structure.
+            Star schema design, RFM customer segmentation, and a synthetic inventory model, with SQL logic reused as DAX rather than duplicated.
           </p>
 
           <div className="flex gap-4">
-            <a href="/projects/medical-billing-delay-prediction" className="text-link">
+            <a href="/projects/online-retail-sql-powerbi" className="text-link">
               View Case Study →
             </a>
             <a
-              href="https://github.com/Kholekile2/medical-billing-prediction"
+              href="https://github.com/Kholekile2/online-retail-ii-analysis"
               target="_blank"
               rel="noopener noreferrer"
               className="text-link"
@@ -61,6 +61,37 @@ export default function ProjectsPage() {
             </a>
             <a
               href="https://github.com/Kholekile2/Global-superstore-regional-profitability"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-link"
+            >
+              Code
+            </a>
+          </div>
+        </div>
+
+        <div className="surface-card">
+          <p className="chip mb-3">Applied Research</p>
+          <h2 className="text-xl font-bold mb-2">Medical Billing Delay Prediction</h2>
+
+          <p className="text-gray-700 mb-3 dark:text-gray-300">
+            XGBoost and SHAP study on 50,000 private patient invoices to flag billing delays at the point of capture, not in the collection queue.
+          </p>
+
+          <p className="text-sm text-gray-500 mb-4 dark:text-gray-400">
+            Python • XGBoost • scikit-learn • SHAP • pandas
+          </p>
+
+          <p className="text-sm text-gray-600 mb-4 dark:text-gray-300">
+            Bootstrap confidence interval analysis used to select the final model on recall, the metric that matched the bureau's cost structure.
+          </p>
+
+          <div className="flex gap-4">
+            <a href="/projects/medical-billing-delay-prediction" className="text-link">
+              View Case Study →
+            </a>
+            <a
+              href="https://github.com/Kholekile2/medical-billing-prediction"
               target="_blank"
               rel="noopener noreferrer"
               className="text-link"

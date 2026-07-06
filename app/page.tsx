@@ -7,17 +7,18 @@ export default function Home() {
       <section className="mx-auto max-w-5xl">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1.15fr)_320px] lg:items-start">
           <div>
-            <p className="chip mb-4">Data Analytics &amp; BI | Open to new roles</p>
+            <p className="chip mb-4">Open to new opportunities</p>
 
             <h1 className="text-4xl font-bold tracking-tight md:text-5xl">Kholekile Mpengesi</h1>
 
             <p className="mt-3 text-xl text-gray-700 dark:text-gray-300">
-              Data Analytics &amp; BI | Full Stack Developer
+              Data Analyst | SQL, Power BI, Python | Background in Backend Development
             </p>
 
             <p className="mt-4 max-w-2xl text-gray-600 dark:text-gray-300">
-              Most analysis stays in a notebook. I make it usable: through dashboards, prediction pipelines,
-              and AI powered tools grounded in real business problems.
+              I work in data analytics with a background in software development that I still draw on when a project needs it.
+              Most of the work I&apos;ve done so far has come from paid client projects for small businesses through the UWC Future Innovation Lab,
+              plus a Cloud Administrator and Data Analyst apprenticeship at Forvis Mazars.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-4">
@@ -49,16 +50,16 @@ export default function Home() {
 
         <div className="mt-10 grid gap-4 md:grid-cols-3">
           <div className="surface-card p-4">
-            <p className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">Primary Focus</p>
-            <p className="mt-2 text-sm text-gray-700 dark:text-gray-300">Data analytics, BI, and applied ML, with engineering to make it deployable.</p>
+            <p className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">Focus</p>
+            <p className="mt-2 text-sm text-gray-700 dark:text-gray-300">Data cleaning, SQL analysis, BI dashboards, and light modelling work, mostly for small business contexts.</p>
           </div>
           <div className="surface-card p-4">
-            <p className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">Core Stack</p>
-            <p className="mt-2 text-sm text-gray-700 dark:text-gray-300">Next.js, ASP.NET Core, Supabase, BigQuery, Streamlit.</p>
+            <p className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">Core Tools</p>
+            <p className="mt-2 text-sm text-gray-700 dark:text-gray-300">SQL, Excel, Power BI, Python (pandas), PostgreSQL, and Microsoft Azure.</p>
           </div>
           <div className="surface-card p-4">
-            <p className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">Value Delivered</p>
-            <p className="mt-2 text-sm text-gray-700 dark:text-gray-300">Production systems with measurable workflow and decision impact.</p>
+            <p className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">How I Work</p>
+            <p className="mt-2 text-sm text-gray-700 dark:text-gray-300">I take time to understand a problem before I start solving it. I would rather ask a question than guess, and rather flag an issue early than hide it.</p>
           </div>
         </div>
 
@@ -66,30 +67,47 @@ export default function Home() {
           <h2 className="mb-4 text-2xl font-semibold">About Me</h2>
 
           <p className="text-gray-700 dark:text-gray-300">
-            I&apos;m a postgraduate student specialising in Data Analytics and Business Intelligence at UWC.
-            What draws me to data work is the space between what a dataset contains and what a decision maker needs.
-            A 0.7570 AUC is a number on a page; SHAP turns it into a triage map a billing administrator can act on Monday morning.
-            That translation is what I care about.
+            I recently completed my Postgraduate Diploma in Data Analysis and Business Intelligence at the University of the Western Cape,
+            on top of a BSc in Physical Science from the same university.
+            My interest in data grew out of the physics and mathematics side of my undergraduate work,
+            particularly the part that deals with finding structure and meaning in messy real world information.
           </p>
 
           <p className="mt-4 text-gray-700 dark:text-gray-300">
-            Through my postgraduate work and personal projects, I&apos;ve built up the technical side to go alongside the analysis:
-            BI dashboards, Streamlit tools, prediction pipelines, and AI powered products.
-            I don&apos;t have years of industry experience yet, but I&apos;m deliberate about what I build and why,
-            and the projects on this site are the clearest evidence of that.
+            Most of my analytics experience so far has come from paid client work at the UWC Future Innovation Lab,
+            where over the last two years I have worked on projects for small businesses that could not afford larger consulting firms,
+            mostly in retail and food service. Alongside that, I&apos;m doing a Cloud Administrator and Data Analyst apprenticeship
+            at Forvis Mazars, where I work with SQL, Power BI, and Microsoft Azure under a more senior team.
+            I&apos;m not an expert, and I&apos;m open about that. I&apos;m looking for a role where I can apply what I already know,
+            keep learning from people who are further along than I am, and grow into a stronger analyst over time.
           </p>
         </section>
 
         <section className="mt-16">
           <h2 className="mb-4 text-2xl font-semibold">Tech Stack</h2>
 
-          <div className="grid grid-cols-2 gap-3 text-sm text-gray-700 dark:text-gray-300 md:grid-cols-3">
-            <div className="surface-card p-4">Python &amp; R (Data Analysis, ML)</div>
-            <div className="surface-card p-4">SQL (BigQuery, PostgreSQL, MySQL)</div>
-            <div className="surface-card p-4">Microsoft Excel &amp; Power BI</div>
-            <div className="surface-card p-4">Microsoft Azure &amp; AI Services</div>
-            <div className="surface-card p-4">C# / .NET (ASP.NET Core, Blazor)</div>
-            <div className="surface-card p-4">JavaScript / TypeScript (Next.js)</div>
+          <div className="space-y-6 text-sm text-gray-700 dark:text-gray-300">
+            <div>
+              <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">Primary (data work)</p>
+              <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
+                <div className="surface-card p-4">SQL (PostgreSQL, MySQL, SQLite, Microsoft SQL Server, BigQuery)</div>
+                <div className="surface-card p-4">Microsoft Excel (PivotTables, XLOOKUP, VBA)</div>
+                <div className="surface-card p-4">Microsoft Power BI (Power Query, DAX)</div>
+                <div className="surface-card p-4">Python (pandas, NumPy, scikit-learn, XGBoost, SHAP)</div>
+                <div className="surface-card p-4">R</div>
+                <div className="surface-card p-4">Microsoft Azure</div>
+              </div>
+            </div>
+
+            <div>
+              <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">Secondary (from backend development background)</p>
+              <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
+                <div className="surface-card p-4">C# and ASP.NET Core</div>
+                <div className="surface-card p-4">MySQL and Entity Framework</div>
+                <div className="surface-card p-4">Next.js and TypeScript</div>
+                <div className="surface-card p-4">Git and GitHub</div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -97,15 +115,21 @@ export default function Home() {
           <h2 className="mb-4 text-2xl font-semibold">Experience</h2>
 
           <p className="text-gray-700 dark:text-gray-300">
-            Currently doing an apprenticeship as an AI Cloud Administrator and Data Analyst at Forvis Mazars,
-            where I get practical exposure to data analysis, reporting, and cloud based AI solutions on Microsoft Azure.
-            It has given me a real look at how analytics work operates in a professional environment.
+            Cloud Administrator and Data Analyst apprenticeship at Forvis Mazars, a global audit and advisory firm.
+            The programme was set up around Microsoft Azure administration, certification and data analytics, most of the day to day work
+            has been data analytics, writing SQL, building Power BI dashboards, and checking that reports are accurate
+            before the team uses them.
           </p>
 
           <p className="mt-4 text-gray-700 dark:text-gray-300">
-            Also interning at the UWC CoLab, where I contribute to software and AI projects as part of the team.
-            I have had the chance to work on real features using React, ASP.NET Core, and Tailwind CSS,
-            which has been a useful bridge between what I build independently and what collaborative development actually looks like.
+            Data Analyst and Backend Developer at the UWC Future Innovation Lab since August 2024, working on paid client
+            projects for small businesses. Data analytics has been the dominant side of the work over time, covering data
+            cleaning, dashboards, reports, and light modelling for three clients across retail and food service.
+            The Feedem project (a food service business on the UWC campus, 2024) was the biggest engagement,
+            and involved analysing their operational data and helping scope out a small system to support the decisions
+            the data was pointing toward. On the software side of the same role, I worked as Technical Lead on KhathalaCare,
+            a healthcare provider discovery web application, and contributed to MzansiMed GPT, a Gates Foundation funded
+            multilingual healthcare assistant.
           </p>
         </section>
 
@@ -137,27 +161,30 @@ export default function Home() {
 
           <div className="grid gap-6 md:grid-cols-2">
             <div className="surface-card">
-              <p className="chip mb-3">Applied Research</p>
-              <h3 className="text-xl font-bold">Medical Billing Delay Prediction</h3>
+              <p className="chip mb-3">Data Analysis</p>
+              <h3 className="text-xl font-bold">Online Retail II: SQL &amp; Power BI</h3>
 
               <p className="mt-2 text-gray-700 dark:text-gray-300">
-                XGBoost and SHAP study on 50,000 private patient invoices to flag billing delays at the point of capture, using bootstrap confidence intervals to select the final model on recall.
+                SQL and Power BI project on 1,055,238 order lines, cleaning messy data, designing a normalized
+                PostgreSQL database from scratch, and building a two page dashboard powered by DAX pulled from
+                tested SQL logic.
               </p>
 
               <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
-                Python • XGBoost • scikit-learn • SHAP • pandas
+                PostgreSQL • Power BI • Power Query • DAX • Window Functions
               </p>
 
               <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
-                Outcome: ROC AUC 0.7570, recall 70.04%, and a SHAP triage map translating model output into operational guidance for billing administrators.
+                Outcome: Star schema database, full RFM customer segmentation, and a synthetic inventory model
+                built from real demand patterns.
               </p>
 
               <div className="mt-4 flex gap-4">
-                <Link href="/projects/medical-billing-delay-prediction" className="text-link">
+                <Link href="/projects/online-retail-sql-powerbi" className="text-link">
                   Case Study
                 </Link>
                 <a
-                  href="https://github.com/Kholekile2/medical-billing-prediction"
+                  href="https://github.com/Kholekile2/online-retail-ii-analysis"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-link"
@@ -193,6 +220,37 @@ export default function Home() {
                 </Link>
                 <a
                   href="https://github.com/Kholekile2/Global-superstore-regional-profitability"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-link"
+                >
+                  Code
+                </a>
+              </div>
+            </div>
+
+            <div className="surface-card">
+              <p className="chip mb-3">Applied Research</p>
+              <h3 className="text-xl font-bold">Medical Billing Delay Prediction</h3>
+
+              <p className="mt-2 text-gray-700 dark:text-gray-300">
+                XGBoost and SHAP study on 50,000 private patient invoices to flag billing delays at the point of capture, using bootstrap confidence intervals to select the final model on recall.
+              </p>
+
+              <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+                Python • XGBoost • scikit-learn • SHAP • pandas
+              </p>
+
+              <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
+                Outcome: ROC AUC 0.7570, recall 70.04%, and a SHAP triage map translating model output into operational guidance for billing administrators.
+              </p>
+
+              <div className="mt-4 flex gap-4">
+                <Link href="/projects/medical-billing-delay-prediction" className="text-link">
+                  Case Study
+                </Link>
+                <a
+                  href="https://github.com/Kholekile2/medical-billing-prediction"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-link"
