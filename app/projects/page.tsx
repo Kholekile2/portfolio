@@ -164,6 +164,39 @@ export default function ProjectsPage() {
         </div>
 
         <div className="surface-card">
+          <p className="chip mb-3">Business Intelligence</p>
+          <h2 className="text-xl font-bold mb-2">Employee Attrition Analysis</h2>
+
+          <p className="text-gray-700 mb-3 dark:text-gray-300">
+            Power BI case study that shows attrition was concentrated in Sales Representatives, not spread
+            evenly across the company.
+          </p>
+
+          <p className="text-sm text-gray-500 mb-4 dark:text-gray-400">
+            Microsoft Power BI • Power Query • DAX • KPI Design
+          </p>
+
+          <p className="text-sm text-gray-600 mb-4 dark:text-gray-300">
+            Dashboard built around retention, cost of attrition, and high risk headcount, with overtime as the
+            strongest risk driver.
+          </p>
+
+          <div className="flex gap-4">
+            <a href="/projects/employee-attrition-power-bi" className="text-link">
+              View Case Study →
+            </a>
+            <a
+              href="https://github.com/Kholekile2/employee-attrition-power-bi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-link"
+            >
+              Code
+            </a>
+          </div>
+        </div>
+
+        <div className="surface-card">
           <p className="chip mb-3">Data & Ethics</p>
           <h2 className="text-xl font-bold mb-2">Student Support Insights</h2>
 
