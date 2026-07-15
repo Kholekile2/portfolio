@@ -41,18 +41,18 @@ export default function ProjectsPage() {
 
         <div className="surface-card">
           <p className="chip mb-3">Data Analysis</p>
-          <h2 className="text-xl font-bold mb-2">Global Superstore: Regional Profitability</h2>
+          <h2 className="text-xl font-bold mb-2">Global Superstore: Regional Profitability Analysis</h2>
 
           <p className="text-gray-700 mb-3 dark:text-gray-300">
-            Excel analysis of ~51,000 orders across 13 regions to find where a global retailer loses money and what actually drives it.
+            A global retailer's sales were growing but profit wasn't. This analysis of ~51,000 orders found a quarter of sales were unprofitable, traced the losses to three regions, and tied them to heavy discounting.
           </p>
 
           <p className="text-sm text-gray-500 mb-4 dark:text-gray-400">
-            Microsoft Excel • XLOOKUP • PivotTables • Dashboard Design
+            Microsoft Excel • XLOOKUP • PivotTables • Data Cleaning • Dashboard Design
           </p>
 
           <p className="text-sm text-gray-600 mb-4 dark:text-gray-300">
-            Hypothesis driven investigation: losses located, discounting confirmed as driver, shipping ruled out, sub category fixes identified.
+            Shipping was tested and ruled out, the losses were concentrated in three regions, and the final dashboard turned the findings into pricing recommendations.
           </p>
 
           <div className="flex gap-4">

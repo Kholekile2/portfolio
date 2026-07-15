@@ -196,19 +196,19 @@ export default function Home() {
 
             <div className="surface-card">
               <p className="chip mb-3">Data Analysis</p>
-              <h3 className="text-xl font-bold">Global Superstore: Regional Profitability</h3>
+              <h3 className="text-xl font-bold">Global Superstore: Regional Profitability Analysis</h3>
 
               <p className="mt-2 text-gray-700 dark:text-gray-300">
-                Excel analysis of ~51,000 orders across 13 regions, finding where a global retailer loses money,
-                testing the discounting hypothesis, ruling out shipping, and delivering a four chart dashboard of recommendations.
+                Excel analysis of ~51,000 orders across 13 regions, finding a quarter of sales were unprofitable,
+                tracing the losses to three regions and heavy discounting, ruling out shipping, and turning it into a dashboard and pricing recommendations.
               </p>
 
               <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
-                Microsoft Excel • XLOOKUP • PivotTables • Dashboard Design
+                Microsoft Excel • XLOOKUP • PivotTables • Data Cleaning • Dashboard Design
               </p>
 
               <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
-                Outcome: Concentrated losses in three regions traced to discounting, with targeted sub category fixes identified.
+                Outcome: Concentrated losses in three regions, discounting confirmed as the main driver, shipping ruled out, and pricing recommendations framed for action.
               </p>
 
               <div className="mt-4 flex gap-4">
