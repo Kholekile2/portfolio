@@ -1,54 +1,55 @@
+import Image from "next/image";
 import CaseStudyToc from "../../components/case-study-toc";
 import portfolioData from "../../../lib/portfolio-data";
-import Image from "next/image";
 
 const project = portfolioData.projects.find((item) => item.id === "online-retail-sql-powerbi")!;
 
 export default function OnlineRetailSqlPowerBiPage() {
   const sections = [
     { id: "overview", label: "Overview" },
-    { id: "problem", label: "The Problem" },
-    { id: "solution", label: "What I Did" },
-    { id: "screenshots", label: "What It Looks Like" },
-    { id: "approach", label: "Approach" },
+    { id: "context", label: "Business Context" },
+    { id: "numbers", label: "Headline Numbers" },
+    { id: "question", label: "The Question" },
+    { id: "screenshots", label: "The Dashboard" },
     { id: "findings", label: "Findings" },
-    { id: "data-workflow", label: "Data Workflow" },
+    { id: "recommendations", label: "Recommendations" },
+    { id: "approach", label: "How I Worked" },
     { id: "tools", label: "Tools & Skills" },
-    { id: "limitations", label: "Scope & Limitations" },
-    { id: "results", label: "What I Learned" },
+    { id: "limitations", label: "What It Doesn't Claim" },
+    { id: "results", label: "What I Took From It" },
   ];
 
   return (
     <main className="page-shell min-h-screen px-6 py-12">
       <section className="mx-auto max-w-6xl lg:grid lg:grid-cols-[minmax(0,1fr)_240px] lg:gap-10">
         <div className="min-w-0 max-w-4xl">
-          <p className="chip mb-4">Data Analysis Case Study</p>
+          <p className="chip mb-4">Retail Analytics Case Study</p>
           <h1 className="text-4xl font-bold mb-2">{project.name}</h1>
           <p className="text-xl text-gray-700 mb-2 dark:text-gray-300">
-            A SQL and Power BI project built end to end on a real, messy retail transaction dataset
+            The same average can describe two completely different products.
           </p>
           <p className="text-gray-600 mb-8 dark:text-gray-300">
-            A self-directed project analysing around 1,055,238 order line items from the public Online Retail
-            II dataset, cleaning the raw data, designing a normalized PostgreSQL database, writing analytical
-            SQL including window functions and a subquery, and finishing with a two page Power BI dashboard.
+            This project follows 1,055,238 order lines from a real two year UK retail transaction log through
+            revenue, seasonality, product performance, customer value and stock demand, to separate a headline
+            revenue figure from where that revenue, and the risk around it, actually concentrates.
           </p>
 
           <div className="grid grid-cols-2 gap-3 mb-10 md:grid-cols-4">
             <div className="surface-card p-3 text-sm">
-              <p className="text-gray-500 dark:text-gray-400">Tools</p>
-              <p className="font-semibold">PostgreSQL, Power BI</p>
+              <p className="text-gray-500 dark:text-gray-400">Total Revenue</p>
+              <p className="font-semibold">19.34M</p>
             </div>
             <div className="surface-card p-3 text-sm">
-              <p className="text-gray-500 dark:text-gray-400">Dataset</p>
-              <p className="font-semibold">1,055,238 order lines</p>
+              <p className="text-gray-500 dark:text-gray-400">Total Customers</p>
+              <p className="font-semibold">5,942</p>
             </div>
             <div className="surface-card p-3 text-sm">
-              <p className="text-gray-500 dark:text-gray-400">Scope</p>
-              <p className="font-semibold">Dec 2009 to Nov 2011</p>
+              <p className="text-gray-500 dark:text-gray-400">UK Revenue Share</p>
+              <p className="font-semibold">85.52%</p>
             </div>
             <div className="surface-card p-3 text-sm">
-              <p className="text-gray-500 dark:text-gray-400">Output</p>
-              <p className="font-semibold">2 page dashboard</p>
+              <p className="text-gray-500 dark:text-gray-400">At Risk Customers</p>
+              <p className="font-semibold">571</p>
             </div>
           </div>
 
@@ -68,108 +69,134 @@ export default function OnlineRetailSqlPowerBiPage() {
               Overview
             </h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              Online Retail II is a real transaction log from a UK based online retailer selling gift and
-              homeware items, with many of its customers being wholesalers rather than individual shoppers.
-              This project takes that raw, genuinely messy data and builds the full path an actual analytics
-              project would follow, cleaning and profiling it, designing a proper relational database around
-              it, analysing it in SQL, and presenting the result as a working dashboard.
+              The point of this project was not to produce a dashboard full of charts. It was to answer a set
+              of real business questions with a properly built database behind them: where does revenue
+              actually come from, which customers are worth focusing retention effort on, and how much stock
+              does a product genuinely need. The dataset arrives genuinely messy, and the work stays honest
+              about every judgement call made cleaning it up.
             </p>
             <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-              <li>Cleaned and validated 1,055,238 order line items across two years, including a systematic method for finding every non product code hiding in the data.</li>
-              <li>Designed a normalized PostgreSQL database using a star schema, with a synthetic inventory table built from actual demand patterns rather than assumed figures.</li>
-              <li>Wrote analytical SQL covering joins, window functions, common table expressions and a subquery, including a full RFM customer segmentation.</li>
-              <li>Built a two page Power BI dashboard connected directly to the database, using DAX to reproduce the SQL logic rather than duplicate it separately.</li>
+              {project.features?.map((feature) => <li key={feature}>{feature}</li>)}
             </ul>
           </section>
 
           <section className="mb-12">
-            <h2 id="problem" className="scroll-mt-24 text-2xl font-semibold mb-4">
-              The Problem
+            <h2 id="context" className="scroll-mt-24 text-2xl font-semibold mb-4">
+              Business Context
             </h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              Raw transaction data rarely arrives ready to answer anything. Before any question about revenue,
-              customers or stock can be answered honestly, the data itself has to be understood, cleaned and
-              structured properly, otherwise every number built on top of it quietly inherits whatever mess
-              sits underneath it.
+              A single total revenue figure sounds like the whole story, but averages and totals are often
+              where a concentrated pattern hides. Here, the headline number was 19.3 million in revenue, yet
+              roughly 85 percent of it came from one country, and the product with the highest apparent average
+              monthly demand turned out to be driven by a single bulk order rather than real, repeatable sales.
             </p>
             <p className="text-gray-700 dark:text-gray-300">
-              The harder part isn't fixing an obviously broken value. It's deciding what to do with values
-              that are technically valid but ambiguous, a missing customer ID, a product with ten different
-              recorded names, a customer linked to two different countries, and being able to explain why each
-              decision was made rather than just that it was made.
+              I treated the analysis as a sequence of checks rather than a single pass. Clean the data and
+              prove each decision with evidence, build a database structured around real business questions,
+              then test the obvious conclusion before trusting it, exactly what caught the bulk order sitting
+              behind an otherwise convincing demand figure.
             </p>
           </section>
 
           <section className="mb-12">
-            <h2 id="solution" className="scroll-mt-24 text-2xl font-semibold mb-4">
-              What I Did
+            <h2 id="numbers" className="scroll-mt-24 text-2xl font-semibold mb-4">
+              Headline Numbers
             </h2>
-            <p className="text-gray-700 dark:text-gray-300 mb-4">
-              I treated it as four connected stages rather than a single pass. First, profile the data
-              thoroughly enough to know exactly what was wrong with it. Then design and build a proper
-              database around what that profiling found, rather than a single flat file. Then write SQL that
-              answers real questions about revenue, products and customers. Then bring that same analysis into
-              Power BI without silently redoing or duplicating any of it.
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+              <div className="surface-card p-5">
+                <p className="text-gray-500 text-sm dark:text-gray-400">Total Revenue</p>
+                <p className="text-2xl font-bold">19.34M</p>
+              </div>
+              <div className="surface-card p-5">
+                <p className="text-gray-500 text-sm dark:text-gray-400">Total Customers</p>
+                <p className="text-2xl font-bold">5,942</p>
+              </div>
+              <div className="surface-card p-5">
+                <p className="text-gray-500 text-sm dark:text-gray-400">Average Order Value</p>
+                <p className="text-2xl font-bold">370.65</p>
+              </div>
+              <div className="surface-card p-5">
+                <p className="text-gray-500 text-sm dark:text-gray-400">Steady Seller Share</p>
+                <p className="text-2xl font-bold">54.47%</p>
+              </div>
+            </div>
+            <p className="text-gray-700 dark:text-gray-300 mt-4">
+              The steady seller share is not a raw count sitting in the data, since the dataset never records
+              actual stock levels. It comes from checking how many months each product sold in and how evenly
+              that demand spread across the two years, then splitting the catalog into products stable enough
+              to trust an average versus products whose demand was driven by occasional bulk orders. It is the
+              figure behind how the estimated inventory table was built, not just a background statistic.
             </p>
+          </section>
+
+          <section className="mb-12">
+            <h2 id="question" className="scroll-mt-24 text-2xl font-semibold mb-4">
+              The Question
+            </h2>
             <p className="text-gray-700 dark:text-gray-300">
-              Each stage was checked against the one before it rather than assumed correct, a query result
-              cross checked against a known total, a dashboard chart checked against its underlying SQL
-              output, before moving on to the next piece.
+              Is this business's revenue and customer base broad and evenly spread, or concentrated in a few
+              products, countries and customers that deserve a different response? The analysis looks for the
+              answer in layers: monthly trend first, then product performance, then country concentration, then
+              customer value segmentation, and finally product demand checked closely enough to see whether an
+              average can be trusted or is hiding a spike.
             </p>
           </section>
 
           <section className="mb-12">
             <h2 id="screenshots" className="scroll-mt-24 text-2xl font-semibold mb-4">
-              What It Looks Like
+              The Dashboard
             </h2>
+
+            <div className="mb-8">
+              <div className="surface-card overflow-hidden mb-3">
+                <Image
+                  src="/projects/online-retail-sql-powerbi/executive_summary.png"
+                  alt="Executive Summary dashboard page, KPI cards, findings and recommendations"
+                  width={1860}
+                  height={920}
+                  className="w-full h-auto"
+                />
+              </div>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                The dashboard opens with revenue, average order value, UK revenue share, at risk customers and
+                steady seller share, then states the findings and recommendations plainly before anyone needs
+                to open a single chart.
+              </p>
+            </div>
 
             <div className="mb-8">
               <div className="surface-card overflow-hidden mb-3">
                 <Image
                   src="/projects/online-retail-sql-powerbi/sales_overview.png"
-                  alt="Sales Overview dashboard page — monthly revenue, top products, revenue by country"
+                  alt="Sales Overview dashboard page, monthly revenue, top products, revenue by country"
                   width={1860}
                   height={920}
                   className="w-full h-auto"
                 />
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                The Sales Overview page. Monthly revenue peaking each November, the top ten products by
-                revenue led by Regency Cakestand 3 Tier, and revenue by country with the UK deliberately left
-                out of the chart since it accounts for roughly 85 percent of all revenue on its own.
+                Monthly revenue peaking each November, the top ten products led by Regency Cakestand 3 Tier, and
+                revenue by country with the UK deliberately left out of the chart since it accounts for roughly
+                85 percent of all revenue on its own.
               </p>
             </div>
 
-            <div className="mb-8">
+            <div>
               <div className="surface-card overflow-hidden mb-3">
                 <Image
                   src="/projects/online-retail-sql-powerbi/customer_inventory.png"
-                  alt="Customers and Inventory dashboard page — RFM segments and inventory charts"
+                  alt="Customers and Inventory dashboard page, RFM segments and inventory charts"
                   width={1860}
                   height={920}
                   className="w-full h-auto"
                 />
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                The Customers and Inventory page. Customers split across four RFM segments, and the product
-                catalog split almost evenly between steady sellers and spike driven demand, the reasoning
-                behind the synthetic inventory table underneath it.
+                Customers split across four RFM segments, and the product catalog split almost evenly between
+                steady sellers and spike driven demand, the reasoning behind the estimated inventory table
+                underneath it.
               </p>
             </div>
-          </section>
-
-          <section className="mb-12">
-            <h2 id="approach" className="scroll-mt-24 text-2xl font-semibold mb-4">
-              Approach
-            </h2>
-            <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-              <li>Profiled the raw data column by column in Power Query, fixing mixed data types on Invoice and StockCode and uncovering sixteen non product codes through a systematic digit extraction check rather than manual scanning.</li>
-              <li>Cleaned known issues with evidence behind each decision: exact duplicates removed, inconsistent product descriptions resolved to a single canonical value, missing customer IDs left as true nulls rather than a placeholder.</li>
-              <li>Designed a star schema in PostgreSQL, one fact table and three dimension tables, and wrote every create table statement by hand rather than letting a tool infer the structure.</li>
-              <li>Wrote SQL covering revenue and trend analysis, product ranking with both aggregation and window functions, a subquery identifying above average products, and a full RFM segmentation.</li>
-              <li>Built a synthetic inventory table by checking demand patterns closely enough to catch a spike driven outlier before it distorted the whole calculation.</li>
-              <li>Connected Power BI directly to the database, and after starting to rebuild the RFM scoring in DAX, switched to pulling the already tested SQL logic in as a database view instead.</li>
-            </ul>
           </section>
 
           <section className="mb-12">
@@ -178,49 +205,66 @@ export default function OnlineRetailSqlPowerBiPage() {
             </h2>
             <div className="grid gap-4 md:grid-cols-2">
               <div className="surface-card p-5">
-                <h3 className="font-semibold mb-2">Revenue is heavily concentrated in one country</h3>
+                <h3 className="font-semibold mb-2">Revenue looks broad, but it is concentrated in one country</h3>
                 <p className="text-sm text-gray-700 dark:text-gray-300">
-                  The United Kingdom accounts for roughly 85 percent of all revenue, about 16.5 million of 19.3
-                  million total. Expected for a UK based retailer, but large enough that it had to be excluded
-                  from the country comparison chart just to keep the rest of the world visible.
+                  The United Kingdom accounts for roughly 85 percent of all revenue. EIRE and the Netherlands
+                  lead every other market by a clear margin, but the total on its own was blurring how
+                  dependent the business is on a single country.
                 </p>
               </div>
               <div className="surface-card p-5">
-                <h3 className="font-semibold mb-2">The business is strongly seasonal</h3>
+                <h3 className="font-semibold mb-2">The business is strongly seasonal, not steady</h3>
                 <p className="text-sm text-gray-700 dark:text-gray-300">
-                  Revenue peaks every November in both years, followed by a sharp drop each January, a normal
-                  pattern for a gift retailer once the holiday period ends rather than a sign of instability.
+                  Revenue peaks every November in both years, then drops sharply each January, a normal pattern
+                  for a gift retailer once the holiday period ends rather than a sign of instability.
                 </p>
               </div>
               <div className="surface-card p-5">
-                <h3 className="font-semibold mb-2">Customers split into balanced tiers, with one actionable group</h3>
+                <h3 className="font-semibold mb-2">Customer value splits evenly, but risk is specific</h3>
                 <p className="text-sm text-gray-700 dark:text-gray-300">
-                  RFM segmentation split customers fairly evenly across Low, Mid and High Value, alongside a
-                  smaller, specific group of 571 customers flagged At Risk, a usable list rather than a vague
-                  idea of churn.
+                  Customers divide fairly evenly across Low, Mid and High Value tiers, alongside a smaller,
+                  specifically identifiable group of 571 customers flagged At Risk, a usable list rather than a
+                  vague idea of churn.
                 </p>
               </div>
               <div className="surface-card p-5">
-                <h3 className="font-semibold mb-2">The catalog splits almost evenly by demand pattern</h3>
+                <h3 className="font-semibold mb-2">An average did not survive a closer check</h3>
                 <p className="text-sm text-gray-700 dark:text-gray-300">
-                  About 54 percent of products sell steadily enough to trust their average demand, while 46
-                  percent show irregular, spike driven demand instead, close enough to even that treating every
-                  product the same way would have been a real mistake.
+                  The product with the highest apparent average monthly demand had only sold in four months,
+                  with nearly all of it from a single order. Compared against a genuinely steady seller active
+                  in all twenty five months, the difference was obvious once checked, not assumed.
                 </p>
               </div>
             </div>
           </section>
 
           <section className="mb-12">
-            <h2 id="data-workflow" className="scroll-mt-24 text-2xl font-semibold mb-4">
-              Data Workflow
+            <h2 id="recommendations" className="scroll-mt-24 text-2xl font-semibold mb-4">
+              Recommendations
+            </h2>
+            <p className="text-gray-700 dark:text-gray-300 mb-4">
+              Framed as what would reasonably follow from these findings, not as changes a real business has
+              already acted on.
+            </p>
+            <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+              <li>Prioritize retention outreach on the 571 named At Risk customers before any broader campaign.</li>
+              <li>Plan inventory differently by product type, steady sellers on a predictable reorder schedule, spike driven products monitored individually rather than stocked the same way.</li>
+              <li>Treat EIRE and the Netherlands as the first markets worth examining for expansion, given they already lead every country outside the UK.</li>
+              <li>Build stock and staffing plans around the November peak specifically, rather than assuming demand spreads evenly across the year.</li>
+            </ul>
+          </section>
+
+          <section className="mb-12">
+            <h2 id="approach" className="scroll-mt-24 text-2xl font-semibold mb-4">
+              How I Worked
             </h2>
             <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-              <li>Invoice, StockCode and CustomerID were typed as text early on, since forcing them to numbers would have silently dropped the C prefix marking cancellations or reformatted IDs incorrectly.</li>
-              <li>Non product codes were found by extracting only the digits from StockCode and filtering for rows where nothing was left, a repeatable check rather than scrolling through thousands of distinct values by eye.</li>
-              <li>Exporting cleaned tables from Power Query surfaced two real formatting issues before they reached the database, dates silently split into year, quarter, month and day columns by Power BI's default hierarchy, and prices written with a comma decimal separator due to Windows regional settings.</li>
-              <li>Every table was built with an explicit primary key and, where relevant, a foreign key constraint, so PostgreSQL itself would reject any row that referenced a customer or product that didn't exist.</li>
-              <li>The RFM scoring logic was saved as a PostgreSQL view rather than kept only as a query result, so Power BI could pull in one tested version instead of a second, separately maintained copy.</li>
+              <li>Checked the dataset before analysis: mixed data types on Invoice and StockCode, exact duplicate rows, and a stock code column that mixed real products with fees and adjustments.</li>
+              <li>Ran a systematic check across every stock code rather than scanning by eye, extracting only the digits from each code to surface every non product entry in one pass, sixteen in total.</li>
+              <li>Started broad with total revenue, then narrowed into monthly trend, product performance, country and customer level views once the total on its own said little.</li>
+              <li>Tested the product with the highest average monthly demand against the assumption that an average can be trusted, and found it was driven almost entirely by a single bulk order rather than steady sales.</li>
+              <li>Checked that finding against a genuinely steady seller before trusting the distinction, comparing month by month activity for both rather than accepting the average at face value.</li>
+              <li>Built the dashboard's headline numbers around revenue, customer count, average order value and the steady seller split, since a single revenue figure does not tell anyone what to actually plan around.</li>
             </ul>
           </section>
 
@@ -237,25 +281,30 @@ export default function OnlineRetailSqlPowerBiPage() {
 
           <section className="mb-12">
             <h2 id="limitations" className="scroll-mt-24 text-2xl font-semibold mb-4">
-              Scope & Limitations
+              What It Doesn't Claim
             </h2>
+            <p className="text-gray-700 dark:text-gray-300 mb-4">
+              This project makes a careful claim set, not an exaggerated one.
+            </p>
             <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-              <li>Synthetic inventory data. inventory_snapshot does not reflect real stock levels, since the dataset never records them. It's built from actual demand patterns, but it's a modelled estimate, not real inventory data, and is described that way throughout.</li>
-              <li>UK dominance is stated, not explained. The dataset holds no information on marketing spend, customer acquisition, or regional strategy, so the reasons behind the UK's share of revenue can't be tested and aren't claimed.</li>
-              <li>Judgement calls behind the thresholds. The twelve month cutoff for a steady seller and the RFM quartile scoring are reasonable, documented choices, not figures tested against actual retention or stock outcomes.</li>
-              <li>A short, historical window. The data covers two years ending partway through December 2011, that final partial month was excluded from the trend charts rather than left in to imply a decline that isn't real.</li>
-              <li>No live business outcome. This is an analysis of an existing historical dataset, not a deployed system, so no claim is made about actual revenue impact.</li>
+              <li>It shows revenue is concentrated and demand patterns differ by product, not that any single cause behind the UK's share, marketing spend or customer acquisition among them, has been tested or proven.</li>
+              <li>inventory_snapshot is a modelled estimate built from real demand patterns, not a recorded company stock level.</li>
+              <li>The RFM quartile scoring and the twelve month steady seller cutoff are reasonable, documented choices, not figures tested against actual retention or stock outcomes.</li>
+              <li>The dataset covers two years ending partway through December 2011, that final partial month was excluded from the trend charts rather than left in to imply a decline that is not real.</li>
+              <li>No business acted on these findings. This is an analysis of an existing historical dataset, not a deployed system, so no claim is made about real business impact.</li>
             </ul>
           </section>
 
           <section>
             <h2 id="results" className="scroll-mt-24 text-2xl font-semibold mb-4">
-              What I Learned
+              What I Took From It
             </h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              The most useful part of this project wasn't a specific SQL function or DAX formula. It was the
-              habit of checking a result against something already known before trusting it, and being willing
-              to investigate a number that looked slightly off rather than explaining it away.
+              The biggest takeaway was how easily a single, confident looking number can mislead if it is never
+              tested. The product with the highest average monthly demand looked like a steady top seller until
+              it was checked month by month, and turned out to be one bulk order away from irrelevance. That
+              habit, checking a number against something else before trusting it, mattered more here than any
+              individual SQL function or DAX formula.
             </p>
             <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
               {(project.lessonsLearned ?? []).map((lesson) => (

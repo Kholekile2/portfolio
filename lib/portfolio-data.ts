@@ -793,20 +793,15 @@ const portfolioData = {
     },
     {
       id: "online-retail-sql-powerbi",
-      name: "Online Retail II: Database Build, SQL Analysis and Power BI Dashboard",
+      name: "Online Retail II: Revenue, Retention and Inventory Analysis",
       shortDescription:
-        "A SQL and Power BI project built on a two year, over one million row transactional dataset — cleaning genuinely messy data, designing a normalized PostgreSQL database from scratch, analysing it with window functions, CTEs and a full RFM segmentation, and finishing with a two page dashboard.",
-      tagline: "The same average can describe two completely different products.",
-      summary:
-        "A self-directed SQL and Power BI project analysing 1,055,238 order line items from the public Online Retail II dataset, cleaning the raw data, designing a normalized PostgreSQL star schema, writing analytical SQL including window functions and a subquery, and finishing with a two page Power BI dashboard.",
-      problem:
-        "Raw transaction data rarely arrives ready to answer anything. Before any question about revenue, customers, or stock can be answered honestly, the data itself has to be understood, cleaned, and structured properly, including deciding what to do with values that are technically valid but ambiguous, such as a missing customer ID or a product with ten different recorded names.",
-      solution:
-        "Treated the project as four connected stages: profiled the data thoroughly enough to know exactly what was wrong with it, designed and built a normalized PostgreSQL database around what that profiling found, wrote SQL that answers real questions about revenue, products, and customers, and brought that same analysis into Power BI without silently redoing or duplicating any of it.",
-      thumbnail: "/projects/online-retail-sql-powerbi/sales_overview.png",
+        "A retailer's revenue looked healthy at 19.3 million, but the total hid where it actually came from. This analysis of over one million order lines found that one country drove 85% of all revenue, that a product's high average demand was really one bulk order in disguise, and turned the findings into a normalized SQL database, a customer segmentation model, and a two page dashboard with recommendations.",
+      tagline: "Revenue looked broad. Almost all of it came from one country.",
+      thumbnail: "/projects/online-retail-sql-powerbi/executive_summary.png",
       links: {
         caseStudyPath: "/projects/online-retail-sql-powerbi",
-        githubUrl: "https://github.com/Kholekile2/online-retail-ii-analysis",
+        githubUrl: "https://github.com/Kholekile2/online-retail-sql-powerbi",
+        // No live demo. PostgreSQL database and Power BI dashboard, with the write-up in the README.
       },
       techStack: {
         tools: ["PostgreSQL", "pgAdmin", "Power BI", "Power Query"],
@@ -819,6 +814,7 @@ const portfolioData = {
           "DAX measures",
         ],
         skills: [
+          "business framing",
           "data cleaning",
           "database design",
           "customer segmentation",
@@ -827,19 +823,18 @@ const portfolioData = {
         ],
       },
       features: [
-        "Cleaned and validated a two year, 1,055,238 row transactional dataset in Power Query, including type corrections, a systematic method for finding every non product code, and resolving inconsistent product descriptions.",
-        "Designed and built a normalized PostgreSQL database using a star schema, one fact table and three dimension tables, with working foreign key constraints.",
-        "Built a synthetic inventory table from actual product demand patterns, treating steady sellers and spike driven products differently rather than applying one formula across the whole catalog.",
-        "Wrote analytical SQL covering joins, window functions (RANK, LAG, running totals), common table expressions, and a subquery.",
-        "Built a full RFM customer segmentation model, scoring recency, frequency and monetary value into quartiles and grouping customers into four segments.",
-        "Connected Power BI directly to the database and built a two page dashboard, using DAX measures and calculated columns to reproduce the SQL logic rather than duplicate it separately.",
+        "Found that revenue was concentrated in one country, the UK accounting for roughly 85% of the total, and that the product with the highest average monthly demand was really a single bulk order in disguise.",
+        "Designed and built a normalized PostgreSQL database from a genuinely messy transactional dataset, including a systematic method for finding every non product code hiding inside it.",
+        "Built a full RFM customer segmentation model, turning a customer base of nearly six thousand into four value based groups, including a specific list of 571 customers worth prioritizing for retention.",
+        "Ruled out a flat, one size fits all approach to inventory planning, splitting the catalog into steady sellers and spike driven products instead.",
+        "Built a two page Power BI dashboard connected directly to the database, with an executive summary page stating the headline numbers, findings and recommendations up front.",
       ],
       lessonsLearned: [
-        "A number that looks wrong is worth chasing down, not shrugging off. A one row mismatch between Power Query and Postgres turned out to be a stale profiling reading once checked with a direct SQL comparison, not real data loss.",
-        "An average can hide two completely different products. One item's typical monthly demand was driven almost entirely by a single bulk order, and treating it the same as a genuinely steady seller would have badly overstated its stock needs.",
-        "Don't duplicate logic that already works. Rebuilding customer segmentation in DAX partway through, the tested SQL version already existed, so it was brought in as a database view instead of maintaining two versions that could quietly drift apart.",
-        "A dominant category can make a chart useless. The UK accounted for about 85 percent of all revenue, so it was stated as a fact in writing but left out of the country comparison chart, since one bar would have made every other country invisible.",
-        "Filters have to be reapplied deliberately in every query. A ranking rebuilt with a window function let a shipping fee code slip into the results the first time, since the database enforces no business rules on its own.",
+        "Framing the work as a set of business questions, where does revenue really come from, which customers matter most, what does a product actually need in stock, matters more than the specific tool used to answer them.",
+        "An average can describe two completely different products. The one with the highest apparent monthly demand had only sold in four months, with nearly all of it from a single order, not a repeatable pattern.",
+        "Testing your own conclusion is part of the job. Comparing that product against a genuinely steady seller, active in all twenty five months, is why the demand figure was trusted rather than assumed either way.",
+        "A dramatic number deserves a look at what is actually behind it before it gets used to plan something as concrete as stock levels.",
+        "Being honest about what the data cannot claim, that the inventory table is a modelled estimate and not real stock data, makes the parts it can claim more trustworthy, not less.",
       ],
     },
   ],
