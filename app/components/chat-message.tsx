@@ -29,27 +29,27 @@ export default function ChatMessage({ role, content }: ChatMessageProps) {
         ) : (
           <ReactMarkdown
             components={{
-              h3: ({ children }) => (
+              h3: ({ children }: { children?: React.ReactNode }) => (
                 <h3 className="font-bold text-base mt-3 mb-1 text-[var(--accent)]">
                   {children}
                 </h3>
               ),
-              h4: ({ children }) => (
+              h4: ({ children }: { children?: React.ReactNode }) => (
                 <h4 className="font-semibold text-sm mt-2 mb-1">{children}</h4>
               ),
-              p: ({ children }) => (
+              p: ({ children }: { children?: React.ReactNode }) => (
                 <p className="mb-2 last:mb-0">{children}</p>
               ),
-              ul: ({ children }) => (
+              ul: ({ children }: { children?: React.ReactNode }) => (
                 <ul className="list-disc list-inside mb-2 space-y-1">{children}</ul>
               ),
-              ol: ({ children }) => (
+              ol: ({ children }: { children?: React.ReactNode }) => (
                 <ol className="list-decimal list-inside mb-2 space-y-1">{children}</ol>
               ),
-              li: ({ children }) => (
+              li: ({ children }: { children?: React.ReactNode }) => (
                 <li className="text-sm">{children}</li>
               ),
-              strong: ({ children }) => (
+              strong: ({ children }: { children?: React.ReactNode }) => (
                 <strong className="font-semibold text-[var(--foreground)]">
                   {children}
                 </strong>
@@ -57,17 +57,17 @@ export default function ChatMessage({ role, content }: ChatMessageProps) {
               hr: () => (
                 <hr className="my-3 border-[var(--surface-border)]" />
               ),
-              table: ({ children }) => (
+              table: ({ children }: { children?: React.ReactNode }) => (
                 <div className="overflow-x-auto my-2">
                   <table className="text-xs w-full border-collapse">{children}</table>
                 </div>
               ),
-              th: ({ children }) => (
+              th: ({ children }: { children?: React.ReactNode }) => (
                 <th className="border border-[var(--surface-border)] px-2 py-1 bg-[var(--background)] font-semibold text-left">
                   {children}
                 </th>
               ),
-              td: ({ children }) => (
+              td: ({ children }: { children?: React.ReactNode }) => (
                 <td className="border border-[var(--surface-border)] px-2 py-1">
                   {children}
                 </td>

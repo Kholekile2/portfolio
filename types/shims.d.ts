@@ -6,6 +6,10 @@ declare namespace JSX {
   interface IntrinsicElements {
     [elemName: string]: any;
   }
+
+  interface IntrinsicAttributes {
+    key?: string | number;
+  }
 }
 
 declare module "react/jsx-runtime" {
@@ -16,7 +20,21 @@ declare module "react/jsx-runtime" {
 
 declare module "react" {
   export type ReactNode = any;
+  export type Dispatch<A> = (value: A) => void;
+  export type SetStateAction<S> = S | ((prevState: S) => S);
+  export type ChangeEvent<T = Element> = {
+    target: T;
+  };
+  export type KeyboardEvent<T = Element> = {
+    key: string;
+    shiftKey: boolean;
+    preventDefault: () => void;
+    target: T;
+  };
   const React: any;
+  export function useEffect(effect: () => void | (() => void), deps?: any[]): void;
+  export function useState<S>(initialState: S | (() => S)): [S, Dispatch<SetStateAction<S>>];
+  export function useRef<T>(initialValue: T | null): { current: T | null };
   export default React;
 }
 

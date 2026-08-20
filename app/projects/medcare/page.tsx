@@ -21,7 +21,7 @@ export default function MedCarePage() {
   ];
 
   return (
-    <main className="page-shell min-h-screen px-6 py-12">
+    <main className="page-shell project-page min-h-screen px-6 py-12">
       <section className="mx-auto max-w-6xl lg:grid lg:grid-cols-[minmax(0,1fr)_240px] lg:gap-10">
       <div className="min-w-0 max-w-4xl">
       <p className="chip mb-4">Healthcare Analytics Case Study</p>

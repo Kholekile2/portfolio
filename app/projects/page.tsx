@@ -1,26 +1,27 @@
 export default function ProjectsPage() {
   return (
-    <main className="page-shell min-h-screen px-6 py-12">
+    <main className="page-shell projects-index min-h-screen px-6 py-12">
       <section className="mx-auto max-w-5xl">
-        <h1 className="text-3xl font-bold tracking-tight md:text-4xl">Projects</h1>
-        <p className="mt-3 max-w-3xl text-gray-600 dark:text-gray-300">
+        <p className="section-kicker mb-3">Selected work</p>
+        <h1 className="text-[clamp(2.2rem,3vw,3.2rem)] font-semibold tracking-[-0.05em]">Projects</h1>
+        <p className="mt-3 max-w-3xl text-[1.02rem] leading-7 text-[var(--ink)]/90">
           Data analytics, business intelligence, and applied machine learning, with full stack engineering to make the analysis deployable and usable.
         </p>
 
       <div className="mt-10 grid gap-8 md:grid-cols-2">
         <div className="surface-card">
           <p className="chip mb-3">Data Analysis</p>
-          <h2 className="text-xl font-bold mb-2">Online Retail II: SQL &amp; Power BI</h2>
+          <h2 className="mb-2 text-[1.45rem] font-semibold tracking-[-0.04em]">Online Retail II: SQL &amp; Power BI</h2>
 
-          <p className="text-gray-700 mb-3 dark:text-gray-300">
+          <p className="mb-3 text-[1rem] leading-7 text-[var(--ink)]/90">
             SQL and Power BI project on 1,055,238 order lines: a normalized PostgreSQL database built from scratch, analytical SQL, and a two page dashboard.
           </p>
 
-          <p className="text-sm text-gray-500 mb-4 dark:text-gray-400">
+          <p className="mb-4 text-sm text-[var(--ink-faint)]">
             PostgreSQL • Power BI • Power Query • DAX • Window Functions
           </p>
 
-          <p className="text-sm text-gray-600 mb-4 dark:text-gray-300">
+          <p className="mb-4 text-sm leading-6 text-[var(--ink)]/90">
             Star schema design, RFM customer segmentation, and a synthetic inventory model, with SQL logic reused as DAX rather than duplicated.
           </p>
 
@@ -41,17 +42,17 @@ export default function ProjectsPage() {
 
         <div className="surface-card">
           <p className="chip mb-3">Data Analysis</p>
-          <h2 className="text-xl font-bold mb-2">Global Superstore: Regional Profitability Analysis</h2>
+          <h2 className="mb-2 text-[1.45rem] font-semibold tracking-[-0.04em]">Global Superstore: Regional Profitability Analysis</h2>
 
-          <p className="text-gray-700 mb-3 dark:text-gray-300">
+          <p className="mb-3 text-[1rem] leading-7 text-[var(--ink)]/90">
             A global retailer's sales were growing but profit wasn't. This analysis of ~51,000 orders found a quarter of sales were unprofitable, traced the losses to three regions, and tied them to heavy discounting.
           </p>
 
-          <p className="text-sm text-gray-500 mb-4 dark:text-gray-400">
+          <p className="mb-4 text-sm text-[var(--ink-faint)]">
             Microsoft Excel • XLOOKUP • PivotTables • Data Cleaning • Dashboard Design
           </p>
 
-          <p className="text-sm text-gray-600 mb-4 dark:text-gray-300">
+          <p className="mb-4 text-sm leading-6 text-[var(--ink)]/90">
             Shipping was tested and ruled out, the losses were concentrated in three regions, and the final dashboard turned the findings into pricing recommendations.
           </p>
 
@@ -72,17 +73,17 @@ export default function ProjectsPage() {
 
         <div className="surface-card">
           <p className="chip mb-3">Applied Research</p>
-          <h2 className="text-xl font-bold mb-2">Medical Billing Delay Prediction</h2>
+          <h2 className="mb-2 text-[1.45rem] font-semibold tracking-[-0.04em]">Medical Billing Delay Prediction</h2>
 
-          <p className="text-gray-700 mb-3 dark:text-gray-300">
+          <p className="mb-3 text-[1rem] leading-7 text-[var(--ink)]/90">
             XGBoost and SHAP study on 50,000 private patient invoices to flag billing delays at the point of capture, not in the collection queue.
           </p>
 
-          <p className="text-sm text-gray-500 mb-4 dark:text-gray-400">
+          <p className="mb-4 text-sm text-[var(--ink-faint)]">
             Python • XGBoost • scikit-learn • SHAP • pandas
           </p>
 
-          <p className="text-sm text-gray-600 mb-4 dark:text-gray-300">
+          <p className="mb-4 text-sm leading-6 text-[var(--ink)]/90">
             Bootstrap confidence interval analysis used to select the final model on recall, the metric that matched the bureau's cost structure.
           </p>
 

@@ -95,51 +95,6 @@ const portfolioData = {
       id: "meetingmind",
       name: "MeetingMind",
       category: "AI",
-      {
-        id: "employee-attrition-power-bi",
-        name: "Employee Attrition Analysis",
-        category: "Business Intelligence",
-        summary:
-          "A Power BI case study that shows employee attrition is concentrated in Sales Representatives, with overtime as the strongest risk driver.",
-        description:
-          "IBM HR Analytics project that traces attrition across department, job role, overtime, satisfaction, tenure, and compensation, then packages the findings into a decision oriented dashboard.",
-        problem:
-          "A company wide attrition rate can hide a concentrated role level problem, so the real question is where the risk sits and what is actually driving it.",
-        solution:
-          "Built a Power BI dashboard that separates company wide averages from role level risk, checks leading explanations against confounders, and centers the story on retention, risk headcount, and cost of attrition.",
-        myRole:
-          "Analysed the IBM HR dataset, developed the dashboard structure, tested the major risk drivers, and wrote the case study narrative around the business interpretation of the findings.",
-        thumbnail: "/projects/employee-attrition-power-bi/dashboard.png",
-        techStack: {
-          tools: ["Microsoft Power BI"],
-          data: ["Power Query", "DAX (CALCULATE, DIVIDE, AVERAGE)", "data modelling", "KPI design"],
-          skills: [
-            "business framing",
-            "hypothesis testing",
-            "checking for confounding variables",
-            "dashboard design",
-            "turning findings into recommendations",
-          ],
-        },
-        features: [
-          "Found that Sales Representative carries a 40 percent attrition rate, nearly double the department figure it sits inside.",
-          "Identified overtime as the strongest factor tied to attrition, tripling the rate across almost every group tested.",
-          "Found that 231 current employees match the highest risk profile in the company, 0 to 5 years tenure and working overtime.",
-          "Checked the pay gap between leavers and stayers against job level as a confounding variable, and found it holds up within a single role.",
-          "Built the dashboard around retention rate, estimated cost of attrition, and high risk headcount, not just attrition rate on its own.",
-        ],
-        lessonsLearned: [
-          "Framing the work as a business question matters more than the tool used to answer it.",
-          "A rate and a headcount answer different questions, and a business usually plans around the headcount.",
-          "Testing your strongest explanation against the others is part of the job, not an optional extra.",
-          "A department level number can hide a role level problem, which is why the Sales Representative result mattered more than the company average.",
-          "Being explicit about what a snapshot dataset cannot show makes the findings that remain more trustworthy.",
-        ],
-        links: {
-          caseStudyPath: "/projects/employee-attrition-power-bi",
-          githubUrl: "https://github.com/Kholekile2/employee-attrition-power-bi",
-        },
-      },
       summary:
         "An AI meeting intelligence app that turns transcripts into summaries, action items, decisions, and chat ready context.",
       description:
@@ -236,6 +191,51 @@ const portfolioData = {
         caseStudyPath: "/projects/meetingmind",
         liveUrl: "https://meetingmind-sigma.vercel.app",
         githubUrl: "https://github.com/Kholekile2/meetingmind",
+      },
+    },
+    {
+      id: "employee-attrition-power-bi",
+      name: "Employee Attrition Analysis",
+      category: "Business Intelligence",
+      summary:
+        "A Power BI case study that shows employee attrition is concentrated in Sales Representatives, with overtime as the strongest risk driver.",
+      description:
+        "IBM HR Analytics project that traces attrition across department, job role, overtime, satisfaction, tenure, and compensation, then packages the findings into a decision oriented dashboard.",
+      problem:
+        "A company wide attrition rate can hide a concentrated role level problem, so the real question is where the risk sits and what is actually driving it.",
+      solution:
+        "Built a Power BI dashboard that separates company wide averages from role level risk, checks leading explanations against confounders, and centers the story on retention, risk headcount, and cost of attrition.",
+      myRole:
+        "Analysed the IBM HR dataset, developed the dashboard structure, tested the major risk drivers, and wrote the case study narrative around the business interpretation of the findings.",
+      thumbnail: "/projects/employee-attrition-power-bi/dashboard.png",
+      techStack: {
+        tools: ["Microsoft Power BI"],
+        data: ["Power Query", "DAX (CALCULATE, DIVIDE, AVERAGE)", "data modelling", "KPI design"],
+        skills: [
+          "business framing",
+          "hypothesis testing",
+          "checking for confounding variables",
+          "dashboard design",
+          "turning findings into recommendations",
+        ],
+      },
+      features: [
+        "Found that Sales Representative carries a 40 percent attrition rate, nearly double the department figure it sits inside.",
+        "Identified overtime as the strongest factor tied to attrition, tripling the rate across almost every group tested.",
+        "Found that 231 current employees match the highest risk profile in the company, 0 to 5 years tenure and working overtime.",
+        "Checked the pay gap between leavers and stayers against job level as a confounding variable, and found it holds up within a single role.",
+        "Built the dashboard around retention rate, estimated cost of attrition, and high risk headcount, not just attrition rate on its own.",
+      ],
+      lessonsLearned: [
+        "Framing the work as a business question matters more than the tool used to answer it.",
+        "A rate and a headcount answer different questions, and a business usually plans around the headcount.",
+        "Testing your strongest explanation against the others is part of the job, not an optional extra.",
+        "A department level number can hide a role level problem, which is why the Sales Representative result mattered more than the company average.",
+        "Being explicit about what a snapshot dataset cannot show makes the findings that remain more trustworthy.",
+      ],
+      links: {
+        caseStudyPath: "/projects/employee-attrition-power-bi",
+        githubUrl: "https://github.com/Kholekile2/employee-attrition-power-bi",
       },
     },
     {

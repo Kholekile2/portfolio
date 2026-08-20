@@ -75,7 +75,7 @@ export default function CaseStudyToc({ sections }: CaseStudyTocProps) {
   return (
     <aside className="hidden lg:block">
       <div className="sticky top-24 surface-card p-4">
-        <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">
+        <p className="mb-3 text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-[var(--ink-faint)]">
           On This Page
         </p>
 
@@ -88,8 +88,8 @@ export default function CaseStudyToc({ sections }: CaseStudyTocProps) {
                   aria-current={activeId === section.id ? "true" : undefined}
                   className={`block rounded-md px-2 py-1 text-sm transition-colors ${
                     activeId === section.id
-                      ? "bg-[var(--accent-soft)] text-zinc-900 dark:text-zinc-100"
-                      : "text-gray-600 hover:text-zinc-900 dark:text-gray-300 dark:hover:text-zinc-100"
+                      ? "bg-[rgba(151,175,163,0.12)] text-[var(--ink)]"
+                      : "text-[var(--ink)]/80 hover:text-[var(--ink)]"
                   }`}
                 >
                   {section.label}

@@ -3,19 +3,21 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="page-shell min-h-screen px-6 py-16 text-zinc-900 dark:text-zinc-100">
+    <main className="page-shell home-page min-h-screen px-6 py-16 text-[var(--ink)]">
       <section className="mx-auto max-w-5xl">
-        <div className="grid gap-10 lg:grid-cols-[minmax(0,1.15fr)_320px] lg:items-start">
+        <div className="home-hero grid gap-12 lg:grid-cols-[minmax(0,1.15fr)_320px] lg:items-center">
           <div>
-            <p className="chip mb-4">Open to new opportunities</p>
+            <p className="chip mb-5">Open to new opportunities</p>
 
-            <h1 className="text-4xl font-bold tracking-tight md:text-5xl">Kholekile Mpengesi</h1>
+            <h1 className="text-[clamp(3rem,6vw,5.25rem)] font-medium tracking-[-0.07em] text-[var(--ink)]">
+              Kholekile Mpengesi
+            </h1>
 
-            <p className="mt-3 text-xl text-gray-700 dark:text-gray-300">
+            <p className="mt-5 max-w-xl text-[1.05rem] font-medium leading-7 text-[var(--ink-soft)]">
               Data Analyst | SQL, Power BI, Python | Background in Backend Development
             </p>
 
-            <p className="mt-4 max-w-2xl text-gray-600 dark:text-gray-300">
+            <p className="mt-5 max-w-2xl text-[0.98rem] leading-7 text-[var(--ink)]/85">
               I work in data analytics with a background in software development that I still draw on when a project needs it.
               Most of the work I&apos;ve done so far has come from paid client projects for small businesses through the UWC Future Innovation Lab,
               plus a Cloud Administrator and Data Analyst apprenticeship at Forvis Mazars.
@@ -48,32 +50,33 @@ export default function Home() {
 
         </div>
 
-        <div className="mt-10 grid gap-4 md:grid-cols-3">
+        <div className="home-snapshot mt-12 grid gap-4 border-y border-[var(--line)] py-6 md:grid-cols-3 md:gap-8">
           <div className="surface-card p-4">
-            <p className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">Focus</p>
-            <p className="mt-2 text-sm text-gray-700 dark:text-gray-300">Data cleaning, SQL analysis, BI dashboards, and light modelling work, mostly for small business contexts.</p>
+            <p className="text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-[var(--ink-faint)]">Focus</p>
+            <p className="mt-2 text-sm leading-6 text-[var(--ink)]">Data cleaning, SQL analysis, BI dashboards, and light modelling work, mostly for small business contexts.</p>
           </div>
           <div className="surface-card p-4">
-            <p className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">Core Tools</p>
-            <p className="mt-2 text-sm text-gray-700 dark:text-gray-300">SQL, Excel, Power BI, Python (pandas), PostgreSQL, and Microsoft Azure.</p>
+            <p className="text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-[var(--ink-faint)]">Core Tools</p>
+            <p className="mt-2 text-sm leading-6 text-[var(--ink)]">SQL, Excel, Power BI, Python (pandas), PostgreSQL, and Microsoft Azure.</p>
           </div>
           <div className="surface-card p-4">
-            <p className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">How I Work</p>
-            <p className="mt-2 text-sm text-gray-700 dark:text-gray-300">I take time to understand a problem before I start solving it. I would rather ask a question than guess, and rather flag an issue early than hide it.</p>
+            <p className="text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-[var(--ink-faint)]">How I Work</p>
+            <p className="mt-2 text-sm leading-6 text-[var(--ink)]">I take time to understand a problem before I start solving it. I would rather ask a question than guess, and rather flag an issue early than hide it.</p>
           </div>
         </div>
 
-        <section className="mt-16 max-w-3xl">
-          <h2 className="mb-4 text-2xl font-semibold">About Me</h2>
+        <section className="mt-24 max-w-3xl">
+          <p className="section-kicker mb-3">A little context</p>
+          <h2 className="mb-5 text-[clamp(2rem,3vw,2.8rem)] font-medium tracking-[-0.05em]">About Me</h2>
 
-          <p className="text-gray-700 dark:text-gray-300">
+          <p className="text-[1.02rem] leading-8 text-[var(--ink)]/90">
             I recently completed my Postgraduate Diploma in Data Analysis and Business Intelligence at the University of the Western Cape,
             on top of a BSc in Physical Science from the same university.
             My interest in data grew out of the physics and mathematics side of my undergraduate work,
             particularly the part that deals with finding structure and meaning in messy real world information.
           </p>
 
-          <p className="mt-4 text-gray-700 dark:text-gray-300">
+          <p className="mt-5 text-[1.02rem] leading-8 text-[var(--ink)]/90">
             Most of my analytics experience so far has come from paid client work at the UWC Future Innovation Lab,
             where over the last two years I have worked on projects for small businesses that could not afford larger consulting firms,
             mostly in retail and food service. Alongside that, I&apos;m doing a Cloud Administrator and Data Analyst apprenticeship
@@ -83,29 +86,30 @@ export default function Home() {
           </p>
         </section>
 
-        <section className="mt-16">
-          <h2 className="mb-4 text-2xl font-semibold">Tech Stack</h2>
+        <section className="mt-24">
+          <p className="section-kicker mb-3">The working toolkit</p>
+          <h2 className="mb-5 text-[clamp(2rem,3vw,2.8rem)] font-medium tracking-[-0.05em]">Tech Stack</h2>
 
-          <div className="space-y-6 text-sm text-gray-700 dark:text-gray-300">
+          <div className="space-y-6 text-sm text-[var(--ink)]">
             <div>
-              <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">Primary (data work)</p>
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.12em] text-[var(--ink-faint)]">Primary (data work)</p>
               <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
-                <div className="surface-card p-4">SQL (PostgreSQL, MySQL, SQLite, Microsoft SQL Server, BigQuery)</div>
-                <div className="surface-card p-4">Microsoft Excel (PivotTables, XLOOKUP, VBA)</div>
-                <div className="surface-card p-4">Microsoft Power BI (Power Query, DAX)</div>
-                <div className="surface-card p-4">Python (pandas, NumPy, scikit-learn, XGBoost, SHAP)</div>
-                <div className="surface-card p-4">R</div>
-                <div className="surface-card p-4">Microsoft Azure</div>
+                <div className="surface-card p-4 text-[var(--ink)]">SQL (PostgreSQL, MySQL, SQLite, Microsoft SQL Server, BigQuery)</div>
+                <div className="surface-card p-4 text-[var(--ink)]">Microsoft Excel (PivotTables, XLOOKUP, VBA)</div>
+                <div className="surface-card p-4 text-[var(--ink)]">Microsoft Power BI (Power Query, DAX)</div>
+                <div className="surface-card p-4 text-[var(--ink)]">Python (pandas, NumPy, scikit-learn, XGBoost, SHAP)</div>
+                <div className="surface-card p-4 text-[var(--ink)]">R</div>
+                <div className="surface-card p-4 text-[var(--ink)]">Microsoft Azure</div>
               </div>
             </div>
 
             <div>
-              <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">Secondary (from backend development background)</p>
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.12em] text-[var(--ink-faint)]">Secondary (from backend development background)</p>
               <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
-                <div className="surface-card p-4">C# and ASP.NET Core</div>
-                <div className="surface-card p-4">MySQL and Entity Framework</div>
-                <div className="surface-card p-4">Next.js and TypeScript</div>
-                <div className="surface-card p-4">Git and GitHub</div>
+                <div className="surface-card p-4 text-[var(--ink)]">C# and ASP.NET Core</div>
+                <div className="surface-card p-4 text-[var(--ink)]">MySQL and Entity Framework</div>
+                <div className="surface-card p-4 text-[var(--ink)]">Next.js and TypeScript</div>
+                <div className="surface-card p-4 text-[var(--ink)]">Git and GitHub</div>
               </div>
             </div>
           </div>
