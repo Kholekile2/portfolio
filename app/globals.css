@@ -1,12 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --surface: #ffffff;
-  --surface-border: #e4e4e7;
-  --accent: #0f766e;
-  --accent-soft: #ccfbf1;
+  --background: #f6f4ee;
+  --paper-2: #eeebe1;
+  --card: #fffdf8;
+  --foreground: #1c211f;
+  --ink-soft: #4c5651;
+  --ink-faint: #8a938d;
+  --sage: #97afa3;
+  --sage-deep: #445048;
+  --sage-line: #c9d5cd;
+  --gold: #c68a45;
+  --line: #ddd8ca;
+  --shadow: 0 1px 2px rgba(28, 33, 31, 0.04), 0 8px 24px -12px rgba(28, 33, 31, 0.18);
+
+  --max: 1000px;
+  --max-nav: 1200px;
 }
 
 @theme inline {
@@ -14,23 +23,6 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --surface: #111113;
-    --surface-border: #27272a;
-    --accent: #5eead4;
-    --accent-soft: #042f2e;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans), "Segoe UI", sans-serif;
 }
 
 html {
@@ -43,56 +35,119 @@ html {
   }
 }
 
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--sage);
+  color: var(--foreground);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+p,
+li,
+span,
+button,
+a {
+  letter-spacing: -0.01em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--foreground);
+  letter-spacing: -0.04em;
+}
+
+a {
+  color: var(--sage-deep);
+  text-decoration-color: var(--sage);
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--gold);
+}
+
 .page-shell {
   background:
-    radial-gradient(circle at 15% 0%, color-mix(in srgb, var(--accent-soft) 55%, transparent), transparent 35%),
-    radial-gradient(circle at 85% 10%, color-mix(in srgb, var(--accent-soft) 40%, transparent), transparent 30%),
+    radial-gradient(circle at 15% 0%, rgba(151, 175, 163, 0.18), transparent 35%),
+    radial-gradient(circle at 85% 10%, rgba(198, 138, 69, 0.1), transparent 25%),
     var(--background);
 }
 
 .surface-card {
   @apply rounded-2xl border p-6 shadow-sm transition-all duration-200;
-  background: var(--surface);
-  border-color: var(--surface-border);
+  background: var(--card);
+  border-color: var(--line);
+  box-shadow: var(--shadow);
 }
 
 .surface-card:hover {
-  @apply -translate-y-0.5 shadow-md;
+  @apply -translate-y-0.5;
+  box-shadow: 0 1px 2px rgba(28, 33, 31, 0.04), 0 14px 26px -16px rgba(28, 33, 31, 0.22);
 }
 
 .chip {
-  @apply inline-flex items-center rounded-full border px-2.5 py-1 text-xs font-medium;
-  border-color: var(--surface-border);
-  background: color-mix(in srgb, var(--surface) 92%, var(--accent-soft));
+  @apply inline-flex items-center rounded-full border px-2.5 py-1 text-[0.68rem] font-medium uppercase tracking-[0.12em];
+  border-color: var(--sage-line);
+  background: rgba(151, 175, 163, 0.12);
+  color: var(--sage-deep);
 }
 
 .text-link {
   @apply text-sm font-semibold underline underline-offset-4 transition-colors;
   color: var(--foreground);
-  text-decoration-color: color-mix(in srgb, var(--foreground) 25%, transparent);
+  text-decoration-color: rgba(68, 80, 72, 0.35);
 }
 
 .text-link:hover {
-  color: color-mix(in srgb, var(--foreground) 82%, var(--accent));
+  color: var(--gold);
+  text-decoration-color: var(--gold);
 }
 
 .btn-primary {
   @apply inline-flex h-11 items-center justify-center rounded-xl px-6 text-sm font-semibold text-white transition-all;
-  background: color-mix(in srgb, var(--accent) 88%, #000000);
+  background: linear-gradient(180deg, #4f5d55 0%, #39463f 100%);
+  box-shadow: 0 8px 18px -12px rgba(28, 33, 31, 0.45);
 }
 
 .btn-primary:hover {
-  background: color-mix(in srgb, var(--accent) 75%, #000000);
+  background: linear-gradient(180deg, #445048 0%, #303a34 100%);
   @apply shadow-md;
 }
 
 .btn-secondary {
   @apply inline-flex h-11 items-center justify-center rounded-xl border px-6 text-sm font-semibold transition-colors;
-  border-color: var(--surface-border);
+  border-color: var(--line);
+  background: rgba(255, 253, 248, 0.9);
   color: var(--foreground);
-  background: color-mix(in srgb, var(--surface) 96%, var(--accent-soft));
 }
 
 .btn-secondary:hover {
-  background: color-mix(in srgb, var(--surface) 88%, var(--accent-soft));
+  background: rgba(151, 175, 163, 0.08);
+}
+
+.max-width-wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+.section-rule {
+  background: var(--line);
+  height: 1px;
 }

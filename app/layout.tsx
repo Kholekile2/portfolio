@@ -32,31 +32,26 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100">
-        <header className="border-b border-zinc-200/80 bg-white/90 dark:border-zinc-800 dark:bg-zinc-950/90">
-          <nav className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4">
-            <Link href="/" className="text-sm font-semibold tracking-tight">
-              Kholekile Mpengesi
+      <body className="min-h-full flex flex-col bg-[var(--background)] text-[var(--foreground)]">
+        <header className="sticky top-0 z-50 border-b border-[var(--line)] bg-[rgba(246,244,238,0.86)] backdrop-blur-sm">
+          <nav className="mx-auto flex w-full max-w-[1200px] items-center justify-between px-6 py-4 md:px-10">
+            <Link href="/" className="font-mono text-[0.78rem] font-medium uppercase tracking-[0.12em] text-[var(--foreground)] transition-colors hover:text-[var(--sage-deep)]">
+              Kholekile <span className="text-[var(--gold)]">Mpengesi</span>
             </Link>
-            <ul className="flex items-center gap-5 text-sm font-medium text-zinc-600 dark:text-zinc-300">
+
+            <ul className="flex items-center gap-5 text-[0.72rem] font-medium uppercase tracking-[0.08em] text-[var(--ink-soft)]">
               <li>
-                <Link href="/" className="transition-colors hover:text-zinc-900 dark:hover:text-zinc-100">
+                <Link href="/" className="border-b border-transparent pb-1 transition-colors hover:border-[var(--gold)] hover:text-[var(--foreground)]">
                   Home
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/projects"
-                  className="transition-colors hover:text-zinc-900 dark:hover:text-zinc-100"
-                >
+                <Link href="/projects" className="border-b border-transparent pb-1 transition-colors hover:border-[var(--gold)] hover:text-[var(--foreground)]">
                   Projects
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/contact"
-                  className="transition-colors hover:text-zinc-900 dark:hover:text-zinc-100"
-                >
+                <Link href="/contact" className="border-b border-transparent pb-1 transition-colors hover:border-[var(--gold)] hover:text-[var(--foreground)]">
                   Contact
                 </Link>
               </li>
